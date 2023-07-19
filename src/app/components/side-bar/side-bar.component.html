@@ -1,0 +1,37 @@
+<div class="sideBarMainContainer">
+
+
+    <!-- desktop -->
+    <!-- hide for mobile -->
+    <div class="sideBarMainContainerForDesktop">
+        <!-- full side bar  -->
+        <div class="sideBarMainContainerForDesktopFull" *ngIf="!isHalfSideBar">
+            <!-- sideBar upper component -->
+            <div class="sideBarUpperComponent">
+                <div class="logoSection">
+                    <img src="./assets/images/logo.png" class="logoImgDesk"/>
+                    <div class="logoTextDesktop">NEXUS</div>
+                </div>
+                <div class="sideBarToggleButton">
+                    <img (click)="halfSideBarActive()" src="./assets/images/dir-right.png"/>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- half side bar -->
+        <div class="sideBarMainContainerForDesktopHalf" *ngIf="isHalfSideBar">
+            
+            <!-- upper  -->
+            <div class="halfSideBarUpperComponent">
+                <div class="logoSection">
+                    <img src="./assets/images/logo.png" class="logoImgDesk"/>
+                </div>
+                <div class="sideBarToggleButton">
+                    <img  (click)="halfSideBarActive()" src="./assets/images/dir-right.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
