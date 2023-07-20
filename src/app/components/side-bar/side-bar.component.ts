@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SideBarComponent {
 
+  constructor() { }
+
   isHalfSideBar: boolean = false;
 
   halfSideBarActive(){

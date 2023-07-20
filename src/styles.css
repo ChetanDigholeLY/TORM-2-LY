@@ -3,13 +3,19 @@ body {
     padding: 0;
     font-family: "Source Sans Pro", sans-serif;
 }
+ul{
+    margin: 0;
+    padding: 0;
+}
 
 @font-face {
     font-family: 'Futura';
     src: url('./assets/fonts/futura/Futura Bold font.ttf');
-  }
+}
 
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import "~bootstrap/dist/css/bootstrap.css";
+
 
 
 .mainComponents {
@@ -110,4 +116,58 @@ body {
 
 .halfSideBarUpperComponent{
     position: relative;
+}
+
+.sideBarLowerComponent > ul > li {
+    list-style: none;
+}
+
+.sideBarLowerComponent{
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.sideBarListElement{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    /* background-color: #FFFFFF; */
+    padding: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    text-decoration: none;
+}
+
+.sideBarListElement:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sideBarListElementText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #EDEEEF;
+}
+
+.sideBarRadioLabel{
+    width: 100%;
+}
+
+.sidebarRadioInput{
+    display: none;
+}
+
+.sideBarRadioLabel input[type="radio"]:checked + a{
+    background-color: #fff;
+}
+
+.sideBarRadioLabel input[type="radio"]:checked + a > div , .sideBarRadioLabel input[type="radio"]:checked + a > svg{
+    color: #00479E;
+    font-weight: 600;
+}
+
+.sideBarFlexColumnElement{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
