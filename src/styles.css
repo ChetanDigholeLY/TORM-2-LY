@@ -33,7 +33,7 @@ ul{
 .sideBarMainContainer {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(178.49deg, #016bff -68.27%, #003a78 91.36%);
+    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
 }
 
 .navBarGrayHeading {
@@ -92,6 +92,7 @@ ul{
 .logoSection{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 20px 23.5px;
     border-bottom: 1px solid #EDEEEF;
@@ -111,11 +112,14 @@ ul{
 }
 
 .sideBarMainContainerForDesktopHalf{
-    width: 72px;
+    width: 62px;
 }
 
 .halfSideBarUpperComponent{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sideBarLowerComponent > ul > li {
@@ -131,8 +135,8 @@ ul{
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: flex-start;
     cursor: pointer;
-    /* background-color: #FFFFFF; */
     padding: 12px;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
@@ -157,17 +161,75 @@ ul{
     display: none;
 }
 
-.sideBarRadioLabel input[type="radio"]:checked + a{
+.activeSideBarElement{
     background-color: #fff;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
-.sideBarRadioLabel input[type="radio"]:checked + a > div , .sideBarRadioLabel input[type="radio"]:checked + a > svg{
+.activeSideBarElement div {
     color: #00479E;
+    font-size: 16px;
     font-weight: 600;
+}
+
+.numbersOnGuidance{
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00479E;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 24px;
+    height: 24px;
+    margin-left: 24px;
+    
 }
 
 .sideBarFlexColumnElement{
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.activeGuidanceNumber{
+    background-color: #00479E;
+    color: #EDEEEF !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.logoImgDeskHalf{
+    width: 32px;
+    height: 24px;
+}
+
+.halfSideBarBottomComponent{
+    margin-top: 40px;
+}
+.halfSideBarBottomComponentMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    gap: 4px;
+}
+
+.halfSideBarBottomElement{
+    padding: 0px 16px;
+    border-radius: 12px;
+    height: 48px;
+    background-color: #fff;
+}
+
+.halfSideBarListElement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
