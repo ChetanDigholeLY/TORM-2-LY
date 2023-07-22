@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { PerformanceComponent } from './components/performance/performance.component';
 import { SensorsComponent } from './components/sensors/sensors.component';
+import { WorldmapComponent } from './components/worldmap/worldmap.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/guidance', pathMatch: 'full' },
   { path: 'guidance', component: GuidanceComponent }, // Default route for the home component
   { path: 'performance', component: PerformanceComponent },
   { path: 'sensors', component: SensorsComponent },
+  { path: 'worldmap', component: WorldmapComponent }
   
   // Add more routes for other components if needed
 ];
@@ -27,7 +29,8 @@ const routes: Routes = [
     NavBarComponent,
     GuidanceComponent,
     PerformanceComponent,
-    SensorsComponent
+    SensorsComponent,
+    WorldmapComponent
   ],
   imports: [
     BrowserModule,

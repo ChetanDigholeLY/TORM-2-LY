@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -10,6 +10,8 @@ import { filter } from 'rxjs/operators';
 export class SideBarComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) { }
+
+  disAbleSideAndNav = false;
 
   // focus on sideBar Element starts
   focusToSideBarElement = [false,false,false,false];
@@ -38,11 +40,15 @@ export class SideBarComponent implements OnInit {
       if(currentUrl === '/sensors'){
         this.focusToSideBarElementFunc(2)
       }
+      if(currentUrl === '/worldmap'){
+        this.disAbleSideAndNav = true;
+        this.disableNavFunc()
+      }
     });
   }
 
   // sideBar toggle feature starts
-  isHalfSideBar: boolean = false;
+  isHalfSideBar: boolean = true;
 
   halfSideBarActive(): void {
     this.isHalfSideBar = !this.isHalfSideBar;
@@ -60,5 +66,14 @@ export class SideBarComponent implements OnInit {
     this.isSensorMenu = false;
   }
   //sideBar for sensor ends
+
+  //code for sending data to navBar component to get disable when the route is /worldMap starts
+  @Output() dataToNavEvent = new EventEmitter<boolean>();
+  
+  disableNavFunc(){
+    const data = true;
+    this.dataToNavEvent.emit(data)
+  }
+  //code for sending data to navBar component to get disable when the route is /worldMap ends
 
 }

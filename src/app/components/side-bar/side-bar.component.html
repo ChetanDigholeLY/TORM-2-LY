@@ -1,4 +1,4 @@
-<div class="sideBarMainContainer">
+<div class="sideBarMainContainer" [ngClass]="{'displaySideNav' : disAbleSideAndNav}">
 
 
     <!-- desktop -->
@@ -19,7 +19,7 @@
             <div class="sideBarLowerComponent" *ngIf="!isSensorMenu">
                 <div class="sideBarFlexColumnElement">
                     <div [ngClass]="{'activeSideBarElement':focusToSideBarElement[0]}">
-                        <a class="sideBarListElement">
+                        <a class="sideBarListElement" routerLink="/worldmap" target="_blank">
                             <svg *ngIf="!focusToSideBarElement[0]" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_2875_9393)">
@@ -207,10 +207,11 @@
             <!-- bottom -->
             <div class="halfSideBarBottomComponent">
                 <div class="halfSideBarBottomComponentMain">
-                    <div class="halfSideBarBottomElement"
+
+                    <a class="halfSideBarBottomElement" routerLink="/worldmap" target="_blank"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[0]}"
                         (click)="sensorMenuInactiveFunc()">
-                        <a>
+                        <div >
                             <div class="halfSideBarListElement">
                                 <svg *ngIf="!focusToSideBarElement[0]" width="20" height="20" viewBox="0 0 20 20"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,8 +240,8 @@
                                     </defs>
                                 </svg>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
 
                     <div class="halfSideBarBottomElement" routerLink="/guidance"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[1]}"

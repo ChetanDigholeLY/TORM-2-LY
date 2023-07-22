@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'torm-ly';
+
+  disablenavBarForWorldMap: any;
+
+  recieveDataFromSideBar(value: boolean){
+    this.disablenavBarForWorldMap = value;
+    console.log("appComp "+value)
+  }
 }
