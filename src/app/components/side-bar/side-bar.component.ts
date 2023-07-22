@@ -14,7 +14,9 @@ export class SideBarComponent implements OnInit {
   disAbleSideAndNav = false;
 
   // focus on sideBar Element starts
-  focusToSideBarElement = [false,false,false,false];
+  //[0,1,2,3] = main menu
+  //[4,5,6,7] = sensor menu
+  focusToSideBarElement = [false,false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
     for(let i = 0; i<this.focusToSideBarElement.length; i++){
@@ -37,8 +39,8 @@ export class SideBarComponent implements OnInit {
       if(currentUrl === '/performance'){
         this.focusToSideBarElementFunc(3)
       }
-      if(currentUrl === '/sensors'){
-        this.focusToSideBarElementFunc(2)
+      if(currentUrl === '/sensors/livedatafeed'){
+        this.focusToSideBarElementFunc(4)
       }
       if(currentUrl === '/worldmap'){
         this.disAbleSideAndNav = true;

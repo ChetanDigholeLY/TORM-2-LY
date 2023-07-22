@@ -159,12 +159,12 @@ ul {
 }
 
 .activeSideBarElement {
-    background-color: #fff;
+    background-color: #fff !important;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 
-.activeSideBarElement div {
+.activeSideBarElement div{
     color: #00479E;
     font-size: 16px;
     font-weight: 600;
@@ -313,6 +313,13 @@ ul {
 .sensorDropDownListElement {
     color: #EDEEEF;
     padding-left: 36px !important;
+}
+
+
+.sensorMenuText{
+    color: #00479E;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .displaySideNav{
