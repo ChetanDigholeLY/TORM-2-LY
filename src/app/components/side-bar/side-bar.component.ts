@@ -11,8 +11,7 @@ export class SideBarComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
-  isHalfSideBar: boolean = true;
-
+  // focus on sideBar Element starts
   focusToSideBarElement = [false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
@@ -21,6 +20,7 @@ export class SideBarComponent implements OnInit {
     }
     this.focusToSideBarElement[value] = true
   }
+  // focus on sideBar Element ends
 
   ngOnInit(): void {
     // Subscribe to NavigationEnd event to get the current URL when the route changes
@@ -41,8 +41,24 @@ export class SideBarComponent implements OnInit {
     });
   }
 
+  // sideBar toggle feature starts
+  isHalfSideBar: boolean = false;
+
   halfSideBarActive(): void {
     this.isHalfSideBar = !this.isHalfSideBar;
   }
+  // sideBar toggle feature ends
+
+  //sideBar for sensor starts
+  isSensorMenu: boolean = false;
+
+  sensorMenuActiveFunc(){
+    this.isSensorMenu = true;
+  }
+
+  sensorMenuInactiveFunc(){
+    this.isSensorMenu = false;
+  }
+  //sideBar for sensor ends
 
 }
