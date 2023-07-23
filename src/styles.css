@@ -81,6 +81,7 @@ ul {
 .logoImgDesk {
     width: 35px;
     height: 26px;
+    margin-top: 8px;
 }
 
 .logoTextDesktop {
@@ -164,7 +165,7 @@ ul {
     border-bottom-left-radius: 12px;
 }
 
-.activeSideBarElement div{
+.activeSideBarElement div {
     color: #00479E;
     font-size: 16px;
     font-weight: 600;
@@ -316,12 +317,133 @@ ul {
 }
 
 
-.sensorMenuText{
+.sensorMenuText {
     color: #00479E;
     font-size: 16px;
     font-weight: 600;
 }
 
-.displaySideNav{
+.displaySideNav {
     display: none;
+}
+
+.worldMapMain {
+    width: 100vw;
+    height: 100vh;
+}
+
+.worldMapMainDesktop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.worldMapMainCoverImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.worldMapNavBarDropDownBtn {
+    position: absolute;
+    top: 14px;
+    left: 8px;
+    width: 46px;
+    height: 80px;
+    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+    border-radius: 4px;
+}
+
+.WorldMapDropDownLogo {
+    height: 58px;
+    border-bottom: 1px solid #EDEEEF;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.dropDownSvgWorldMap {
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    left: 10px;
+    rotate: 180deg;
+}
+
+.worldMapSideBarMain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+    animation: expandDropdown 0.3s ease forwards;
+    width: 60px;
+}
+
+@keyframes expandDropdown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100vh;
+    }
+}
+
+.worldMapSideBarLogoSection{
+    height: 72px;
+    border-bottom: 1px solid #EDEEEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.worldMapSideBarCollpsBtn{
+    position: absolute;
+    top: 58px;
+    left: 18px;
+}
+.worldmapSideBarList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 40px;
+}
+
+.worldMapSideBarEle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.worldMapSideBarEle:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.worldMapActiveEle{
+    background: #FFF !important;
+}
+
+.vesselDropDownOnWorldMap{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.vesselDropDownOnWorldMain{
+    background: rgba(255, 255, 255, 0.60);
+}
+
+.dropDownVesselMenu{
+    width: 230px !important;
+    padding: 8px 16px;
 }

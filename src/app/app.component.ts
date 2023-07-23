@@ -12,6 +12,5 @@ export class AppComponent {
 
   recieveDataFromSideBar(value: boolean){
     this.disablenavBarForWorldMap = value;
-    console.log("appComp "+value)
   }
 }

@@ -1,1 +1,131 @@
-<p>worldmap works!</p>
+<div class="worldMapMain">
+
+    <!-- for desktop view -->
+    <div class="worldMapMainDesktop">
+        <img class="worldMapMainCoverImage" src="./assets/images/image 24.png" />
+
+        <div class="worldMapNavBarDropDownBtn"  *ngIf="!isSideBarOpen">
+            <div class="WorldMapDropDownLogo">
+                <img class="logoImgDesk" src="./assets/images/logo.png" />
+            </div>
+            <div class="dropDownSvgWorldMap" (click)="sideBarOpenFunc()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="23.9989" y="24.0002" width="24" height="24" rx="6" transform="rotate(180 23.9989 24.0002)" fill="#0154BD"/>
+                    <path d="M16.9989 17.0002L11.9989 13.0002L6.9989 17.0002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.9989 11.0002L11.9989 7.00024L6.9989 11.0002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </div>
+        </div>
+
+        <div class="worldMapSideBarMain" *ngIf="isSideBarOpen">
+
+            <!-- logo section starts -->
+            <div class="worldMapSideBarLogoSection">
+                <img class="logoImgDesk" src="./assets/images/logo.png" />
+                <div class="worldMapSideBarCollpsBtn" (click)="sideBarOpenFunc()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="23.9989" y="24.0002" width="24" height="24" rx="6" transform="rotate(180 23.9989 24.0002)" fill="#0154BD"/>
+                        <path d="M16.9989 17.0002L11.9989 13.0002L6.9989 17.0002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.9989 11.0002L11.9989 7.00024L6.9989 11.0002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </div>                   
+            </div>
+            <!-- logo section ends -->
+
+            <!-- middle section starts -->
+            
+                <!-- sideBar elements starts -->
+                <div class="worldmapSideBarList">
+                    <a class="worldMapSideBarEle worldMapActiveEle" routerLink="/worldmap" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_148_6365)">
+                            <path d="M14.4541 2.95564C13.9988 3.29303 13.7037 3.83428 13.7037 4.44447C13.7037 5.46721 12.8746 6.29632 11.8519 6.29632C10.8291 6.29632 10 7.12542 10 8.14817C10 9.17092 10.8291 10 11.8519 10C12.8746 10 13.7037 10.8291 13.7037 11.8519C13.7037 12.8746 14.5328 13.7037 15.5556 13.7037H17.4671M14.4541 2.95564C13.1657 2.13931 11.6381 1.66669 10 1.66669C5.7106 1.66669 2.17813 4.90747 1.71753 9.07409M14.4541 2.95564C16.7856 4.4329 18.3333 7.03571 18.3333 10C18.3333 14.6024 14.6024 18.3334 10 18.3334C8.01547 18.3334 6.19296 17.6397 4.76173 16.4815M4.76173 16.4815L7.22223 16.4815C8.24498 16.4815 9.07408 15.6524 9.07408 14.6297C9.07408 13.6069 8.24498 12.7778 7.22223 12.7778C6.19948 12.7778 5.37038 11.9487 5.37038 10.9259C5.37038 9.9032 4.54127 9.07409 3.51852 9.07409H1.71753M4.76173 16.4815C2.87377 14.9538 1.66667 12.6179 1.66667 10C1.66667 9.68705 1.68392 9.37811 1.71753 9.07409" stroke="#003A78" stroke-width="1.5" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_148_6365">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <a class="worldMapSideBarEle" routerLink="/guidance"  target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.73303 7.32836C5.04485 4.57571 7.30912 2.5 10 2.5C12.6909 2.5 14.9551 4.57571 15.267 7.32836L15.5544 9.86542C15.6258 10.4958 15.8813 11.0891 16.2871 11.5667C17.1483 12.5803 16.4493 14.1667 15.1415 14.1667H4.85844C3.55067 14.1667 2.85173 12.5803 3.71291 11.5667C4.11871 11.0891 4.37421 10.4958 4.44563 9.86542L4.73303 7.32836Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M12.5 15.8333C12.1361 16.8043 11.1542 17.5 10 17.5C8.84581 17.5 7.8639 16.8043 7.5 15.8333" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                            
+                    </a>
+
+                    <a class="worldMapSideBarEle" routerLink="/sensors/livedatafeed" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54939 4.54939C4.79347 4.30532 4.79347 3.90959 4.54939 3.66551C4.30531 3.42143 3.90958 3.42143 3.66551 3.66551C2.04505 5.28597 1.04167 7.52641 1.04167 10C1.04167 12.4736 2.04505 14.7141 3.66551 16.3345C3.90958 16.5786 4.30531 16.5786 4.54939 16.3345C4.79347 16.0904 4.79347 15.6947 4.54939 15.4506C3.15377 14.055 2.29167 12.1288 2.29167 10C2.29167 7.87124 3.15377 5.94501 4.54939 4.54939ZM16.3345 3.66551C16.0904 3.42143 15.6947 3.42143 15.4506 3.66551C15.2065 3.90959 15.2065 4.30532 15.4506 4.54939C16.8462 5.94501 17.7083 7.87124 17.7083 10C17.7083 12.1288 16.8462 14.055 15.4506 15.4506C15.2065 15.6947 15.2065 16.0904 15.4506 16.3345C15.6947 16.5786 16.0904 16.5786 16.3345 16.3345C17.955 14.7141 18.9583 12.4736 18.9583 10C18.9583 7.52641 17.955 5.28597 16.3345 3.66551ZM6.90641 6.90642C7.15049 6.66234 7.15049 6.26661 6.90641 6.02253C6.66234 5.77846 6.26661 5.77846 6.02253 6.02253C5.00529 7.03977 4.37501 8.44688 4.37501 10C4.37501 11.5531 5.00529 12.9602 6.02253 13.9775C6.26661 14.2216 6.66234 14.2216 6.90641 13.9775C7.15049 13.7334 7.15049 13.3377 6.90641 13.0936C6.11401 12.3012 5.62501 11.2083 5.62501 10C5.62501 8.79171 6.11401 7.69882 6.90641 6.90642ZM13.9775 6.02253C13.7334 5.77846 13.3377 5.77846 13.0936 6.02253C12.8495 6.26661 12.8495 6.66234 13.0936 6.90642C13.886 7.69882 14.375 8.79171 14.375 10C14.375 11.2083 13.886 12.3012 13.0936 13.0936C12.8495 13.3377 12.8495 13.7334 13.0936 13.9775C13.3377 14.2216 13.7334 14.2216 13.9775 13.9775C14.9947 12.9602 15.625 11.5531 15.625 10C15.625 8.44688 14.9947 7.03977 13.9775 6.02253ZM10 12.0833C11.1506 12.0833 12.0833 11.1506 12.0833 9.99999C12.0833 8.8494 11.1506 7.91666 10 7.91666C8.84941 7.91666 7.91667 8.8494 7.91667 9.99999C7.91667 11.1506 8.84941 12.0833 10 12.0833Z" fill="#EDEEEF"/>
+                        </svg>                            
+                    </a>
+
+                    <a class="worldMapSideBarEle" routerLink="/performance" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.00001 9.99999H5.83334C6.75381 9.99999 7.50001 9.2538 7.50001 8.33332V7.49999C7.50001 6.57952 8.2462 5.83332 9.16667 5.83332C10.0871 5.83332 10.8333 6.57952 10.8333 7.49999V12.5C10.8333 13.4205 11.5795 14.1667 12.5 14.1667C13.4205 14.1667 14.1667 13.4205 14.1667 12.5V11.6667C14.1667 10.7462 14.9129 9.99999 15.8333 9.99999H16.6667M1.66667 1.66666V14.1667C1.66667 16.0076 3.15906 17.5 5.00001 17.5H18.3333" stroke="#EDEEEF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>                                                       
+                    </a>
+                </div>
+                <!-- sideBar elements ends -->
+
+            <!-- middle section ends -->
+
+        </div>
+        
+        <div class="vesselDropDownOnWorldMap">
+            <div class="navbarDropDown vesselDropDownOnWorldMain" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="navBarDropDownMain">
+                    <div class="navBarDropDownLeft">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H8L6.63938 10.0133L3 10V12Z" stroke="#003A78" stroke-width="0.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.9447 5.66406L19.3447 12.2708H18.6127L18.9447 5.66406Z" stroke="#003A78"
+                                stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M3.00105 13.3488C3.01707 14.1068 3.16028 16.0863 4.1684 17.7786C4.25036 17.9159 4.36908 17.9972 4.49439 17.9972L19.1017 18C19.2101 18 19.3147 17.9594 19.4089 17.8837C19.8385 17.5363 21.0577 16.3357 21.9848 13.3502C22.0357 13.1863 21.9527 13 21.8293 13L3.21115 13.0294C3.0915 13.0294 2.99634 13.1737 3.00011 13.346L3.00105 13.3488Z"
+                                stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 19.1024L3.09 19.0813" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21.6562 19.9474L14.3443 19.9263" stroke="#003A78" stroke-width="0.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.7998 19.9521H10.1998" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.6001 19.9519H4.9001" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M14 10H17V12H14V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10 10H13V12H10V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 7H15V9H12V7Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M19.6001 7.77881H18.3471" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M19.6001 8.55444H19.1201" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M18.7539 9.45312H18.3469" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+    
+                        <div>Torm Alice</div>
+                    </div>
+                    <div class="navBarDropDownRight">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 14L17 10" stroke="#1E2124" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="dropdown-menu dropDownVesselMenu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- desktop view ends -->
+</div>

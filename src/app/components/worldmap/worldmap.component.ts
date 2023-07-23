@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class WorldmapComponent {
 
+  // code for world map sidebar starts
+  isSideBarOpen: boolean = false;
+
+  sideBarOpenFunc(){
+    this.isSideBarOpen = !this.isSideBarOpen
+  }
+  // code for world map sidebar ends
+
 }
