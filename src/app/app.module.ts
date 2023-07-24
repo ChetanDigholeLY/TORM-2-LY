@@ -12,6 +12,10 @@ import { PerformanceComponent } from './components/performance/performance.compo
 import { SensorsComponent } from './components/sensors/sensors.component';
 import { WorldmapComponent } from './components/worldmap/worldmap.component';
 import { LiveDataFeedComponent } from './components/live-data-feed/live-data-feed.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/guidance', pathMatch: 'full' },
@@ -42,6 +46,9 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatExpansionModule,
+    MatCheckboxModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

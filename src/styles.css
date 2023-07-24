@@ -437,13 +437,77 @@ ul {
     position: absolute;
     top: 24px;
     right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .vesselDropDownOnWorldMain{
     background: rgba(255, 255, 255, 0.60);
+    width: 250px !important;
+    cursor: pointer;
 }
 
 .dropDownVesselMenu{
     width: 230px !important;
     padding: 8px 16px;
+    background-color: #FFFFFF;
+}
+.vesselDropDownOnWorldMainMenu{
+    width: 250px !important;
+    border-radius: 8px;
+}
+
+.rotateVesselArrowWorldMap{
+    rotate: 180deg;
+}
+
+.vesselDropDownOnWorldMapEle{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+mat-checkbox .mdc-form-field  label{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #596069 !important;
+}
+
+.vesselCheckBoxText{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #596069 !important;
+}
+
+.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background, .mdc-checkbox__ripple , .mdc-checkbox-selected-icon-color {
+    background-color: #016BFF !important;
+    border-color: #016BFF !important;
+}
+.blueTextForVesselDropDownEle{
+    color: #016BFF !important;
+}
+
+/* .mat-mdc-checkbox .example-margin .mat-accent .mdc-checkbox .mat-mdc-checkbox-touch-target .mdc-checkbox__native-control .mdc-checkbox__ripple .mdc-checkbox__background .mat-ripple .mat-mdc-checkbox-ripple .mat-mdc-focus-indicator .mdc-checkbox{
+    background-color: #016BFF !important;
+    border-color: #016BFF !important;
+} */
+
+.mat-mdc-checkbox.mat-accent {
+    --mdc-checkbox-selected-icon-color: #016BFF !important;
+  }
+
+.nestedVesselOfLR{
+    margin-left: 56px;
+}
+
+.flexNestedEleDropDownWorld{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.rotateVesselForCheckBox{
+    rotate: 90deg;
 }
