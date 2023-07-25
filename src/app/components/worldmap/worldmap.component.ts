@@ -64,45 +64,91 @@ export class WorldmapComponent {
       return;
     }
     this.task.subtasks.forEach(t => (t.completed = completed));
+
+    //custom
+    this.setAlllr1TextBlueFunc()
   }
 
   // nested vessel drop down checkBox ends
 
-  blueText: boolean = false;
+  // blueText: boolean = false;
 
-  lr1 = [false, false, false, false];
-  vesselNameFromDropDown = [false, false, false, false, false, false, false, false]
+  // lr1 = [false, false, false, false];
+  // vesselNameFromDropDown = [false, false, false, false, false, false, false, false]
 
-  onCheckboxChange(event: string){
-    if(event === 'LR1'){
-      for(let i=0; i<4; i++){
-        this.lr1[i] = !this.lr1[i];
+  // onCheckboxChange(event: string){
+  //   if(event === 'LR1'){
+  //     for(let i=0; i<4; i++){
+  //       this.lr1[i] = !this.lr1[i];
+  //     }
+  //   }
+  //   if(event === 'ActiveVessels1'){
+  //     this.vesselNameFromDropDown[0] = !this.vesselNameFromDropDown[0];
+  //   }
+  //   if(event === 'ActiveVessels2'){
+  //     this.vesselNameFromDropDown[1] = !this.vesselNameFromDropDown[1];
+  //   }
+  //   if(event === 'Torm Holland'){
+  //     this.lr1[0] = !this.lr1[0];
+  //   }
+  //   if(event === 'Torm Alice'){
+  //     this.lr1[1] = !this.lr1[1];
+  //   }
+  //   if(event === 'Torm Poland'){
+  //     this.lr1[2] = !this.lr1[2];
+  //   }
+  //   if(event === 'Torm India'){
+  //     this.lr1[3] = !this.lr1[3];
+  //   }
+  //   if(event === 'LR2'){
+  //     this.vesselNameFromDropDown[6] = !this.vesselNameFromDropDown[6];
+  //   }
+  //   if(event === 'sold'){
+  //     this.vesselNameFromDropDown[7] = !this.vesselNameFromDropDown[7];
+  //   }
+  // }
+
+  vesselCheckTextBlue = [false, false, false, false, false]
+  lr1VesselText = [false, false, false, false]
+
+  setAlllr1TextBlueFunc(){
+    if(this.allComplete){
+      for (let i = 0; i < this.lr1VesselText.length; i++) {
+        this.lr1VesselText[i] = true;
+        
       }
     }
-    if(event === 'ActiveVessels1'){
-      this.vesselNameFromDropDown[0] = !this.vesselNameFromDropDown[0];
-    }
-    if(event === 'ActiveVessels2'){
-      this.vesselNameFromDropDown[1] = !this.vesselNameFromDropDown[1];
-    }
-    if(event === 'Torm Holland'){
-      this.lr1[0] = !this.lr1[0];
-    }
-    if(event === 'Torm Alice'){
-      this.lr1[1] = !this.lr1[1];
-    }
-    if(event === 'Torm Poland'){
-      this.lr1[2] = !this.lr1[2];
-    }
-    if(event === 'Torm India'){
-      this.lr1[3] = !this.lr1[3];
-    }
-    if(event === 'LR2'){
-      this.vesselNameFromDropDown[6] = !this.vesselNameFromDropDown[6];
-    }
-    if(event === 'sold'){
-      this.vesselNameFromDropDown[7] = !this.vesselNameFromDropDown[7];
+    else if(!this.allComplete){
+      for (let i = 0; i < this.lr1VesselText.length; i++) {
+        this.lr1VesselText[i] = false;
+        
+      }
     }
   }
+  // nested vessel drop down checkBox ends
+
+  // vessel sideBar starts
+  isVesselSideBar = true;
+  vesselSideBar(){
+    this.isVesselSideBar = !this.isVesselSideBar;
+  }
+  // vessel sideBar ends
+
+  //vessel accrodian starts
+  accordionWorldMap = [false, false, false, false];
+
+  accordionWorldMapFunc(val: number){
+
+    for (let i = 0; i < this.accordionWorldMap.length; i++) {
+      this.accordionWorldMap[i] = false;
+    }
+    this.accordionWorldMap[val] = true;
+  }
+
+  toggleWorldMapFunc(val: number){
+    this.accordionWorldMap[val] = !this.accordionWorldMap[val]
+  }
+  //vessel accrodian ends
+
 
 }

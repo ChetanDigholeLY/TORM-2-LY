@@ -59,7 +59,7 @@ ul {
 
 .navBarDropDownLeft {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
 }
 
@@ -330,6 +330,7 @@ ul {
 .worldMapMain {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .worldMapMainDesktop {
@@ -392,7 +393,7 @@ ul {
     }
 }
 
-.worldMapSideBarLogoSection{
+.worldMapSideBarLogoSection {
     height: 72px;
     border-bottom: 1px solid #EDEEEF;
     display: flex;
@@ -402,12 +403,13 @@ ul {
     position: relative;
 }
 
-.worldMapSideBarCollpsBtn{
+.worldMapSideBarCollpsBtn {
     position: absolute;
     top: 58px;
     left: 18px;
 }
-.worldmapSideBarList{
+
+.worldmapSideBarList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,7 +417,7 @@ ul {
     margin-top: 40px;
 }
 
-.worldMapSideBarEle{
+.worldMapSideBarEle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -425,15 +427,15 @@ ul {
     cursor: pointer;
 }
 
-.worldMapSideBarEle:hover{
+.worldMapSideBarEle:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.worldMapActiveEle{
+.worldMapActiveEle {
     background: #FFF !important;
 }
 
-.vesselDropDownOnWorldMap{
+.vesselDropDownOnWorldMap {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -443,49 +445,53 @@ ul {
     gap: 16px;
 }
 
-.vesselDropDownOnWorldMain{
+.vesselDropDownOnWorldMain {
     background: rgba(255, 255, 255, 0.60);
     width: 250px !important;
     cursor: pointer;
 }
 
-.dropDownVesselMenu{
+.dropDownVesselMenu {
     width: 230px !important;
     padding: 8px 16px;
     background-color: #FFFFFF;
 }
-.vesselDropDownOnWorldMainMenu{
+
+.vesselDropDownOnWorldMainMenu {
     width: 250px !important;
     border-radius: 8px;
 }
 
-.rotateVesselArrowWorldMap{
+.rotateVesselArrowWorldMap {
     rotate: 180deg;
 }
 
-.vesselDropDownOnWorldMapEle{
+.vesselDropDownOnWorldMapEle {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-mat-checkbox .mdc-form-field  label{
+mat-checkbox .mdc-form-field label {
     font-size: 16px !important;
     font-weight: 400 !important;
     color: #596069 !important;
 }
 
-.vesselCheckBoxText{
+.vesselCheckBoxText {
     font-size: 16px !important;
     font-weight: 400 !important;
     color: #596069 !important;
 }
 
-.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background, .mdc-checkbox__ripple , .mdc-checkbox-selected-icon-color {
+.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background,
+.mdc-checkbox__ripple,
+.mdc-checkbox-selected-icon-color {
     background-color: #016BFF !important;
     border-color: #016BFF !important;
 }
-.blueTextForVesselDropDownEle{
+
+.blueTextForVesselDropDownEle {
     color: #016BFF !important;
 }
 
@@ -496,18 +502,208 @@ mat-checkbox .mdc-form-field  label{
 
 .mat-mdc-checkbox.mat-accent {
     --mdc-checkbox-selected-icon-color: #016BFF !important;
-  }
+}
 
-.nestedVesselOfLR{
+.nestedVesselOfLR {
     margin-left: 56px;
 }
 
-.flexNestedEleDropDownWorld{
+.flexNestedEleDropDownWorld {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
 
-.rotateVesselForCheckBox{
+.rotateVesselForCheckBox {
     rotate: 90deg;
+}
+
+.WorldMapDropDownActiveText {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1E2124;
+}
+
+.numberOnDropDownForWorldMap {
+    color: #003A78;
+    font-size: 12px;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    border-radius: 40px;
+    background-color: #E1EFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shipOnWorldMap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    cursor: pointer;
+}
+
+.shipOnWorldMapText {
+    background-color: #1E2124;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.vesselSideBarMain {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(2px);
+}
+
+.vesselSideBarMainContent {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordionWorldMapEle {
+    width: 392px;
+}
+
+.firstAccordionWorldMapHead {
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.dropDownOnShipSideBar{
+    background: rgba(255, 255, 255, 0.60);
+}
+
+.firstAccordionWorldMapHeadRight , .firstAccordionWorldMapHeadLeft{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.accordionWorldMapSideBarBody{
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.60);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.loacationAtWorldMapSidebar{
+    width: 296px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    background: #F4F5F6;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+}
+
+.loacationAtWorldMapSidebarText{
+    font-size: 16px;
+    font-weight: 600;
+    color: #596069;
+}
+.secondWorldMapEle{
+    display: flex;
+    justify-content: space-between;
+    width: 392px;
+}
+
+.borderBottomZeroAccordion , .borderBottomZeroAccordion > div {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    background-color: #F1F1F1 !important;
+    font-weight: 600;
+    color: #1E2124;
+}
+
+.voyageInfoAccordion{
+    display: flex;
+    flex-direction: column;
+}
+
+.actualAccordionWorldMapEleHead{
+    background: rgba(255, 255, 255, 0.60);
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.actualAccordionHeadText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #596069;
+}
+
+.actualAccordionWorldMapEleBody{
+    background: rgba(255, 255, 255, 0.60);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.HeadWhiteeActive{
+    background-color: #F1F1F1;
+}
+
+
+.voyageInfoAccordion{
+    display: flex;
+    flex-direction: column;
+    /* gap: 8px; */
+}
+.voyageAccordionFlexEle{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+}
+
+.voyageAccordionLeftEle{
+    color: #596069;
+    font-size: 16px;
+    font-weight: 400;
+}
+.voyageAccordionRightEle{
+    font-size: 16px;
+    font-weight: 600;
+    color: #596069;
+}
+.flexSelfCrewDetails{
+    justify-self: flex-end;
+}
+.crewDetailsFlexBetween{
+    justify-content: space-between;
+}
+.crewDetailsFlexHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sixCrewText{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #003A78 !important;
+    padding: 4px 8px !important;
+    background-color: #A8CCFF !important;
+    margin: 0 !important;
+    border-radius: 4px;
+}
+.textBoldCrew{
+    font-weight: 600;
 }

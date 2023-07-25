@@ -4,6 +4,7 @@
     <div class="worldMapMainDesktop">
         <img class="worldMapMainCoverImage" src="./assets/images/image 24.png" />
 
+        <!-- toggle button to open navivagation sideBar starts -->
         <div class="worldMapNavBarDropDownBtn" *ngIf="!isSideBarOpen">
             <div class="WorldMapDropDownLogo">
                 <img class="logoImgDesk" src="./assets/images/logo.png" />
@@ -19,7 +20,10 @@
                 </svg>
             </div>
         </div>
+        <!-- toggle button to open navivagation sideBar ends -->
 
+
+        <!-- navigation sideBar starts -->
         <div class="worldMapSideBarMain" *ngIf="isSideBarOpen">
 
             <!-- logo section starts -->
@@ -90,8 +94,11 @@
             <!-- middle section ends -->
 
         </div>
+        <!-- navigation sideBar ends -->
 
-        <div class="vesselDropDownOnWorldMap">
+
+        <!-- drop down world map starts -->
+        <div class="vesselDropDownOnWorldMap" *ngIf="!isVesselSideBar">
             <div class="navbarDropDown vesselDropDownOnWorldMain" (click)="vesselDropDownWorldMapFunc()">
                 <div class="navBarDropDownMain">
                     <div class="navBarDropDownLeft">
@@ -125,8 +132,9 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
-                        <div>Torm Alice</div>
+                        <div class="WorldMapDropDownActiveText">Active vessels</div>
                     </div>
+                    <div class="numberOnDropDownForWorldMap">+3</div>
                     <div class="navBarDropDownRight"
                         [ngClass]="{'rotateVesselArrowWorldMap':isVesselDropDrownWorldmap}">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,9 +155,9 @@
                                     fill="#596069" />
                             </svg>
                         </div>
-                        <mat-checkbox (change)="onCheckboxChange('ActiveVessels1')"
-                            class="example-margin vesselCheckBoxText" [(ngModel)]="vesselNameFromDropDown[0]"></mat-checkbox><span class="vesselCheckBoxText"
-                            [ngClass]="{'blueTextForVesselDropDownEle':vesselNameFromDropDown[0]}">All Vessels</span>
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[0]"
+                            class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[0]}">All Vessels</span>
                     </div>
                     <div class="vesselDropDownOnWorldMapEle">
                         <div>
@@ -160,9 +168,9 @@
                                     fill="#596069" />
                             </svg>
                         </div>
-                        <mat-checkbox (change)="onCheckboxChange('ActiveVessels2')"
-                            class="example-margin vesselCheckBoxText" [(ngModel)]="vesselNameFromDropDown[1]"></mat-checkbox><span class="vesselCheckBoxText"
-                            [ngClass]="{'blueTextForVesselDropDownEle':vesselNameFromDropDown[1]}">Active Vessels</span>
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[1]"
+                            class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[1]}">Active Vessels</span>
                     </div>
 
                     <!-- nested starts -->
@@ -184,7 +192,7 @@
                                         fill="#016BFF" />
                                 </svg>
                             </div>
-                            <mat-checkbox (change)="onCheckboxChange('LR1')" [checked]="allComplete"
+                            <mat-checkbox [(ngModel)]="vesselCheckTextBlue[2]" [checked]="allComplete"
                                 [indeterminate]="someComplete()" (change)="setAll($event.checked)"
                                 class="example-margin vesselCheckBoxText"></mat-checkbox><span
                                 class="vesselCheckBoxText" [ngClass]="{'blueTextForVesselDropDownEle':allComplete}">LR
@@ -195,13 +203,13 @@
                             <div class="vesselDropDownOnWorldMapEle flexNestedEleDropDownWorld">
                                 <div *ngFor="let subtask of task.subtasks; let i = index">
 
-                                    <mat-checkbox (change)="onCheckboxChange(subtask.name)"
+                                    <mat-checkbox [(ngModel)]="lr1VesselText[i]"
                                         [(ngModel)]="subtask.completed" (ngModelChange)="updateAllComplete()"
-                                        class="example-margin vesselCheckBoxText" [(ngModel)]="lr1[i]">
+                                        class="example-margin vesselCheckBoxText">
                                     </mat-checkbox>
                                     <span
                                         class="vesselCheckBoxText"
-                                        [ngClass]="{'blueTextForVesselDropDownEle':lr1[i]}">{{subtask.name}}</span>
+                                        [ngClass]="{'blueTextForVesselDropDownEle':lr1VesselText[i]}">{{subtask.name}}</span>
 
                                 </div>
                             </div>
@@ -218,8 +226,8 @@
                                     fill="#596069" />
                             </svg>
                         </div>
-                        <mat-checkbox (change)="onCheckboxChange('LR2')" class="example-margin" [(ngModel)]="vesselNameFromDropDown[6]"></mat-checkbox><span class="vesselCheckBoxText"
-                        [ngClass]="{'blueTextForVesselDropDownEle':vesselNameFromDropDown[6]}">Active Vessels</span>
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]" class="example-margin"></mat-checkbox><span class="vesselCheckBoxText"
+                        [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[3]}">LR 2</span>
                     </div>
 
                     <div class="vesselDropDownOnWorldMapEle">
@@ -231,16 +239,299 @@
                                     fill="#596069" />
                             </svg>
                         </div>
-                        <mat-checkbox (change)="onCheckboxChange('solld')"
-                            class="example-margin vesselCheckBoxText" [(ngModel)]="vesselNameFromDropDown[7]"></mat-checkbox><span class="vesselCheckBoxText"
+                        <mat-checkbox
+                            class="example-margin vesselCheckBoxText" [(ngModel)]="vesselCheckTextBlue[4]"></mat-checkbox><span class="vesselCheckBoxText"
                             
-                            [ngClass]="{'blueTextForVesselDropDownEle':vesselNameFromDropDown[7]}">Sold</span>
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[4]}">Sold</span>
                     </div>
 
                 </div>
             </div>
 
 
+        </div>
+        <!-- drop down world map ends -->
+
+
+        <!-- ship icon for toggle starts -->
+        <div class="shipOnWorldMap" (click)="vesselSideBar()">
+            
+            <svg width="74" height="51" viewBox="0 0 74 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M64.9915 23.7683C64.9915 23.7683 68.0252 21.2402 67.0139 17.1953C66.0027 13.1503 61.9576 12.6447 61.9576 12.6447" stroke="white" stroke-width="1.01124" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M61.472 22.404C61.472 22.404 63.6014 20.7577 62.9735 18.2219C62.3456 15.686 59.5712 15.4347 59.5712 15.4347" stroke="white" stroke-width="1.01124" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path opacity="0.2" d="M69.5273 24.5578C69.5273 24.5578 72.4213 21.5173 71.0549 16.1703C69.6886 10.8233 65.5113 9.83292 65.5113 9.83292" stroke="white" stroke-width="1.01124" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M39.8946 44.4241C50.414 41.6054 56.6567 30.7927 53.8381 20.2732C51.0194 9.75377 40.2067 3.51104 29.6872 6.32973C19.1677 9.14841 12.925 19.9611 15.7437 30.4806C18.5624 41.0001 29.3751 47.2428 39.8946 44.4241Z" fill="#016BFF" fill-opacity="0.5" stroke="#1E2124" stroke-width="1.01124"/>
+                <path d="M51.6249 31.174C51.6249 31.174 55.8103 29.4055 58.1379 26.1141C58.5834 25.4842 58.6551 24.6785 58.4516 23.9344L56.113 15.3825C55.8914 14.5722 55.3448 13.8882 54.5566 13.5974C52.983 13.017 50.0121 12.2059 46.4745 12.6299L19.1765 19.8142C19.1765 19.8142 11.5636 22.9479 4.75772 32.1021C4.04626 33.0591 4.38245 34.3952 5.47014 34.884C9.01807 36.4781 16.7289 39.4024 23.948 38.5248L51.6249 31.174Z" fill="#E73C3C" stroke="#F2F4F4" stroke-width="1.01124" stroke-miterlimit="10"/>
+                <path d="M42.2185 15.6737L46.1753 30.4407L53.3413 28.5206L49.3844 13.7536L42.2185 15.6737Z" fill="#BDE0F2"/>
+                <path d="M43.4916 16.9446L46.6394 28.6923L52.065 27.2385L48.9172 15.4908L43.4916 16.9446Z" fill="#F2F4F4"/>
+                <path d="M38.1011 23.4063L34.3511 24.4111L33.1193 19.8138L29.1045 20.9215L30.2966 25.4975L19.5966 28.3645L18.5311 24.3879L15.6357 25.1637L16.6694 29.1489L11.0922 30.6433" stroke="white" stroke-width="1.01124" stroke-miterlimit="10"/>
+                <path d="M41.1347 24.4175L37.3848 25.4223L38.8473 30.8806L34.8151 31.9231L33.3303 26.5087L22.6303 29.3758L23.8954 34.0972L21 34.873L19.7031 30.1601L14.1259 31.6545" stroke="white" stroke-width="1.01124" stroke-miterlimit="10"/>
+                <path d="M12.8934 27.4047L14.9159 34.989" stroke="white" stroke-width="1.01124"/>
+                <path d="M15.9271 26.3934L17.9496 33.9777" stroke="white" stroke-width="1.01124"/>
+                <path d="M24.017 24.371L26.0394 31.9553" stroke="white" stroke-width="1.01124"/>
+                <path d="M27.0507 23.3597L29.0731 30.944" stroke="white" stroke-width="1.01124"/>
+                <path d="M37.1631 19.8204L39.1856 27.4047" stroke="white" stroke-width="1.01124"/>
+                <path d="M40.1968 19.8204L42.2192 27.4047" stroke="white" stroke-width="1.01124"/>
+                <path d="M7.26183 33.4437L7.26325 33.449C7.50396 34.3473 8.42734 34.8805 9.32568 34.6397L9.33098 34.6383C10.2293 34.3976 10.7624 33.4742 10.5217 32.5759L10.5203 32.5706C10.2796 31.6723 9.35621 31.1391 8.45787 31.3799L8.45258 31.3813C7.55424 31.622 7.02112 32.5454 7.26183 33.4437Z" fill="#BDE0F2"/>
+                <path d="M8.6735 32.0826C8.21195 32.2063 7.93804 32.6807 8.06172 33.1422C8.18539 33.6038 8.65981 33.8777 9.12136 33.754C9.58291 33.6303 9.85682 33.1559 9.73315 32.6944C9.60947 32.2328 9.13506 31.9589 8.6735 32.0826Z" fill="white"/>
+            </svg>
+                
+            <div class="shipOnWorldMapText">Torm Alice</div>  
+        </div>
+        <!-- ship icon for toggle ends  -->
+
+        <!-- vessel sideBar starts -->
+        <div class="vesselSideBarMain" *ngIf="isVesselSideBar">
+            <div class="vesselSideBarMainContent">
+
+
+                <!-- first accordian -->
+                <div class="accordionWorldMapEle">
+
+                    <!-- head starts -->
+                    <div class="firstAccordionWorldMapHead dropDownOnShipSideBar" (click)="toggleWorldMapFunc(0)" (click)="accordionWorldMapFunc(0)" [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[0]}">
+                        <div class="firstAccordionWorldMapHeadRight">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 12H8L6.63938 10.0133L3 10V12Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.9447 5.664L19.3447 12.2707H18.6127L18.9447 5.664Z" stroke="#003A78" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.00105 13.3488C3.01707 14.1068 3.16028 16.0863 4.1684 17.7786C4.25036 17.9159 4.36908 17.9972 4.49439 17.9972L19.1017 18C19.2101 18 19.3147 17.9594 19.4089 17.8837C19.8385 17.5363 21.0577 16.3357 21.9848 13.3502C22.0357 13.1863 21.9527 13 21.8293 13L3.21115 13.0294C3.0915 13.0294 2.99634 13.1737 3.00011 13.346L3.00105 13.3488Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 19.1024L3.09 19.0812" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.6562 19.9473L14.3443 19.9261" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.7998 19.952H10.1998" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.6001 19.952H4.9001" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 10H17V12H14V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 10H13V12H10V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 7H15V9H12V7Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.6001 7.7789H18.3471" stroke="#003A78" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.6001 8.5545H19.1201" stroke="#003A78" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.7539 9.45309H18.3469" stroke="#003A78" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>Active Vessels</div>
+                        </div>
+                        <div class="firstAccordionWorldMapHeadLeft">
+                            <div class="numberOnDropDownForWorldMap">+3</div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L12 14L17 10" stroke="#1E2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <!-- head ends  -->
+                    <!-- body starts -->
+                    <div class="accordionWorldMapSideBarBody" *ngIf="accordionWorldMap[0]">
+                        <div class="vesselDropDownOnWorldMapList">
+                            <div class="vesselDropDownOnWorldMapEle">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                            fill="#596069" />
+                                    </svg>
+                                </div>
+                                <mat-checkbox [(ngModel)]="vesselCheckTextBlue[0]"
+                                    class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                                    [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[0]}">All Vessels</span>
+                            </div>
+                            <div class="vesselDropDownOnWorldMapEle">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                            fill="#596069" />
+                                    </svg>
+                                </div>
+                                <mat-checkbox [(ngModel)]="vesselCheckTextBlue[1]"
+                                    class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                                    [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[1]}">Active Vessels</span>
+                            </div>
+        
+                            <!-- nested starts -->
+                            <div>
+                                <div class="vesselDropDownOnWorldMapEle">
+                                    <div>
+                                        <svg *ngIf="!allComplete" (click)="nestedVesselCheckBoxFunc()"
+                                            [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBox}" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                                fill="#596069" />
+                                        </svg>
+                                        <svg *ngIf="allComplete" (click)="nestedVesselCheckBoxFunc()"
+                                            [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBox}" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                                fill="#016BFF" />
+                                        </svg>
+                                    </div>
+                                    <mat-checkbox [(ngModel)]="vesselCheckTextBlue[2]" [checked]="allComplete"
+                                        [indeterminate]="someComplete()" (change)="setAll($event.checked)"
+                                        class="example-margin vesselCheckBoxText"></mat-checkbox><span
+                                        class="vesselCheckBoxText" [ngClass]="{'blueTextForVesselDropDownEle':allComplete}">LR
+                                        1</span>
+                                </div>
+        
+                                <div class="nestedVesselOfLR" *ngIf="isNestedVesselCheckBox">
+                                    <div class="vesselDropDownOnWorldMapEle flexNestedEleDropDownWorld">
+                                        <div *ngFor="let subtask of task.subtasks; let i = index">
+        
+                                            <mat-checkbox [(ngModel)]="lr1VesselText[i]"
+                                                [(ngModel)]="subtask.completed" (ngModelChange)="updateAllComplete()"
+                                                class="example-margin vesselCheckBoxText">
+                                            </mat-checkbox>
+                                            <span
+                                                class="vesselCheckBoxText"
+                                                [ngClass]="{'blueTextForVesselDropDownEle':lr1VesselText[i]}">{{subtask.name}}</span>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- nested ends -->
+        
+                            <div class="vesselDropDownOnWorldMapEle">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                            fill="#596069" />
+                                    </svg>
+                                </div>
+                                <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]" class="example-margin"></mat-checkbox><span class="vesselCheckBoxText"
+                                [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[3]}">LR 2</span>
+                            </div>
+        
+                            <div class="vesselDropDownOnWorldMapEle">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                            fill="#596069" />
+                                    </svg>
+                                </div>
+                                <mat-checkbox
+                                    class="example-margin vesselCheckBoxText" [(ngModel)]="vesselCheckTextBlue[4]"></mat-checkbox><span class="vesselCheckBoxText"
+                                    
+                                    [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[4]}">Sold</span>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <!-- body ends -->
+                </div>
+
+                <div class="secondWorldMapEle">
+                    <!-- left -->
+                    <div class="loacationAtWorldMapSidebar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.3821 18.5H22V19.5H21.6179L20.6179 20H19.882L18.882 19.5H18.6179L17.6179 20H16.882L15.882 19.5H15.6179L14.6179 20H13.882L12.882 19.5H12.6179L11.6179 20H10.882L9.88205 19.5H9.6179L8.6179 20H7.88205L6.88205 19.5H6.6179L5.6179 20H4.8821L3.8821 19.5H3.6179L2.6179 20H2V19H2.3821L3.3821 18.5H4.11795L5.11795 19H5.3821L6.3821 18.5H7.11795L8.11795 19H8.3821L9.3821 18.5H10.118L11.118 19H11.3821L12.3821 18.5H13.118L14.118 19H14.3821L15.3821 18.5H16.118L17.118 19H17.3821L18.3821 18.5H19.118L20.118 19H20.3821L21.3821 18.5ZM22 13.5V14.6809L19.5 17.6809V18H18.5V17.3191L20.8491 14.5H18.5811L17.0811 15H3C3 16.2075 4.26585 17.0761 4.27855 17.0847L4.49875 17.2334L4.5 18H3.5V17.7493C3.0327 17.3719 2 16.3816 2 15V14H3.09895L4.09885 9.5H17.25L20.25 13.5H22ZM18.4189 13.5H15.5V12.5H18.25L17.875 12H13.5V11H17.125L16.75 10.5H4.9011L4.12325 14H16.9189L18.4189 13.5ZM6.5 8.1179L6.8091 7.5H8.5V5.5H11.1909L11.6909 6.5H9.5V7.5H14.7929L15.5 8.20705V9H16.5V7.79295L15.2071 6.5H12.8091L11.8091 4.5H7.5V6.5H6.1909L5.5 7.8821V9H6.5V8.1179Z" fill="#596069"/>
+                        </svg>
+                        <div class="loacationAtWorldMapSidebarText">Torm Alice</div>
+                    </div>
+                    <!-- right  -->
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#016BFF"/>
+                        <circle cx="24" cy="24" r="8" stroke="white" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="3" stroke="white" stroke-width="1.5"/>
+                        <path d="M24 16V14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M24 34V32" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M32 24L34 24" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M14 24L16 24" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                        
+                </div>
+
+                <div class="actualAccordionWorldMapEle">
+                    <!-- head  -->
+                    <div class="actualAccordionWorldMapEleHead" [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[1]}" (click)="accordionWorldMapFunc(1)">
+                        
+                        <svg [ngClass]="{'rotateVesselForCheckBox':accordionWorldMap[1]}" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_1_3447)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z" fill="#596069"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_d_1_3447" x="-4" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3447"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3447" result="shape"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                            
+                        <div class="actualAccordionHeadText">Voyage Information</div>
+                    </div>
+                    <!-- body -->
+                    <div class="actualAccordionWorldMapEleBody voyageInfoAccordion" *ngIf="accordionWorldMap[1]">
+                        <div class="voyageAccordionFlexEle">
+                            <div class="voyageAccordionLeftEle">Departure Port</div>
+                            <div class="voyageAccordionRightEle">Mumbai</div>
+                        </div>
+                        <div class="voyageAccordionFlexEle">
+                            <div class="voyageAccordionLeftEle">ETD</div>
+                            <div class="voyageAccordionRightEle">8d 34h 45m</div>
+                        </div>
+                        <div class="voyageAccordionFlexEle">
+                            <div class="voyageAccordionLeftEle">Arrival Port</div>
+                            <div class="voyageAccordionRightEle">Australia</div>
+                        </div>
+                        <div class="voyageAccordionFlexEle">
+                            <div class="voyageAccordionLeftEle">ETA</div>
+                            <div class="voyageAccordionRightEle">7d 42h 54m</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- crew details starts -->
+                <div class="actualAccordionWorldMapEle">
+
+                    <!-- head  -->
+                    <div class="actualAccordionWorldMapEleHead crewDetailsFlexBetween" [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[2]}" (click)="accordionWorldMapFunc(2)">
+                        <div class="crewDetailsFlexHead">
+                            <svg [ngClass]="{'rotateVesselForCheckBox':accordionWorldMap[2]}" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_1_3447)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z" fill="#596069"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_1_3447" x="-4" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3447"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3447" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                                
+                            <div class="actualAccordionHeadText" [ngClass]="{'textBoldCrew':accordionWorldMap[2]}">Crew Details</div>
+                        </div>
+                        <p class="sixCrewText">6 Crew members</p>
+                    </div>
+                    <!-- body  -->
+                    <div class="crewMemberBody">
+                        <div class="crewMemberCabin">
+                            <div>Cabin crew</div>
+                            <div class="">
+                                <div>Captain</div>
+                                <div>Palak Jadhav</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- crew details ends -->
+
+
+            </div>
         </div>
 
     </div>
