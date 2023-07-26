@@ -1,14 +1,21 @@
 <div class="mainComponents">
+    <!-- sideBar -->
     <div class="sideBarMainComponent">
         <app-side-bar (dataToNavEvent)="recieveDataFromSideBar($event)"></app-side-bar>
     </div>
+
+
     <div class="navAndRouteMainComponent">
-        <!-- <div class="navBarMain" *ngIf="!disablenavBarForWorldMap"> -->
+
+        <!-- navBar -->
         <div class="navBarMain">
             <app-nav-bar [dataFromAppComp]="disablenavBarForWorldMap"></app-nav-bar>
         </div>
-        <div>
+
+        <!-- routes -->
+        <div class="routedElementMain">
             <router-outlet></router-outlet>
         </div>
+
     </div>
 </div>

@@ -1,3 +1,4 @@
+<!-- desktop -->
 <div class="navBarMainContainer" *ngIf="!dataFromAppComp">
     <div>
         <div class="navBarGrayHeading">Automated Guidance</div>
@@ -39,7 +40,7 @@
                             stroke-linejoin="round" />
                     </svg>
 
-                    <div>Torm Alice</div>
+                    <div class="navBarDropDownHeadingText">Torm Alice</div>
                 </div>
                 <div class="navBarDropDownRight">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +66,79 @@
                     stroke-linejoin="round" />
             </svg>
         </div>
+    </div>
+
+</div>
+
+<!-- mobile -->
+<div class="mobileNavBarContainer">
+
+    <!-- blue navBar -->
+    <div class="mobileUpperNavBarContainer">
+        <svg (click)="toggleSideBar()" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33337 10.6667C8.33337 10.1145 8.78109 9.66675 9.33337 9.66675H22.6667C23.219 9.66675 23.6667 10.1145 23.6667 10.6667C23.6667 11.219 23.219 11.6667 22.6667 11.6667H9.33337C8.78109 11.6667 8.33337 11.219 8.33337 10.6667ZM8.33337 16.0001C8.33337 15.4478 8.78109 15.0001 9.33337 15.0001H22.6667C23.219 15.0001 23.6667 15.4478 23.6667 16.0001C23.6667 16.5524 23.219 17.0001 22.6667 17.0001H9.33337C8.78109 17.0001 8.33337 16.5524 8.33337 16.0001ZM9.33337 20.3334C8.78109 20.3334 8.33337 20.7811 8.33337 21.3334C8.33337 21.8857 8.78109 22.3334 9.33337 22.3334H22.6667C23.219 22.3334 23.6667 21.8857 23.6667 21.3334C23.6667 20.7811 23.219 20.3334 22.6667 20.3334H9.33337Z" fill="white"/>
+        </svg>
+        
+        <div class="mobileUpperNavBarLeft">
+            <div class="navbarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="navBarDropDownMain">
+                    <div class="navBarDropDownLeft">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H8L6.63938 10.0133L3 10V12Z" stroke="#003A78" stroke-width="0.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.9447 5.66406L19.3447 12.2708H18.6127L18.9447 5.66406Z" stroke="#003A78"
+                                stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M3.00105 13.3488C3.01707 14.1068 3.16028 16.0863 4.1684 17.7786C4.25036 17.9159 4.36908 17.9972 4.49439 17.9972L19.1017 18C19.2101 18 19.3147 17.9594 19.4089 17.8837C19.8385 17.5363 21.0577 16.3357 21.9848 13.3502C22.0357 13.1863 21.9527 13 21.8293 13L3.21115 13.0294C3.0915 13.0294 2.99634 13.1737 3.00011 13.346L3.00105 13.3488Z"
+                                stroke="#003A78" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 19.1024L3.09 19.0813" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21.6562 19.9474L14.3443 19.9263" stroke="#003A78" stroke-width="0.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.7998 19.9521H10.1998" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.6001 19.9519H4.9001" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M14 10H17V12H14V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10 10H13V12H10V10Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 7H15V9H12V7Z" stroke="#003A78" stroke-width="0.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M19.6001 7.77881H18.3471" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M19.6001 8.55444H19.1201" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M18.7539 9.45312H18.3469" stroke="#003A78" stroke-width="0.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+    
+                        <div class="navBarDropDownHeadingText">Torm Alice</div>
+                    </div>
+                    <div class="navBarDropDownRight">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 14L17 10" stroke="#1E2124" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </div>
+            </div>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5588 19.5488C17.5654 16.8918 15.0036 15 12 15C8.99638 15 6.4346 16.8918 5.44117 19.5488M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33285 17.7154 5.44117 19.5488M18.5588 19.5488C16.8031 21.0756 14.5095 22 12 22C9.49052 22 7.19694 21.0756 5.44117 19.5488" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="3" cy="3" r="3" transform="matrix(1 0 0 -1 9 12)" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- white navBar -->
+    <div class="mobileLowerNavBarContainer">
+        <div class="lowerNavbarText">Automated Guidance</div>
     </div>
 
 </div>

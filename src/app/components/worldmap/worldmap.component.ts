@@ -128,14 +128,14 @@ export class WorldmapComponent {
   // nested vessel drop down checkBox ends
 
   // vessel sideBar starts
-  isVesselSideBar = true;
+  isVesselSideBar = false;
   vesselSideBar(){
     this.isVesselSideBar = !this.isVesselSideBar;
   }
   // vessel sideBar ends
 
   //vessel accrodian starts
-  accordionWorldMap = [false, false, false, false];
+  accordionWorldMap = [false, true, false, false];
 
   accordionWorldMapFunc(val: number){
 

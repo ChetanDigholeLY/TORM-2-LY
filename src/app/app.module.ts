@@ -15,6 +15,7 @@ import { LiveDataFeedComponent } from './components/live-data-feed/live-data-fee
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { SidebarService } from './services/sidebar.service';
 
 
 const routes: Routes = [
@@ -51,7 +52,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

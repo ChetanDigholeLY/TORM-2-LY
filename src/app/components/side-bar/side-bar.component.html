@@ -1,8 +1,6 @@
+<!-- desktop -->
 <div class="sideBarMainContainer" [ngClass]="{'displaySideNav' : disAbleSideAndNav}">
 
-
-    <!-- desktop -->
-    <!-- hide for mobile -->
     <div class="sideBarMainContainerForDesktop">
 
         <!--------------------------------------- full side bar -------------------------------------------->
@@ -168,7 +166,8 @@
                             </svg>
                             <div>Sensor</div>
                         </div>
-                        <div class="sideBarListElement sensorDropDownListElement sensorMenuText" [ngClass]="{'activeSideBarElement':focusToSideBarElement[4]}">Live data series</div>
+                        <div class="sideBarListElement sensorDropDownListElement sensorMenuText"
+                            [ngClass]="{'activeSideBarElement':focusToSideBarElement[4]}">Live data series</div>
                         <div class="sideBarListElement sensorDropDownListElement">Time Series</div>
                         <div class="sideBarListElement sensorDropDownListElement">Counters</div>
                         <div class="sideBarListElement sensorDropDownListElement">Placeholder</div>
@@ -211,7 +210,7 @@
                     <a class="halfSideBarBottomElement" routerLink="/worldmap" target="_blank"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[0]}"
                         (click)="sensorMenuInactiveFunc()">
-                        <div >
+                        <div>
                             <div class="halfSideBarListElement">
                                 <svg *ngIf="!focusToSideBarElement[0]" width="20" height="20" viewBox="0 0 20 20"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -329,5 +328,41 @@
             </div>
         </div>
     </div>
+
+</div>
+
+<!-------------------------------- mobile -------------------------------------------->
+
+<div class="mobileSideBarContainer" *ngIf="isMobileSideBarActive">
+
+    <!-- logo section -->
+    <div class="mobileSideBarLogoSection">
+        <div class="mobileLogo">
+            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.5" width="26" height="21" fill="url(#pattern0)" />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_5_7352" transform="scale(0.0384615 0.05)" />
+                    </pattern>
+                    <image id="image0_5_7352" width="130" height="20"
+                        xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg>
+            <div class="mobileNexusText">NEXUS</div>
+        </div>
+        <div>
+            <svg (click)="disableSideBar()" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.7123 16.7729C16.0052 17.0658 16.4801 17.0658 16.7729 16.7729C17.0658 16.48 17.0658 16.0052 16.7729 15.7123L13.0607 12L16.7729 8.2877C17.0658 7.99481 17.0658 7.51993 16.7729 7.22704C16.48 6.93415 16.0052 6.93415 15.7123 7.22704L12 10.9393L8.28766 7.22699C7.99477 6.9341 7.5199 6.9341 7.227 7.22699C6.93411 7.51989 6.93411 7.99476 7.227 8.28765L10.9393 12L7.22699 15.7123C6.9341 16.0052 6.9341 16.4801 7.22699 16.773C7.51989 17.0659 7.99476 17.0659 8.28765 16.773L12 13.0606L15.7123 16.7729Z"
+                    fill="#DEE0E2" />
+            </svg>
+        </div>
+    </div>
+
+    <!------------------------------------ middle section ----------------------------->
+
+
 
 </div>

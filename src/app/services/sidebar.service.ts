@@ -5,25 +5,15 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SidebarService {
-  private isHoverSvgSubject: BehaviorSubject<boolean[]> = new BehaviorSubject<boolean[]>([false, false, false, false]);
-  public isHoverSvg$: Observable<boolean[]> = this.isHoverSvgSubject.asObservable();
+  private isMobileSideBar = new BehaviorSubject<boolean>(true);
 
-  constructor() {
-    this.isHoverSvg = [false, false, false, false];
+
+  get mobileSideBar$(){
+    return this.isMobileSideBar.asObservable();
   }
 
-  isHoverSvg = [false, false, false, false];
-
-  isHoverSvgFunc(value: number) {
-    for (let i = 0; i < this.isHoverSvg.length; i++) {
-      this.isHoverSvg[i] = false;
-    }
-    this.isHoverSvg[value] = true;
-    console.log(this.isHoverSvg);
+  toggleMobileSidebarFunc(){
+    this.isMobileSideBar.next(!this.isMobileSideBar.value);
   }
 
-  updateIsHoverSvg(value: number) {
-    this.isHoverSvgFunc(value);
-    this.isHoverSvgSubject.next(this.isHoverSvg);
-  }
 }

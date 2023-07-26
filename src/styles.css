@@ -50,6 +50,11 @@ ul {
     width: 230px;
 }
 
+.navBarDropDownHeadingText{
+    font-size: 18px;
+    font-weight: 400;
+    color: #1E2124;
+}
 .navBarDropDownMain {
     display: flex;
     align-items: center;
@@ -81,7 +86,6 @@ ul {
 .logoImgDesk {
     width: 35px;
     height: 26px;
-    margin-top: 8px;
 }
 
 .logoTextDesktop {
@@ -504,14 +508,25 @@ mat-checkbox .mdc-form-field label {
     --mdc-checkbox-selected-icon-color: #016BFF !important;
 }
 
+.mat-mdc-checkbox.mat-accent:hover {
+    --mdc-checkbox-selected-hover-state-layer-color: #016BFF !important;
+    --mdc-checkbox-selected-focus-state-layer-color: #016BFF !important;
+    --mdc-checkbox-selected-pressed-icon-color: #016BFF !important;
+    --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
+    --mdc-checkbox-selected-focus-icon-color: #016BFF !important;
+  }
+
 .nestedVesselOfLR {
     margin-left: 56px;
+}
+.marginForLogoBtn{
+    margin-top: 8px;
 }
 
 .flexNestedEleDropDownWorld {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .rotateVesselForCheckBox {
@@ -563,6 +578,7 @@ mat-checkbox .mdc-form-field label {
     height: 100%;
     background: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(2px);
+    width: 392px;
 }
 
 .vesselSideBarMainContent {
@@ -573,7 +589,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .accordionWorldMapEle {
-    width: 392px;
+    width: 360px;
 }
 
 .firstAccordionWorldMapHead {
@@ -584,25 +600,26 @@ mat-checkbox .mdc-form-field label {
     padding: 12px 16px;
 }
 
-.dropDownOnShipSideBar{
+.dropDownOnShipSideBar {
     background: rgba(255, 255, 255, 0.60);
 }
 
-.firstAccordionWorldMapHeadRight , .firstAccordionWorldMapHeadLeft{
+.firstAccordionWorldMapHeadRight,
+.firstAccordionWorldMapHeadLeft {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
 }
 
-.accordionWorldMapSideBarBody{
+.accordionWorldMapSideBarBody {
     width: 100% !important;
     background: rgba(255, 255, 255, 0.60);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-.loacationAtWorldMapSidebar{
+.loacationAtWorldMapSidebar {
     width: 296px;
     padding: 12px 16px;
     display: flex;
@@ -613,18 +630,20 @@ mat-checkbox .mdc-form-field label {
     border-radius: 8px;
 }
 
-.loacationAtWorldMapSidebarText{
+.loacationAtWorldMapSidebarText {
     font-size: 16px;
     font-weight: 600;
     color: #596069;
 }
-.secondWorldMapEle{
+
+.secondWorldMapEle {
     display: flex;
     justify-content: space-between;
-    width: 392px;
+    width: 360px;
 }
 
-.borderBottomZeroAccordion , .borderBottomZeroAccordion > div {
+.borderBottomZeroAccordion,
+.borderBottomZeroAccordion>div {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     background-color: #F1F1F1 !important;
@@ -632,12 +651,12 @@ mat-checkbox .mdc-form-field label {
     color: #1E2124;
 }
 
-.voyageInfoAccordion{
+.voyageInfoAccordion {
     display: flex;
     flex-direction: column;
 }
 
-.actualAccordionWorldMapEleHead{
+.actualAccordionWorldMapEleHead {
     background: rgba(255, 255, 255, 0.60);
     padding: 16px;
     display: flex;
@@ -645,57 +664,63 @@ mat-checkbox .mdc-form-field label {
     border-radius: 8px;
 }
 
-.actualAccordionHeadText{
+.actualAccordionHeadText {
     font-size: 16px;
     font-weight: 400;
     color: #596069;
 }
 
-.actualAccordionWorldMapEleBody{
+.actualAccordionWorldMapEleBody {
     background: rgba(255, 255, 255, 0.60);
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-.HeadWhiteeActive{
+.HeadWhiteeActive {
     background-color: #F1F1F1;
 }
 
 
-.voyageInfoAccordion{
+.voyageInfoAccordion {
     display: flex;
     flex-direction: column;
     /* gap: 8px; */
 }
-.voyageAccordionFlexEle{
+
+.voyageAccordionFlexEle {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 8px 16px;
 }
 
-.voyageAccordionLeftEle{
+.voyageAccordionLeftEle {
     color: #596069;
     font-size: 16px;
     font-weight: 400;
 }
-.voyageAccordionRightEle{
+
+.voyageAccordionRightEle {
     font-size: 16px;
     font-weight: 600;
     color: #596069;
 }
-.flexSelfCrewDetails{
+
+.flexSelfCrewDetails {
     justify-self: flex-end;
 }
-.crewDetailsFlexBetween{
+
+.crewDetailsFlexBetween {
     justify-content: space-between;
 }
-.crewDetailsFlexHead{
+
+.crewDetailsFlexHead {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.sixCrewText{
+
+.sixCrewText {
     font-size: 14px !important;
     font-weight: 600 !important;
     color: #003A78 !important;
@@ -704,6 +729,234 @@ mat-checkbox .mdc-form-field label {
     margin: 0 !important;
     border-radius: 4px;
 }
-.textBoldCrew{
+
+.crewMemberBody {
+    max-height: 286px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: auto;
+}
+
+.crewMemberBody::-webkit-scrollbar , .shipSideBarCheckBoxDrop::-webkit-scrollbar {
+    display: none;
+}
+
+.textBoldCrew {
     font-weight: 600;
+}
+
+.cabinCrewTextOnAccordionBody {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E2124;
+}
+
+.cabinCrewSectionEle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.crewMemberBody {
+    background: rgba(255, 255, 255, 0.60);
+}
+
+.cabinCrewSectionLeftEle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #596069;
+}
+
+.crewMemberCabin {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-bottom: 1px solid rgba(150, 157, 166, 0.40);
+}
+
+.cabinCrewSectionRightEle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #596069;
+    justify-self: flex-start;
+    width: 50%;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+    background-color: #999999 !important;
+}
+
+.routeAccordionDetails {
+    padding: 16px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dateRouteAccordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dateRouteDetails {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+}
+
+.routeAccordionMain {
+    background: rgba(255, 255, 255, 0.60);
+    padding: 0 16px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.checkBoxForRoute {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e2124;
+}
+
+.routeAccordionButtons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.routeAccordionBtnEle {
+    padding: 8px 16px;
+    border: 1px solid #969da6;
+    border-radius: 120px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.applyBtnOnRoute {
+    color: #f4f5f6;
+    background: #016bff;
+    border: 1px solid #016bff;
+}
+
+.actualAccordionWorldMapEle{
+    width: 360px;
+}
+
+.shipSideBarCheckBoxDrop{
+    max-height: 286px;
+    overflow: auto;
+    padding: 8px 16px;
+}
+
+.routedElementMain{
+    width: 100%;
+    height: calc(100vh - 72px);
+}
+
+@media (min-width:512px){
+    .mobileNavBarContainer{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 512px){
+   .routedElementMain{
+    height: calc(100vh - 96px);
+   }
+
+   .sideBarMainContainer{
+    display: none;
+   }
+
+   .navBarMainContainer{
+    display: none;
+   }
+
+   /* navbar */
+   .mobileUpperNavBarContainer{
+    background: linear-gradient(83deg, #016BFF 0%, #003A78 95.27%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+    padding: 12px 16px;
+   }
+   .navbarDropDown{
+    width: 168px;
+    background: #FFF;
+   }
+
+   .mobileUpperNavBarLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+   }
+
+   .navBarDropDownHeadingText{
+    font-size: 14px;
+   }
+
+   .lowerNavbarText{
+    font-size: 14px;
+    font-weight: 600;
+    color: #596069;
+    padding: 0px 16px;
+    height: 20px;
+    border-bottom: 1px solid #DEE0E2;
+   }
+
+   .mainComponents{
+    display: block;
+    position: relative;
+   }
+
+   .mobileSideBarContainer{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 252px;
+    height: 100%;
+    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+   }
+
+   .mobileSideBarLogoSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 16px;
+   }
+
+   .mobileLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+   }
+   .mobileNexusText{
+    font-weight:700;
+    font-size: 16px;
+    font-family: Futura;
+    color: #FFFFFF;
+   }
+
 }

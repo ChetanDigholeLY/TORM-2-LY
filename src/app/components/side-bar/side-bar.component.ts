@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-
+import { SidebarService } from 'src/app/services/sidebar.service';
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private sideBarService: SidebarService) { }
 
   disAbleSideAndNav = false;
 
@@ -77,5 +77,20 @@ export class SideBarComponent implements OnInit {
     this.dataToNavEvent.emit(data)
   }
   //code for sending data to navBar component to get disable when the route is /worldMap ends
+
+  // mobile sideBar starts
+  isMobileSideBarActive:boolean = false;
+  isMobileSideBarActiveSubscription = this.sideBarService.mobileSideBar$.subscribe((val)=> {this.isMobileSideBarActive = val;})
+
+
+  disableSideBar(){
+    this.sideBarService.toggleMobileSidebarFunc()
+  }
+
+  //sensor mobile menu starts
+  isMobileSensorMenu:boolean = false;
+  //sensor mobile menu ends
+
+  // mobile sideBar ends
 
 }
