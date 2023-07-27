@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SidebarService {
-  private isMobileSideBar = new BehaviorSubject<boolean>(true);
+  private isMobileSideBar = new BehaviorSubject<boolean>(false);
 
 
   get mobileSideBar$(){

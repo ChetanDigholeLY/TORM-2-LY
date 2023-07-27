@@ -871,8 +871,15 @@ mat-checkbox .mdc-form-field label {
     height: calc(100vh - 72px);
 }
 
+.nexusLetterSpacing{
+    letter-spacing: 2px;
+}
+
 @media (min-width:512px){
     .mobileNavBarContainer{
+        display: none;
+    }
+    .mobileSideBarContainer{
         display: none;
     }
     
@@ -944,6 +951,7 @@ mat-checkbox .mdc-form-field label {
     justify-content: space-between;
     align-items: center;
     padding: 18px 16px;
+    position: relative;
    }
 
    .mobileLogo{
@@ -957,6 +965,129 @@ mat-checkbox .mdc-form-field label {
     font-size: 16px;
     font-family: Futura;
     color: #FFFFFF;
+   }
+
+   .mobileSideBarListContainer{
+    margin-top: 24px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+   }
+
+   .mobileSideBarMainEle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 212px;
+    height: 48px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding-left: 12px;
+    padding-right: 16px;
+   }
+
+   .mobileSideBarEle{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   }
+
+   .mobileSideBarEleText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #EDEEEF;
+   }
+
+   .mobileGuidanceNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border-radius: 40px;
+    color: #00479E;
+    background-color: #FFF;
+   }
+
+   .mobileActiveSideBarEle , .mobileActiveSideBarEle div{
+    background-color: #FFFFFF;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #003A78;
+   }
+
+   .activeMobileGuidanceNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border-radius: 40px;
+    background-color: #00479E !important;
+    color: #EDEEEF !important;
+   }
+
+   .mobileSensorMenuMain{
+    margin-top: 24px;
+    margin-left: 40px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    align-items: flex-end;
+   }
+
+   .sensorMainMenuToggle{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+    padding-right: 16px;
+    width: 100%;
+    height: 48px;
+   }
+
+   .sensormainMenuText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #EDEEEF;
+   }
+
+   .sensorMenuHeading{
+    background-color: #003A78;
+   }
+
+   .sensorEmptyDiv24px{
+    width: 24px;
+    height: 24px;
+   }
+
+   .mobileSideBarShipImg{
+    position: absolute;
+    top: 356px;
+    left: 0;
+   }
+
+   .nexusLetterSpacing{
+    letter-spacing: 2px;
+   }
+
+   .worldMapNavBarDropDownBtn, .hideForMobileDropDown{
+    display: none;
+   }
+
+   .shipOnWorldMap{
+    top: 20px;
+    left: 50px;
+   }
+
+   /* //////////////////world map mobile  */
+
+   .worldMapMain{
+    height: calc(100vh - 96px);
    }
 
 }

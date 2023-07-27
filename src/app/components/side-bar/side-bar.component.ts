@@ -16,6 +16,7 @@ export class SideBarComponent implements OnInit {
   // focus on sideBar Element starts
   //[0,1,2,3] = main menu
   //[4,5,6,7] = sensor menu
+  //apend more when needed
   focusToSideBarElement = [false,false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
@@ -43,6 +44,7 @@ export class SideBarComponent implements OnInit {
         this.focusToSideBarElementFunc(4)
       }
       if(currentUrl === '/worldmap'){
+        this.focusToSideBarElementFunc(0)
         this.disAbleSideAndNav = true;
         this.disableNavFunc()
       }
@@ -89,6 +91,10 @@ export class SideBarComponent implements OnInit {
 
   //sensor mobile menu starts
   isMobileSensorMenu:boolean = false;
+
+  mobileSensorToggleFunc(){
+    this.isMobileSensorMenu = !this.isMobileSensorMenu
+  }
   //sensor mobile menu ends
 
   // mobile sideBar ends
