@@ -62,6 +62,20 @@ ul {
     padding: 8px;
 }
 
+.navBarDropDownNumberMobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    border-radius: 40px;
+    background-color: #E1EFFF;
+    color: #003A78;
+    font-size: 10px;
+    font-weight: 600;
+}
+
 .navBarDropDownLeft {
     display: flex;
     align-items: flex-start;
@@ -450,7 +464,7 @@ ul {
 }
 
 .vesselDropDownOnWorldMain {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
     width: 250px !important;
     cursor: pointer;
 }
@@ -586,6 +600,7 @@ mat-checkbox .mdc-form-field label {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: normal;
 }
 
 .accordionWorldMapEle {
@@ -601,7 +616,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .dropDownOnShipSideBar {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
 }
 
 .firstAccordionWorldMapHeadRight,
@@ -614,7 +629,7 @@ mat-checkbox .mdc-form-field label {
 
 .accordionWorldMapSideBarBody {
     width: 100% !important;
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
@@ -657,7 +672,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .actualAccordionWorldMapEleHead {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
     padding: 16px;
     display: flex;
     gap: 8px;
@@ -671,7 +686,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .actualAccordionWorldMapEleBody {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -759,7 +774,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .crewMemberBody {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
 }
 
 .cabinCrewSectionLeftEle {
@@ -821,7 +836,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .routeAccordionMain {
-    background: rgba(255, 255, 255, 0.60);
+    background: rgba(237, 238, 239, 0.8);
     padding: 0 16px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -880,6 +895,10 @@ mat-checkbox .mdc-form-field label {
         display: none;
     }
     .mobileSideBarContainer{
+        display: none;
+    }
+
+    .worldmapShipSideBArMobileDrawer{
         display: none;
     }
     
@@ -944,6 +963,14 @@ mat-checkbox .mdc-form-field label {
     width: 252px;
     height: 100%;
     background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+   }
+
+   .blackScreenForSideBar{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100%;
+    background: rgba(27, 27, 27, 0.35);
    }
 
    .mobileSideBarLogoSection{
@@ -1088,6 +1115,53 @@ mat-checkbox .mdc-form-field label {
 
    .worldMapMain{
     height: calc(100vh - 96px);
+   }
+
+   .vesselSideBarMain{
+    bottom: 0;
+    top: initial;
+    height: 406px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /* overflow: auto; */
+   }
+
+   .worldmapShipSideBArMobileDrawer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+   }
+
+   .WhiteBarOnShipDrawer{
+    width: 64px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+   }
+
+   .accordionWorldMapEle{
+    max-width: 328px;
+   }
+
+   .secondWorldMapEle{
+    max-width: 328px;
+   }
+
+   .loacationAtWorldMapSidebar{
+    max-width: 268px;
+   }
+
+   .actualAccordionWorldMapEle{
+    max-width: 328px;
+   }
+
+   .vesselSideBarMainContent{
+    align-items: center;
+    overflow: auto;
+    height: 378px;
    }
 
 }
