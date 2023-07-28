@@ -1,0 +1,557 @@
+<div class="guidanceMain">
+    <div class="guidanceListContent">
+      <div class="guidanceListContentLeft">
+        <div class="guidenceOfficerFlexImg">
+          <img src="./assets/images/guidenceListUser.png" />
+          <div class="guidanceListContentOfficer"> E/R or bridge watchkeeping
+            officer </div>
+        </div>
+        <div class="guidanceListContentLeftDetails">
+          <div class="guidanceListContentIssue">
+            Consider to stop steering gear pump
+          </div>
+          <div class="guidanceListContentDescription">
+            Steering gear pump is running after FWE causing additional maintenance
+          </div>
+        </div>
+      </div>
+  
+      <div class="estimatedValue">
+        <div class="kgPerHr">kg/hr</div>
+        <div class="EstimatedvaluePerKg">20</div>
+      </div>
+  
+      <div class="ActualValue">
+        <div class="kgPerHr">Kg</div>
+        <div class="ActualvaluePerKg">200</div>
+      </div>
+      <!-- mobile view only -->
+      <div class="valueForMobileView">
+        <div class="mobileEstimatedValue">
+          <div class="mobilekgPerHr">kg/hr</div>
+          <div class="mobileEstimatedvaluePerKg">20</div>
+        </div>
+  
+        <div class="mobileActualValue">
+          <div class="mobilekgPerHr">Kg</div>
+          <div class="mobileActualvaluePerKg">200</div>
+        </div>
+        <div>
+          <div class="mobilekgPerHr">Active Since</div>
+          <div class="mobileGuidanceListTime">05d 21h 40m</div>
+        </div>
+      </div>
+      <!-- mobile view ends -->
+  
+      <div class="guidanceListContentRight">
+        <div class="guidanceListTime">05d 21h 40m</div>
+        <div class="guidanceButtons">
+          <!-- <button class="acknowledgeBtn">Acknowledge</button> -->
+  
+          <!-- bootstrap component ##############  -->
+          <button class="btn btn-primary AckButtonForModalPop" data-bs-toggle="modal"
+            data-bs-target="#exampleModalCenter2">
+            <div class="ackBtnMakeFlex">
+              <div class="ackButtonFlexImg">
+                <img src="./assets/images/ackTickMark.png" />
+              </div>
+              <div>Acknowledge</div>
+              <!-- Acknowledge -->
+            </div>
+          </button>
+  
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg" id="exampleModalCenter2" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg detailsOnClickModalForTab" role="document">
+              <div class="modal-content acknowledgeModalOnlyForDesktop">
+                <div class="modal-header">
+                  <h5 class="modal-title modal-acknowledge-title" id="exampleModalCenterTitle">
+                    Acknowledge Guidance
+                  </h5>
+  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4 class="modalDetailText">Select Reason</h4>
+  
+                  <div class="acknowledgeBtnFlex">
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButton1" name="radioGroup"
+                        class="acknowledgeModalRadioButtons" />
+                      <label for="acknowledgeModalRadioButton1" class="acknowledgeModalRadioLabel">VFD Defective</label>
+                    </div>
+  
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButton2" name="radioGroup"
+                        class="acknowledgeModalRadioButtons" />
+                      <label for="acknowledgeModalRadioButton2" class="acknowledgeModalRadioLabel">Pump Defective</label>
+                    </div>
+  
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButton3" name="radioGroup"
+                        class="acknowledgeModalRadioButtons" />
+                      <label for="acknowledgeModalRadioButton3" class="acknowledgeModalRadioLabel">Pump Defective</label>
+                    </div>
+                  </div>
+  
+                  <div class="modalSeperationLine"></div>
+  
+                  <div class="modalSelectRankFlex">
+                    <div class="modalStatusProgressText">
+                      Select Rank<span class="modalRedAstrik">*</span>
+                    </div>
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="10.0001" cy="6.33333" rx="0.833333" ry="0.833333" fill="#003A78" />
+                      <path
+                        d="M9.16675 8.83342H10.0001V14.6667M18.3334 10.5001C18.3334 15.1025 14.6025 18.8334 10.0001 18.8334C5.39771 18.8334 1.66675 15.1025 1.66675 10.5001C1.66675 5.89771 5.39771 2.16675 10.0001 2.16675C14.6025 2.16675 18.3334 5.89771 18.3334 10.5001Z"
+                        stroke="#003A78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+  
+                  <div class="selectRankGrid">
+                    <div class="selectRankGridText">Cabin Crew</div>
+                    <div class="selectRankGridText">Engineer</div>
+                    <div class="selectRankBtnGrid">
+                      <div class="selectRankcabinUpper">
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton4" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton4" class="acknowledgeModalRadioLabel2">Captain</label>
+                        </div>
+  
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton5" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton5" class="acknowledgeModalRadioLabel2">1st
+                            Officer</label>
+  
+                        </div>
+                      </div>
+  
+                      <div class="selectRankcabinlower">
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton6" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton6" class="acknowledgeModalRadioLabel2">2nd
+                            Officer</label>
+                        </div>
+  
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton7" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton7" class="acknowledgeModalRadioLabel2">3rd
+                            Officer</label>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="selectRankBtnGrid">
+                      <div class="selectRankcabinUpper">
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton8" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton8" class="acknowledgeModalRadioLabel2">Chief
+                            Engineer</label>
+                        </div>
+  
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton9" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton9" class="acknowledgeModalRadioLabel2">2nd
+                            Engineer</label>
+  
+                        </div>
+                      </div>
+  
+                      <div class="selectRankcabinlower">
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton10" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton10" class="acknowledgeModalRadioLabel2">3rd
+                            Engineer</label>
+                        </div>
+  
+                        <div>
+                          <input type="radio" id="acknowledgeModalRadioButton11" name="radioGroup2"
+                            class="acknowledgeModalRadioButtons2" />
+                          <label for="acknowledgeModalRadioButton11" class="acknowledgeModalRadioLabel2">4th
+                            Engineer</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer ">
+                  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Acknowledge
+                  </button>
+                </div>
+              </div>
+  
+              <!-- ##################################################################################### -->
+              <div class="modal-content acknowledgeModalOnlyForMobile">
+                <div class="modal-header">
+                  <h5 class="modal-title modal-acknowledge-title" id="exampleModalCenterTitle">
+                    Acknowledge Guidance
+                  </h5>
+  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h4 class="modalDetailText">Select Reason</h4>
+  
+                  <div class="acknowledgeBtnFlex">
+  
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButtonMobile1" name="radioGroup"
+                        class="acknowledgeModalRadioButtonsMobile" />
+                      <label for="acknowledgeModalRadioButtonMobile1" class="acknowledgeModalRadioLabelMobile">VFD
+                        Defective</label>
+                    </div>
+  
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButtonMobile2" name="radioGroup"
+                        class="acknowledgeModalRadioButtonsMobile" />
+                      <label for="acknowledgeModalRadioButtonMobile2" class="acknowledgeModalRadioLabelMobile">Pump
+                        Defective</label>
+                    </div>
+  
+                    <div>
+                      <input type="radio" id="acknowledgeModalRadioButtonMobile3" name="radioGroup"
+                        class="acknowledgeModalRadioButtonsMobile" />
+                      <label for="acknowledgeModalRadioButtonMobile3" class="acknowledgeModalRadioLabelMobile">Pump
+                        Defective</label>
+                    </div>
+  
+                  </div>
+  
+                  <div class="modalSeperationLine"></div>
+  
+                  <!-- <div class="modalSelectRankFlex"> -->
+                  <div class="modalStatusProgressText">
+                    Select Rank<span class="modalRedAstrik">*</span>
+                  </div>
+                  <!-- </div> -->
+  
+                  <div class="selectRankFlexCol">
+                    <div class="selectRankGridText">Cabin Crew</div>
+  
+                    <div class="selectRankOnlyMobileBtn">
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile24" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile24"
+                          class="acknowledgeModalRadioLabelMobile2">Captain</label>
+                      </div>
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile25" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile25" class="acknowledgeModalRadioLabelMobile2">1st
+                          Officer</label>
+                      </div>
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile26" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile26" class="acknowledgeModalRadioLabelMobile2">2nd
+                          Officer</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile27" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile27" class="acknowledgeModalRadioLabelMobile2">3rd
+                          Officer</label>
+                      </div>
+  
+                    </div>
+  
+                    <div class="selectRankGridText">Engineer</div>
+  
+                    <div class="selectRankOnlyMobileBtn">
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile28" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile28" class="acknowledgeModalRadioLabelMobile2">Chief
+                          Engineer</label>
+                      </div>
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile29" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile29" class="acknowledgeModalRadioLabelMobile2">2nd
+                          Engineer</label>
+                      </div>
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile30" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile30" class="acknowledgeModalRadioLabelMobile2">3rd
+                          Engineer</label>
+                      </div>
+  
+                      <div>
+                        <input type="radio" id="acknowledgeModalRadioButtonMobile31" name="radioGroup2"
+                          class="acknowledgeModalRadioButtonsMobile2" />
+                        <label for="acknowledgeModalRadioButtonMobile31" class="acknowledgeModalRadioLabelMobile2">4th
+                          Engineer</label>
+                      </div>
+  
+                    </div>
+  
+  
+  
+                  </div>
+  
+                  <div class="modal-footer modalMobileFooter">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                      Acknowledge
+                    </button>
+                  </div>
+  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <!-- bootstrap component ##############################-->
+  
+          <!-- Button trigger modal -->
+          <button type="button" class=" detailsBtn" data-bs-toggle="modal"
+            data-bs-target="#exampleModalCenter">
+            Details
+          </button>
+  
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg " id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg detailsOnClickModalForTab " role="document">
+              <div class="modal-content noBorderBottomForMobileDetailPop">
+                <div class="modal-header">
+                  <h5 class="modal-title modalpopupheading" id="exampleModalCenterTitle">
+                    Automated Guidance Details
+                  </h5>
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                  <div class="DetailsModalOnlyForDeskTop">
+                    <h4 class="modalDetailText">Details</h4>
+                    <div class="acknowledgeModalList">
+                      <div class="guidanceListContentLeft">
+                        <div class="guidenceOfficerFlexImg">
+                          <img src="./assets/images/guidenceListUser.png" />
+                          <div class="guidanceListContentOfficer"> E/R or bridge watchkeeping
+                            officer</div>
+                        </div>
+                        <div class="guidanceListContentLeftDetails">
+                          <div class="guidanceListContentIssue">
+                            Consider to stop steering gear pump
+                          </div>
+                          <div class="guidanceListContentDescription">
+                            Steering gear pump is running after FWE causing
+                            additional maintenance
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="estimatedValue">
+                        <div class="kgPerHr">kg/hr</div>
+                        <div class="EstimatedvaluePerKg">20</div>
+                      </div>
+  
+                      <div class="ActualValue">
+                        <div class="kgPerHr">Kg</div>
+                        <div class="ActualvaluePerKg">200</div>
+                      </div>
+                      <div>
+                        <div class="modalkgPerHr">Active Since</div>
+                        <div class="modalGuidanceListTime">05d 21h 40m</div>
+                      </div>
+                    </div>
+  
+                    <div class="modalListSecond">
+                      <div class="row modalListSecondGrid">
+                        <div class="col guidanceListContentIssue">
+                          Acknowledged By
+                        </div>
+                        <div class="col guidanceListContentIssue">Reason</div>
+                        <div class="w-100"></div>
+                        <div class="col modalRedText">Not Acknowledged Yet</div>
+                        <div class="col modalRedText">Not Acknowledged Yet</div>
+                      </div>
+                    </div>
+  
+                    <div class="modalSeperationLine"></div>
+  
+                    <div class="modalStatusBar">
+                      <div class="modalStatusProgressText">Status Progress</div>
+                      <div class="modalStatusProgressGrid">
+                        <div class="modalStatusGridText">Triggered</div>
+                        <div class="modalStatusGridText">Activated</div>
+                        <div class="modalStatusGridText">Acknowledged</div>
+                        <div class="modalStatusProgressGridGrayText">Cleared</div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagram modalStatusdiagramImgPositions">
+                          
+                              <img src="./assets/images/ackTickMark.png" />
+                            
+                          </div>
+                          <div class="modalStatusLine"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagram modalStatusdiagramImgPositions">
+                            
+                              <img src="./assets/images/ackTickMark.png" />
+                            
+                          </div>
+                          <div class="modalStatusLineDashed"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagramHollow"></div>
+                          <div class="modalStatusGrayLine"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagramHollowGray"></div>
+                          <div class=""></div>
+                        </div>
+                        <div class="modalStatusDateAndTime">
+                          <div class="modalStatusDate">20-04-23</div>
+                          <div class="modalStatusTime">09:23 PM</div>
+                        </div>
+                        <div class="modalStatusDateAndTime">
+                          <div class="modalStatusDate">20-04-23</div>
+                          <div class="modalStatusTime">09:23 PM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="DetailsModalOnlyForMobile">
+                    <h4 class="modalDetailText">Details</h4>
+  
+                    <div class="guidanceMain">
+                      <div class="guidanceListContent redBorderForModelMobilePopUp">
+                        <div class="guidanceListContentLeft">
+                          <div class="guidenceOfficerFlexImg">
+                            <img src="./assets/images/guidenceListUser.png" />
+                            <div class="guidanceListContentOfficer"> E/R or bridge watchkeeping
+                              officer</div>
+                          </div>
+                          <div class="guidanceListContentLeftDetails">
+                            <div class="guidanceListContentIssue"> Consider to stop steering
+                              gear pump </div>
+                            <div class="guidanceListContentDescription"> Steering gear pump
+                              is running after FWE causing additional maintenance </div>
+                          </div>
+                        </div>
+                        <div class="estimatedValue">
+                          <div class="kgPerHr">kg/hr</div>
+                          <div class="EstimatedvaluePerKg">20</div>
+                        </div>
+                        <div class="ActualValue">
+                          <div class="kgPerHr">Kg</div>
+                          <div class="ActualvaluePerKg">200</div>
+                        </div>
+                        <div class="valueForMobileView">
+                          <div class="mobileEstimatedValue">
+                            <div class="mobilekgPerHr">kg/hr</div>
+                            <div class="mobileEstimatedvaluePerKg">20</div>
+                          </div>
+                          <div class="mobileActualValue">
+                            <div class="mobilekgPerHr">Kg</div>
+                            <div class="mobileActualvaluePerKg">200</div>
+                          </div>
+                          <div>
+                            <div class="mobilekgPerHr">Active Since</div>
+                            <div class="mobileGuidanceListTime">05d 21h 40m</div>
+                          </div>
+                        </div>
+                        <div class="guidanceListContentRight">
+                          <div class="guidanceListTime">05d 21h 40m</div>
+  
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="modalListSecond">
+                      <div class="row modalListSecondGrid">
+                        <div class="col guidanceListContentIssue"> Acknowledged By </div>
+                        <div class="col guidanceListContentIssue">Reason</div>
+                        <div class="w-100"></div>
+                        <div class="col modalRedText">Not Acknowledged Yet</div>
+                        <div class="col modalRedText">Not Acknowledged Yet</div>
+                      </div>
+                    </div>
+  
+                    <div class="modalSeperationLine"></div>
+  
+                    <div class="modalStatusBar">
+                      <div class="modalStatusProgressText">Status Progress</div>
+                      <div class="modalStatusProgressGrid">
+                        <div>Triggered</div>
+                        <div>Activated</div>
+                        <div>Acknowledged</div>
+                        <div class="modalStatusProgressGridGrayText">Cleared</div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagram">
+                            
+                              <img src="./assets/images/ackTickMark.png" />
+                            
+                          </div>
+                          <div class="modalStatusLine"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagram">
+                            
+                              <img src="./assets/images/ackTickMark.png" />
+                            
+                          </div>
+                          <div class="modalStatusLineDashed"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagramHollow"></div>
+                          <div class="modalStatusGrayLine"></div>
+                        </div>
+                        <div class="modalStatusFlex">
+                          <div class="modalStatusdiagramHollowGray"></div>
+                          <div></div>
+                        </div>
+                        <div class="modalStatusDateAndTime">
+                          <div class="modalStatusDate">20-04-23</div>
+                          <div class="modalStatusTime">09:23 PM</div>
+                        </div>
+                        <div class="modalStatusDateAndTime">
+                          <div class="modalStatusDate">20-04-23</div>
+                          <div class="modalStatusTime">09:23 PM</div>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+  
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Acknowledge
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- <button class="detailsBtn">Details</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

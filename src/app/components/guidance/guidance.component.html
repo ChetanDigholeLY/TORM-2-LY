@@ -1,1 +1,58 @@
-<p>guidance works!</p>
+<div class="guidanceComponent">
+    <div class="guidanceHeaderMain">
+      <div class="guidanceHeaderLeft">
+        <div class="guidanceHeaderLeftTop">ADVICE</div>
+        <div class="guidanceHeaderLeftDown">(Automated Guidance)</div>
+      </div>
+  
+      <div class="guidanceHeaderMidLeft">
+        <div class="guidanceHeaderMidLeftTop">ESTIMATED</div>
+        <div class="guidanceHeaderMidLeftdown">(Excess consumption/hr)</div>
+      </div>
+      <div class="guidanceHeaderMidRight">
+        <div class="guidanceHeaderMidRightTop">ACTUAL</div>
+        <div class="guidanceHeaderMidRightdown">(Excess consumption/hr)</div>
+      </div>
+  
+      <div class="guidanceHeaderRight">
+        <div class="guidanceHeaderRightTop">ACTIONS</div>
+        <div class="guidanceHeaderRightDown">(Suggested guidance)</div>
+      </div>
+    </div>
+  
+    <div class="guidanceComponentBelowHeader">
+      <div class="NotAcknowledged">
+        <div class="NotAcknowledgedTitle">
+          <h4>Not acknowledged yet (1)</h4>
+        </div>
+        <div class="NotAcknowledgedLine1"></div>
+      </div>
+
+      <!-- not acknowledged list starts -->
+  
+      <app-not-acknowledged-guidance></app-not-acknowledged-guidance>
+      <app-not-acknowledged-guidance></app-not-acknowledged-guidance>
+      <app-not-acknowledged-guidance></app-not-acknowledged-guidance>
+      <app-not-acknowledged-guidance></app-not-acknowledged-guidance>
+      <app-not-acknowledged-guidance></app-not-acknowledged-guidance>
+
+      <!-- not acknowledged list ends -->
+
+      <div class="NotAcknowledged">
+        <div class="NotAcknowledgedTitle">
+          <h4>Acknowledged but not cleared (1)</h4>
+        </div>
+        <div class="NotAcknowledgedLine"></div>
+      </div>
+
+      <!-- acknowledged but not cleared list starts -->
+      
+      <app-acknowledged-guidance></app-acknowledged-guidance>
+      <app-acknowledged-guidance></app-acknowledged-guidance>
+      <app-acknowledged-guidance></app-acknowledged-guidance>
+      <app-acknowledged-guidance></app-acknowledged-guidance>
+
+      <!-- acknowledged but not cleared list ends -->
+
+    </div>
+</div>

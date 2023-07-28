@@ -16,6 +16,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { SidebarService } from './services/sidebar.service';
+import { NotAcknowledgedGuidanceComponent } from './components/not-acknowledged-guidance/not-acknowledged-guidance.component';
+import { AcknowledgedGuidanceComponent } from './components/acknowledged-guidance/acknowledged-guidance.component';
 
 
 const routes: Routes = [
@@ -41,7 +43,9 @@ const routes: Routes = [
     PerformanceComponent,
     SensorsComponent,
     WorldmapComponent,
-    LiveDataFeedComponent
+    LiveDataFeedComponent,
+    NotAcknowledgedGuidanceComponent,
+    AcknowledgedGuidanceComponent
   ],
   imports: [
     BrowserModule,
