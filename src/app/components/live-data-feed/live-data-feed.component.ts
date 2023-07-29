@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class LiveDataFeedComponent {
 
+  isNotifiactionDismiss = true;
+
+  dismissNotificationFunction(){
+    this.isNotifiactionDismiss = false;
+  }
+
 }

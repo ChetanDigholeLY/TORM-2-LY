@@ -3956,14 +3956,14 @@ mat-checkbox .mdc-form-field label {
 /* copy imprpvements starts */
 
 @media (min-width:513px) {
-  .performance-container , .guidanceComponent {
+  .sensorComponentMain , .performance-container , .guidanceComponent {
     height: calc(100vh - 72px);
     overflow: auto;
   }
 }
 
 @media (max-width:512px) {
-  .performance-container , .guidanceComponent {
+  .sensorComponentMain , .performance-container , .guidanceComponent {
     height: calc(100vh - 96px);
     overflow: auto;
   }
