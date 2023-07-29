@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: 'Futura';
-    src: url('./assets/fonts/futura/Futura Bold font.ttf');
+  font-family: 'Futura';
+  src: url('./assets/fonts/futura/Futura Bold font.ttf');
 }
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
@@ -20,498 +21,505 @@ ul {
 
 
 .mainComponents {
-    display: flex;
+  display: flex;
 }
 
 .navAndRouteMainComponent {
-    width: 100%;
+  width: 100%;
 }
 
 .sideBarMainContainerForDesktopFull {
-    position: relative;
-    width: 192px;
-    height: 100vh;
+  position: relative;
+  width: 192px;
+  height: 100vh;
 }
 
 .sideBarMainContainer {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
 }
 
 .navBarGrayHeading {
-    font-size: 24px;
-    font-weight: 600;
-    color: #596069;
+  font-size: 24px;
+  font-weight: 600;
+  color: #596069;
 }
 
 .navbarDropDown {
-    border: 1px solid #DEE0E2;
-    border-radius: 8px;
-    width: 230px;
+  border: 1px solid #DEE0E2;
+  border-radius: 8px;
+  width: 230px;
 }
 
-.navBarDropDownHeadingText{
-    font-size: 18px;
-    font-weight: 400;
-    color: #1E2124;
+.navBarDropDownHeadingText {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1E2124;
 }
+
 .navBarDropDownMain {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
 }
 
-.navBarDropDownNumberMobile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18px;
-    height: 18px;
-    padding: 8px;
-    border-radius: 40px;
-    background-color: #E1EFFF;
-    color: #003A78;
-    font-size: 10px;
-    font-weight: 600;
+.navBarDropDownNumberMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  border-radius: 40px;
+  background-color: #E1EFFF;
+  color: #003A78;
+  font-size: 10px;
+  font-weight: 600;
 }
 
 .navBarDropDownLeft {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .navBarRightElement {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .navBarMainContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 48px 12px 24px;
-    box-shadow: 0px 1px 2px 0px rgba(158, 158, 158, 0.24);
-    height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 48px 12px 24px;
+  box-shadow: 0px 1px 2px 0px rgba(158, 158, 158, 0.24);
+  height: 72px;
 }
 
 .logoImgDesk {
-    width: 35px;
-    height: 26px;
+  width: 35px;
+  height: 26px;
 }
 
 .logoTextDesktop {
-    color: white;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 31.9px;
-    margin-bottom: 0px;
-    font-family: "Futura";
-    letter-spacing: 2px;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.9px;
+  margin-bottom: 0px;
+  font-family: "Futura";
+  letter-spacing: 2px;
 }
 
 .logoSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px 23.5px;
-    border-bottom: 1px solid #EDEEEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 23.5px;
+  border-bottom: 1px solid rgb(237, 238, 239, 0.3);
 }
 
 .logoSectionHalfSideBar {
-    padding: 0;
+  padding: 0;
+  border: 0;
 }
 
 .sideBarUpperComponent {
-    height: 72px;
+  height: 72px;
 }
 
 .sideBarMainContainerForDesktopHalf {
-    width: 62px;
+  width: 62px;
 }
 
 .halfSideBarUpperComponent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 72px;
-    border-bottom: 1px solid #EDEEEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  border-bottom: 1px solid rgb(237, 238, 239, 0.3);
 }
 
 .sideBarLowerComponent {
-    margin-top: 40px;
-    margin-left: 16px;
+  margin-top: 40px;
+  margin-left: 16px;
 }
 
 .sideBarListElement {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: flex-start;
-    cursor: pointer;
-    padding: 12px;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  text-decoration: none;
 }
 
 .sideBarListElement:hover,
 .halfSideBarBottomElement:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sideBarListElementText {
-    font-size: 16px;
-    font-weight: 400;
-    color: #EDEEEF;
+  font-size: 16px;
+  font-weight: 400;
+  color: #EDEEEF;
 }
 
 .sideBarRadioLabel {
-    width: 100%;
+  width: 100%;
 }
 
 .sidebarRadioInput {
-    display: none;
+  display: none;
 }
 
 .activeSideBarElement {
-    background-color: #fff !important;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+  background-color: #fff !important;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  font-size: 16px !important;
+
 }
 
 .activeSideBarElement div {
-    color: #00479E;
-    font-size: 16px;
-    font-weight: 600;
+  color: #00479E;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .numbersOnGuidance {
-    background-color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    color: #00479E;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    width: 24px;
-    height: 24px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #00479E;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  width: 24px;
+  height: 24px;
 
 }
 
 .sideBarFlexColumnElement {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .activeGuidanceNumber {
-    background-color: #00479E;
-    color: #EDEEEF !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
+  background-color: #00479E;
+  color: #EDEEEF !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
 }
 
 .logoImgDeskHalf {
-    width: 32px;
-    height: 24px;
+  width: 32px;
+  height: 24px;
 }
 
 .halfSideBarBottomComponent {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .halfSideBarBottomComponentMain {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 4px;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  gap: 4px;
 }
 
 .halfSideBarBottomElement {
-    padding: 0px 16px;
-    border-radius: 12px;
-    height: 48px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0px 16px;
+  border-radius: 12px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .halfSideBarListElement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .halfSideBarActiveElement {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .shipImgOnFullSideBarImg {
-    position: absolute;
-    bottom: 64px;
+  position: absolute;
+  bottom: 64px;
 }
 
 .toggleSideBar {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
 }
 
 .toggleHalfSideBar {
-    position: absolute;
-    bottom: 20px;
-    left: 18px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+  cursor: pointer;
 }
 
 .relativeEle {
-    position: relative;
+  position: relative;
 }
 
 .arrowOnSideBar {
-    position: absolute;
-    right: 16px;
+  position: absolute;
+  right: 16px;
 }
 
 .sensorDropDownMenu {
-    margin-top: 16px;
-    margin-left: 12px;
+  margin-top: 16px;
+  margin-left: 12px;
 }
 
 .sensorDropDownMenuMain {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .mainMenuSensor {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    margin-top: 26px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 26px;
+  margin-bottom: 16px;
 }
 
 .sidebarMainMenuText {
-    font-size: 16px;
-    font-weight: 400;
-    color: #EDEEEF;
+  font-size: 16px;
+  font-weight: 400;
+  color: #EDEEEF;
 }
 
 .sensorFirstList {
-    background-color: #003A78;
-    color: #E1EFFF;
-    cursor: auto;
+  background-color: #003A78;
+  color: #E1EFFF;
+  cursor: auto;
 }
 
 .sensorFirstList:hover {
-    background-color: #003A78;
+  background-color: #003A78;
 }
 
 .sensorMenuList {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .sensorDropDownListElement {
-    color: #EDEEEF;
-    padding-left: 36px !important;
+  color: #EDEEEF;
+  padding-left: 36px !important;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 
 .sensorMenuText {
-    color: #00479E;
-    font-size: 16px;
-    font-weight: 600;
+  color: #00479E;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .displaySideNav {
-    display: none;
+  display: none;
 }
 
 .worldMapMain {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .worldMapMainDesktop {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .worldMapMainCoverImage {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .worldMapNavBarDropDownBtn {
-    position: absolute;
-    top: 14px;
-    left: 8px;
-    width: 46px;
-    height: 80px;
-    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
-    border-radius: 4px;
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  width: 46px;
+  height: 80px;
+  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  border-radius: 4px;
 }
 
 .WorldMapDropDownLogo {
-    height: 58px;
-    border-bottom: 1px solid #EDEEEF;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  height: 58px;
+  border-bottom: 1px solid rgb(237, 238, 239, 0.3);
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .dropDownSvgWorldMap {
-    position: absolute;
-    bottom: 10px;
-    z-index: 2;
-    left: 10px;
-    rotate: 180deg;
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  left: 10px;
+  rotate: 180deg;
 }
 
 .worldMapSideBarMain {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
-    animation: expandDropdown 0.3s ease forwards;
-    width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  animation: expandDropdown 0.3s ease forwards;
+  width: 60px;
 }
 
 @keyframes expandDropdown {
-    from {
-        height: 0;
-    }
+  from {
+    height: 0;
+  }
 
-    to {
-        height: 100vh;
-    }
+  to {
+    height: 100vh;
+  }
 }
 
 .worldMapSideBarLogoSection {
-    height: 72px;
-    border-bottom: 1px solid #EDEEEF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: 72px;
+  border-bottom: 1px solid rgb(237, 238, 239, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .worldMapSideBarCollpsBtn {
-    position: absolute;
-    top: 58px;
-    left: 18px;
+  position: absolute;
+  top: 58px;
+  left: 18px;
 }
 
 .worldmapSideBarList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 40px;
 }
 
 .worldMapSideBarEle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 52px;
-    height: 48px;
-    border-radius: 12px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 48px;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .worldMapSideBarEle:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .worldMapActiveEle {
-    background: #FFF !important;
+  background: #FFF !important;
 }
 
 .vesselDropDownOnWorldMap {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .vesselDropDownOnWorldMain {
-    background: rgba(237, 238, 239, 0.8);
-    width: 250px !important;
-    cursor: pointer;
+  background: rgba(255, 255, 255, 0.60);
+  width: 230px !important;
+  cursor: pointer;
+  border: 1px solid #DEE0E2;
 }
 
 .dropDownVesselMenu {
-    width: 230px !important;
-    padding: 8px 16px;
-    background-color: #FFFFFF;
+  width: 230px !important;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
 }
 
 .vesselDropDownOnWorldMainMenu {
-    width: 250px !important;
-    border-radius: 8px;
+  width: 250px !important;
+  border-radius: 8px;
 }
 
 .rotateVesselArrowWorldMap {
-    rotate: 180deg;
+  rotate: 180deg;
 }
 
 .vesselDropDownOnWorldMapEle {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 mat-checkbox .mdc-form-field label {
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    color: #596069 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #596069 !important;
 }
 
 .vesselCheckBoxText {
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    color: #596069 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #596069 !important;
 }
 
 .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background,
 .mdc-checkbox__ripple,
 .mdc-checkbox-selected-icon-color {
-    background-color: #016BFF !important;
-    border-color: #016BFF !important;
+  background-color: #016BFF !important;
+  border-color: #016BFF !important;
 }
 
 .blueTextForVesselDropDownEle {
-    color: #016BFF !important;
+  color: #016BFF !important;
 }
 
 /* .mat-mdc-checkbox .example-margin .mat-accent .mdc-checkbox .mat-mdc-checkbox-touch-target .mdc-checkbox__native-control .mdc-checkbox__ripple .mdc-checkbox__background .mat-ripple .mat-mdc-checkbox-ripple .mat-mdc-focus-indicator .mdc-checkbox{
@@ -520,491 +528,496 @@ mat-checkbox .mdc-form-field label {
 } */
 
 .mat-mdc-checkbox.mat-accent {
-    --mdc-checkbox-selected-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-icon-color: #016BFF !important;
 }
 
 .mat-mdc-checkbox.mat-accent:hover {
-    --mdc-checkbox-selected-hover-state-layer-color: #016BFF !important;
-    --mdc-checkbox-selected-focus-state-layer-color: #016BFF !important;
-    --mdc-checkbox-selected-pressed-icon-color: #016BFF !important;
-    --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
-    --mdc-checkbox-selected-focus-icon-color: #016BFF !important;
-  }
+  --mdc-checkbox-selected-hover-state-layer-color: #016BFF !important;
+  --mdc-checkbox-selected-focus-state-layer-color: #016BFF !important;
+  --mdc-checkbox-selected-pressed-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-focus-icon-color: #016BFF !important;
+}
 
 .nestedVesselOfLR {
-    margin-left: 56px;
+  margin-left: 56px;
 }
-.marginForLogoBtn{
-    margin-top: 8px;
+
+.marginForLogoBtn {
+  margin-top: 8px;
 }
 
 .flexNestedEleDropDownWorld {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .rotateVesselForCheckBox {
-    rotate: 90deg;
+  rotate: 90deg;
 }
 
 .WorldMapDropDownActiveText {
-    font-size: 18px;
-    font-weight: 400;
-    color: #1E2124;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1E2124;
 }
 
 .numberOnDropDownForWorldMap {
-    color: #003A78;
-    font-size: 12px;
-    font-weight: 600;
-    width: 24px;
-    height: 24px;
-    border-radius: 40px;
-    background-color: #E1EFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: #003A78;
+  font-size: 12px;
+  font-weight: 600;
+  width: 24px;
+  height: 24px;
+  border-radius: 40px;
+  background-color: #E1EFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shipOnWorldMap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 30px;
-    left: 300px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  cursor: pointer;
 }
 
 .shipOnWorldMapText {
-    background-color: #1E2124;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 400;
-    border-radius: 6px;
+  background-color: #1E2124;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 6px;
 }
 
 .vesselSideBarMain {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(2px);
-    width: 392px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(2px);
+  width: 392px;
 }
 
 .vesselSideBarMainContent {
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: normal;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: normal;
 }
 
 .accordionWorldMapEle {
-    width: 360px;
+  width: 360px;
 }
 
 .firstAccordionWorldMapHead {
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
 }
 
 .dropDownOnShipSideBar {
-    background: rgba(237, 238, 239, 0.8);
+  background: rgba(237, 238, 239, 0.8);
 }
 
 .firstAccordionWorldMapHeadRight,
 .firstAccordionWorldMapHeadLeft {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .accordionWorldMapSideBarBody {
-    width: 100% !important;
-    background: rgba(237, 238, 239, 0.8);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  width: 100% !important;
+  background: rgba(237, 238, 239, 0.8);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .loacationAtWorldMapSidebar {
-    width: 296px;
-    padding: 12px 16px;
-    display: flex;
-    align-items: flex-end;
-    gap: 16px;
-    background: #F4F5F6;
-    backdrop-filter: blur(4px);
-    border-radius: 8px;
+  width: 296px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  background: #F4F5F6;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
 }
 
 .loacationAtWorldMapSidebarText {
-    font-size: 16px;
-    font-weight: 600;
-    color: #596069;
+  font-size: 16px;
+  font-weight: 600;
+  color: #596069;
 }
 
 .secondWorldMapEle {
-    display: flex;
-    justify-content: space-between;
-    width: 360px;
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
 }
 
 .borderBottomZeroAccordion,
 .borderBottomZeroAccordion>div {
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    background-color: #F1F1F1 !important;
-    font-weight: 600;
-    color: #1E2124;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  background-color: #F1F1F1 !important;
+  font-weight: 600;
+  color: #1E2124;
 }
 
 .voyageInfoAccordion {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .actualAccordionWorldMapEleHead {
-    background: rgba(237, 238, 239, 0.8);
-    padding: 16px;
-    display: flex;
-    gap: 8px;
-    border-radius: 8px;
+  background: rgba(237, 238, 239, 0.8);
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
 }
 
 .actualAccordionHeadText {
-    font-size: 16px;
-    font-weight: 400;
-    color: #596069;
+  font-size: 16px;
+  font-weight: 400;
+  color: #596069;
 }
 
 .actualAccordionWorldMapEleBody {
-    background: rgba(237, 238, 239, 0.8);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+  background: rgba(237, 238, 239, 0.8);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .HeadWhiteeActive {
-    background-color: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 
 .voyageInfoAccordion {
-    display: flex;
-    flex-direction: column;
-    /* gap: 8px; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 8px; */
 }
 
 .voyageAccordionFlexEle {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 16px;
 }
 
 .voyageAccordionLeftEle {
-    color: #596069;
-    font-size: 16px;
-    font-weight: 400;
+  color: #596069;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .voyageAccordionRightEle {
-    font-size: 16px;
-    font-weight: 600;
-    color: #596069;
+  font-size: 16px;
+  font-weight: 600;
+  color: #596069;
 }
 
 .flexSelfCrewDetails {
-    justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .crewDetailsFlexBetween {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .crewDetailsFlexHead {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sixCrewText {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    color: #003A78 !important;
-    padding: 4px 8px !important;
-    background-color: #A8CCFF !important;
-    margin: 0 !important;
-    border-radius: 4px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #003A78 !important;
+  padding: 4px 8px !important;
+  background-color: #A8CCFF !important;
+  margin: 0 !important;
+  border-radius: 4px;
 }
 
 .crewMemberBody {
-    max-height: 286px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    overflow: auto;
+  max-height: 286px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: auto;
 }
 
-.crewMemberBody::-webkit-scrollbar , .shipSideBarCheckBoxDrop::-webkit-scrollbar {
-    display: none;
+.crewMemberBody::-webkit-scrollbar,
+.shipSideBarCheckBoxDrop::-webkit-scrollbar {
+  display: none;
 }
 
 .textBoldCrew {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .cabinCrewTextOnAccordionBody {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1E2124;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1E2124;
 }
 
 .cabinCrewSectionEle {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
 }
 
 .crewMemberBody {
-    background: rgba(237, 238, 239, 0.8);
+  background: rgba(237, 238, 239, 0.8);
 }
 
 .cabinCrewSectionLeftEle {
-    font-size: 16px;
-    font-weight: 400;
-    color: #596069;
+  font-size: 16px;
+  font-weight: 400;
+  color: #596069;
 }
 
 .crewMemberCabin {
-    padding: 8px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border-bottom: 1px solid rgba(150, 157, 166, 0.40);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid rgba(150, 157, 166, 0.40);
 }
 
 .cabinCrewSectionRightEle {
-    font-size: 16px;
-    font-weight: 600;
-    color: #596069;
-    justify-self: flex-start;
-    width: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #596069;
+  justify-self: flex-start;
+  width: 50%;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
-    background-color: #f5f5f5;
+  -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+  background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    background-color: #f5f5f5;
+  width: 5px;
+  background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
-    background-color: #999999 !important;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+  background-color: #999999 !important;
 }
 
 .routeAccordionDetails {
-    padding: 16px 0 8px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  padding: 16px 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .dateRouteAccordion {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .dateRouteDetails {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
 }
 
 .routeAccordionMain {
-    background: rgba(237, 238, 239, 0.8);
-    padding: 0 16px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  background: rgba(237, 238, 239, 0.8);
+  padding: 0 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 
 .checkBoxForRoute {
-    font-weight: 400;
-    font-size: 16px;
-    color: #1e2124;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e2124;
 }
 
 .routeAccordionButtons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
-    padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 0;
 }
 
 .routeAccordionBtnEle {
-    padding: 8px 16px;
-    border: 1px solid #969da6;
-    border-radius: 120px;
-    font-weight: 600;
-    font-size: 16px;
+  padding: 8px 16px;
+  border: 1px solid #969da6;
+  border-radius: 120px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .applyBtnOnRoute {
-    color: #f4f5f6;
-    background: #016bff;
-    border: 1px solid #016bff;
+  color: #f4f5f6;
+  background: #016bff;
+  border: 1px solid #016bff;
 }
 
-.actualAccordionWorldMapEle{
-    width: 360px;
+.actualAccordionWorldMapEle {
+  width: 360px;
 }
 
-.shipSideBarCheckBoxDrop{
-    max-height: 286px;
-    overflow: auto;
-    padding: 8px 16px;
+.shipSideBarCheckBoxDrop {
+  max-height: 286px;
+  overflow: auto;
+  padding: 8px 16px;
 }
 
-.routedElementMain{
-    width: 100%;
-    height: calc(100vh - 72px);
+.routedElementMain {
+  width: 100%;
+  height: calc(100vh - 72px);
 }
 
-.nexusLetterSpacing{
-    letter-spacing: 2px;
+.nexusLetterSpacing {
+  letter-spacing: 2px;
 }
 
-@media (min-width:512px){
-    .mobileNavBarContainer{
-        display: none;
-    }
-    .mobileSideBarContainer{
-        display: none;
-    }
+@media (min-width:512px) {
+  .mobileNavBarContainer {
+    display: none;
+  }
 
-    .worldmapShipSideBArMobileDrawer{
-        display: none;
-    }
-    
+  .mobileSideBarContainer {
+    display: none;
+  }
+
+  .worldmapShipSideBArMobileDrawer {
+    display: none;
+  }
+
 }
 
-@media (max-width: 512px){
-   .routedElementMain{
+@media (max-width: 512px) {
+  .routedElementMain {
     height: calc(100vh - 96px);
-   }
+  }
 
-   .sideBarMainContainer{
+  .sideBarMainContainer {
     display: none;
-   }
+  }
 
-   .navBarMainContainer{
+  .navBarMainContainer {
     display: none;
-   }
+  }
 
-   /* navbar */
-   .mobileUpperNavBarContainer{
+  /* navbar */
+  .mobileUpperNavBarContainer {
     background: linear-gradient(83deg, #016BFF 0%, #003A78 95.27%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 76px;
     padding: 12px 16px;
-   }
-   .navbarDropDown{
+  }
+
+  .navbarDropDown {
     width: 168px;
     background: #FFF;
-   }
+  }
 
-   .mobileUpperNavBarLeft{
+  .mobileUpperNavBarLeft {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
-   }
+  }
 
-   .navBarDropDownHeadingText{
+  .navBarDropDownHeadingText {
     font-size: 14px;
-   }
+  }
 
-   .lowerNavbarText{
+  .lowerNavbarText {
     font-size: 14px;
     font-weight: 600;
     color: #596069;
     padding: 0px 16px;
     height: 20px;
     border-bottom: 1px solid #DEE0E2;
-   }
+  }
 
-   .mainComponents{
+  .mainComponents {
     display: block;
     position: relative;
-   }
+  }
 
-   .mobileSideBarContainer{
+  .mobileSideBarContainer {
     position: absolute;
     left: 0;
     z-index: 2;
     width: 252px;
     height: 100%;
     background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
-   }
+  }
 
-   .blackScreenForSideBar{
+  .blackScreenForSideBar {
     position: absolute;
     z-index: 1;
     width: 100vw;
     height: 100%;
     background: rgba(27, 27, 27, 0.35);
-   }
+  }
 
-   .mobileSideBarLogoSection{
+  .mobileSideBarLogoSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 16px;
     position: relative;
-   }
+  }
 
-   .mobileLogo{
+  .mobileLogo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-   }
-   .mobileNexusText{
-    font-weight:700;
+  }
+
+  .mobileNexusText {
+    font-weight: 700;
     font-size: 16px;
     font-family: Futura;
     color: #FFFFFF;
-   }
+  }
 
-   .mobileSideBarListContainer{
+  .mobileSideBarListContainer {
     margin-top: 24px;
     margin-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 4px;
-   }
+  }
 
-   .mobileSideBarMainEle{
+  .mobileSideBarMainEle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1014,21 +1027,21 @@ mat-checkbox .mdc-form-field label {
     border-bottom-left-radius: 12px;
     padding-left: 12px;
     padding-right: 16px;
-   }
+  }
 
-   .mobileSideBarEle{
+  .mobileSideBarEle {
     display: flex;
     align-items: center;
     gap: 8px;
-   }
+  }
 
-   .mobileSideBarEleText{
+  .mobileSideBarEleText {
     font-size: 16px;
     font-weight: 400;
     color: #EDEEEF;
-   }
+  }
 
-   .mobileGuidanceNumber{
+  .mobileGuidanceNumber {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1038,16 +1051,17 @@ mat-checkbox .mdc-form-field label {
     border-radius: 40px;
     color: #00479E;
     background-color: #FFF;
-   }
+  }
 
-   .mobileActiveSideBarEle , .mobileActiveSideBarEle div{
+  .mobileActiveSideBarEle,
+  .mobileActiveSideBarEle div {
     background-color: #FFFFFF;
     font-size: 16px !important;
     font-weight: 600 !important;
     color: #003A78;
-   }
+  }
 
-   .activeMobileGuidanceNumber{
+  .activeMobileGuidanceNumber {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1057,18 +1071,18 @@ mat-checkbox .mdc-form-field label {
     border-radius: 40px;
     background-color: #00479E !important;
     color: #EDEEEF !important;
-   }
+  }
 
-   .mobileSensorMenuMain{
+  .mobileSensorMenuMain {
     margin-top: 24px;
     margin-left: 40px;
     display: flex;
     gap: 4px;
     flex-direction: column;
     align-items: flex-end;
-   }
+  }
 
-   .sensorMainMenuToggle{
+  .sensorMainMenuToggle {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1076,49 +1090,50 @@ mat-checkbox .mdc-form-field label {
     padding-right: 16px;
     width: 100%;
     height: 48px;
-   }
+  }
 
-   .sensormainMenuText{
+  .sensormainMenuText {
     font-size: 16px;
     font-weight: 400;
     color: #EDEEEF;
-   }
+  }
 
-   .sensorMenuHeading{
+  .sensorMenuHeading {
     background-color: #003A78;
-   }
+  }
 
-   .sensorEmptyDiv24px{
+  .sensorEmptyDiv24px {
     width: 24px;
     height: 24px;
-   }
+  }
 
-   .mobileSideBarShipImg{
+  .mobileSideBarShipImg {
     position: absolute;
     top: 356px;
     left: 0;
-   }
+  }
 
-   .nexusLetterSpacing{
+  .nexusLetterSpacing {
     letter-spacing: 2px;
-   }
+  }
 
-   .worldMapNavBarDropDownBtn, .hideForMobileDropDown{
+  .worldMapNavBarDropDownBtn,
+  .hideForMobileDropDown {
     display: none;
-   }
+  }
 
-   .shipOnWorldMap{
+  .shipOnWorldMap {
     top: 20px;
     left: 50px;
-   }
+  }
 
-   /* //////////////////world map mobile  */
+  /* //////////////////world map mobile  */
 
-   .worldMapMain{
+  .worldMapMain {
     height: calc(100vh - 96px);
-   }
+  }
 
-   .vesselSideBarMain{
+  .vesselSideBarMain {
     bottom: 0;
     top: initial;
     height: 406px;
@@ -1126,46 +1141,46 @@ mat-checkbox .mdc-form-field label {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     /* overflow: auto; */
-   }
+  }
 
-   .worldmapShipSideBArMobileDrawer{
+  .worldmapShipSideBArMobileDrawer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 8px;
     margin-bottom: 8px;
-   }
+  }
 
-   .WhiteBarOnShipDrawer{
+  .WhiteBarOnShipDrawer {
     width: 64px;
     height: 4px;
     border-radius: 4px;
     background-color: #FFFFFF;
-   }
+  }
 
-   .accordionWorldMapEle{
+  .accordionWorldMapEle {
     max-width: 328px;
-   }
+  }
 
-   .secondWorldMapEle{
+  .secondWorldMapEle {
     max-width: 328px;
-   }
+  }
 
-   .loacationAtWorldMapSidebar{
+  .loacationAtWorldMapSidebar {
     max-width: 268px;
-   }
+  }
 
-   .actualAccordionWorldMapEle{
+  .actualAccordionWorldMapEle {
     max-width: 328px;
-   }
+  }
 
-   .vesselSideBarMainContent{
+  .vesselSideBarMainContent {
     align-items: center;
     overflow: auto;
     height: 378px;
-   }
+  }
 
-   /* //////////////////world map mobile ends */
+  /* //////////////////world map mobile ends */
 }
 
 
@@ -3940,15 +3955,15 @@ mat-checkbox .mdc-form-field label {
 
 /* copy imprpvements starts */
 
-@media (min-width:513px){
-  .guidanceComponent{
+@media (min-width:513px) {
+  .performance-container , .guidanceComponent {
     height: calc(100vh - 72px);
     overflow: auto;
   }
 }
 
-@media (max-width:512px){
-  .guidanceComponent{
+@media (max-width:512px) {
+  .performance-container , .guidanceComponent {
     height: calc(100vh - 96px);
     overflow: auto;
   }
