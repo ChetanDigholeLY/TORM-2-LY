@@ -36,17 +36,23 @@ export class SideBarComponent implements OnInit {
       // console.log('Current URL side bar: ', currentUrl);
       if(currentUrl === '/guidance' || currentUrl === '/'){
         this.focusToSideBarElementFunc(1)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
       }
       if(currentUrl === '/performance'){
         this.focusToSideBarElementFunc(3)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
       }
       if(currentUrl === '/sensors/livedatafeed'){
         this.focusToSideBarElementFunc(4)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
       }
       if(currentUrl === '/worldmap'){
         this.focusToSideBarElementFunc(0)
         this.disAbleSideAndNav = true;
-        this.disableNavFunc()
+        this.disableNavFunc(true)
       }
     });
   }
@@ -74,8 +80,8 @@ export class SideBarComponent implements OnInit {
   //code for sending data to navBar component to get disable when the route is /worldMap starts
   @Output() dataToNavEvent = new EventEmitter<boolean>();
   
-  disableNavFunc(){
-    const data = true;
+  disableNavFunc(val: boolean){
+    const data = val;
     this.dataToNavEvent.emit(data)
   }
   //code for sending data to navBar component to get disable when the route is /worldMap ends
