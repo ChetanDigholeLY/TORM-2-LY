@@ -485,7 +485,7 @@ ul {
 }
 
 .vesselDropDownOnWorldMainMenu {
-  width: 250px !important;
+  width: 230px !important;
   border-radius: 8px;
 }
 
@@ -555,6 +555,10 @@ mat-checkbox .mdc-form-field label {
 
 .rotateVesselForCheckBox {
   rotate: 90deg;
+}
+
+.rotateTwoSeventyDegree {
+  rotate: 270deg;
 }
 
 .WorldMapDropDownActiveText {
@@ -743,6 +747,7 @@ mat-checkbox .mdc-form-field label {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .sixCrewText {
@@ -763,12 +768,14 @@ mat-checkbox .mdc-form-field label {
 }
 
 .crewMemberBody::-webkit-scrollbar,
-.shipSideBarCheckBoxDrop::-webkit-scrollbar {
+.shipSideBarCheckBoxDrop::-webkit-scrollbar,
+.vesselSideBarMainContent::-webkit-scrollbar {
   display: none;
 }
 
 .textBoldCrew {
   font-weight: 600;
+  color: #1E2124 !important;
 }
 
 .cabinCrewTextOnAccordionBody {

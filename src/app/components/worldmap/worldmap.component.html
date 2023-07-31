@@ -354,8 +354,8 @@
                         </div>
                         <div class="firstAccordionWorldMapHeadLeft">
                             <div class="numberOnDropDownForWorldMap">+3</div>
-                            <svg [ngClass]="{'rotateVesselArrowWorldMap' : accordionWorldMap[0]}" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg [ngClass]="{'rotateVesselArrowWorldMap' : accordionWorldMap[0]}" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 10L12 14L17 10" stroke="#1E2124" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
@@ -504,29 +504,9 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[1]}"
                         (click)="accordionWorldMapFunc(1)">
 
-                        <svg [ngClass]="{'rotateVesselForCheckBox':accordionWorldMap[1]}" width="24" height="26"
-                            viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_d_1_3447)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                    fill="#596069" />
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1_3447" x="-4" y="0" width="32" height="32"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feColorMatrix in="SourceAlpha" type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                    <feOffset dy="4" />
-                                    <feGaussianBlur stdDeviation="2" />
-                                    <feComposite in2="hardAlpha" operator="out" />
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                    <feBlend mode="normal" in2="BackgroundImageFix"
-                                        result="effect1_dropShadow_1_3447" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3447"
-                                        result="shape" />
-                                </filter>
-                            </defs>
+                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[1]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
                         <div class="actualAccordionHeadText">Voyage Information</div>
@@ -560,30 +540,9 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[2]}"
                         (click)="accordionWorldMapFunc(2)">
                         <div class="crewDetailsFlexHead">
-                            <svg [ngClass]="{'rotateVesselForCheckBox':accordionWorldMap[2]}" width="24" height="26"
-                                viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_1_3447)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                        fill="#596069" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_1_3447" x="-4" y="0" width="32" height="32"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_1_3447" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3447"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
+                            <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[2]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
                             <div class="actualAccordionHeadText" [ngClass]="{'textBoldCrew':accordionWorldMap[2]}">Crew
@@ -646,29 +605,9 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[3]}"
                         (click)="accordionWorldMapFunc(3)">
 
-                        <svg [ngClass]="{'rotateVesselForCheckBox':accordionWorldMap[3]}" width="24" height="26"
-                            viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_d_1_3447)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                    fill="#596069" />
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1_3447" x="-4" y="0" width="32" height="32"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feColorMatrix in="SourceAlpha" type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                    <feOffset dy="4" />
-                                    <feGaussianBlur stdDeviation="2" />
-                                    <feComposite in2="hardAlpha" operator="out" />
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                    <feBlend mode="normal" in2="BackgroundImageFix"
-                                        result="effect1_dropShadow_1_3447" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3447"
-                                        result="shape" />
-                                </filter>
-                            </defs>
+                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[3]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
                         <div class="actualAccordionHeadText">Route</div>
@@ -709,7 +648,7 @@
                             <label class="form-check-label checkBoxForRoute" for="checkbox">Show planned Route</label>
                         </div>
 
-                        
+
                         <div class="routeAccordionButtons">
                             <button class="routeAccordionBtnEle">Reset</button>
                             <button class="routeAccordionBtnEle applyBtnOnRoute">Apply</button>
