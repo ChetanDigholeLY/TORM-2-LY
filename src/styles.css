@@ -478,6 +478,15 @@ ul {
   border: 1px solid #DEE0E2;
 }
 
+.activeBlueBackgroundDropDown{
+  background: #E1EFFF !important;
+  border: 1px solid #016BFF !important;
+}
+.activeBlueTextDropDown{
+  background: #A8CCFF !important;
+  color: #003A78 !important;
+}
+
 .dropDownVesselMenu {
   width: 230px !important;
   padding: 8px 16px;
@@ -929,6 +938,10 @@ mat-checkbox .mdc-form-field label {
   }
 
   .sideBarMainContainer {
+    display: none;
+  }
+
+  .accordionWorldMapEle{
     display: none;
   }
 

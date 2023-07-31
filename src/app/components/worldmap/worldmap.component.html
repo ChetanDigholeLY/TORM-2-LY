@@ -99,7 +99,9 @@
 
         <!-- drop down world map starts -->
         <div class="vesselDropDownOnWorldMap hideForMobileDropDown" *ngIf="!isVesselSideBar">
-            <div class="navbarDropDown vesselDropDownOnWorldMain" (click)="vesselDropDownWorldMapFunc()">
+            <div class="navbarDropDown vesselDropDownOnWorldMain"
+                [ngClass]="{'activeBlueBackgroundDropDown':isVesselDropDrownWorldmap}"
+                (click)="vesselDropDownWorldMapFunc()">
                 <div class="navBarDropDownMain">
                     <div class="navBarDropDownLeft">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +136,8 @@
 
                         <div class="WorldMapDropDownActiveText">Active vessels</div>
                     </div>
-                    <div class="numberOnDropDownForWorldMap">+3</div>
+                    <div class="numberOnDropDownForWorldMap"
+                        [ngClass]="{'activeBlueTextDropDown':isVesselDropDrownWorldmap}">+3</div>
                     <div class="navBarDropDownRight"
                         [ngClass]="{'rotateVesselArrowWorldMap':isVesselDropDrownWorldmap}">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,11 +151,17 @@
                 <div class="vesselDropDownOnWorldMapList">
                     <div class="vesselDropDownOnWorldMapEle">
                         <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg *ngIf="!vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                     fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
                             </svg>
                         </div>
                         <mat-checkbox [(ngModel)]="vesselCheckTextBlue[0]"
@@ -161,11 +170,17 @@
                     </div>
                     <div class="vesselDropDownOnWorldMapEle">
                         <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg *ngIf="!vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                     fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
                             </svg>
                         </div>
                         <mat-checkbox [(ngModel)]="vesselCheckTextBlue[1]"
@@ -217,11 +232,17 @@
 
                     <div class="vesselDropDownOnWorldMapEle">
                         <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg *ngIf="!vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                     fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
                             </svg>
                         </div>
                         <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]" class="example-margin"></mat-checkbox><span
@@ -231,11 +252,17 @@
 
                     <div class="vesselDropDownOnWorldMapEle">
                         <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg *ngIf="!vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                     fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
                             </svg>
                         </div>
                         <mat-checkbox class="example-margin vesselCheckBoxText"
@@ -367,11 +394,17 @@
                         <div class="vesselDropDownOnWorldMapList">
                             <div class="vesselDropDownOnWorldMapEle">
                                 <div>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg *ngIf="!vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                             fill="#596069" />
+                                    </svg>
+                                    <svg *ngIf="vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                            fill="#016BFF" />
                                     </svg>
                                 </div>
                                 <mat-checkbox [(ngModel)]="vesselCheckTextBlue[0]"
@@ -382,11 +415,17 @@
                             </div>
                             <div class="vesselDropDownOnWorldMapEle">
                                 <div>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg *ngIf="!vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                             fill="#596069" />
+                                    </svg>
+                                    <svg *ngIf="vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                            fill="#016BFF" />
                                     </svg>
                                 </div>
                                 <mat-checkbox [(ngModel)]="vesselCheckTextBlue[1]"
@@ -444,11 +483,17 @@
 
                             <div class="vesselDropDownOnWorldMapEle">
                                 <div>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg *ngIf="!vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                             fill="#596069" />
+                                    </svg>
+                                    <svg *ngIf="vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                            fill="#016BFF" />
                                     </svg>
                                 </div>
                                 <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]"
@@ -458,11 +503,17 @@
 
                             <div class="vesselDropDownOnWorldMapEle">
                                 <div>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg *ngIf="!vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
                                             fill="#596069" />
+                                    </svg>
+                                    <svg *ngIf="vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                            fill="#016BFF" />
                                     </svg>
                                 </div>
                                 <mat-checkbox class="example-margin vesselCheckBoxText"
@@ -504,7 +555,8 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[1]}"
                         (click)="accordionWorldMapFunc(1)">
 
-                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[1]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[1]}" width="24" height="24"
+                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -540,7 +592,8 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[2]}"
                         (click)="accordionWorldMapFunc(2)">
                         <div class="crewDetailsFlexHead">
-                            <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[2]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[2]}" width="24" height="24"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -605,7 +658,8 @@
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[3]}"
                         (click)="accordionWorldMapFunc(3)">
 
-                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[3]}" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg [ngClass]="{'rotateTwoSeventyDegree':!accordionWorldMap[3]}" width="24" height="24"
+                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.25 7.5L9 10.5L12.75 7.5" stroke="#596069" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
