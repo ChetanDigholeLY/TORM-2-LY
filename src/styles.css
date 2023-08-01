@@ -108,7 +108,7 @@ ul {
 .logoTextDesktop {
   color: white;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 31.9px;
   margin-bottom: 0px;
   font-family: "Futura";
@@ -3986,11 +3986,19 @@ mat-checkbox .mdc-form-field label {
   }
 }
 
+.guidanceComponent{
+  background: #F4F5F6;
+}
+
 @media (max-width:512px) {
   .sensorComponentMain , .performance-container , .guidanceComponent {
     height: calc(100vh - 96px);
     overflow: auto;
   }
+}
+
+.guidanceListContent{
+  background: #FFF;
 }
 
 /* copy imprpvements ends */
