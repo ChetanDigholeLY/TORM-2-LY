@@ -1141,7 +1141,8 @@ mat-checkbox .mdc-form-field label {
   }
 
   .worldMapNavBarDropDownBtn,
-  .hideForMobileDropDown {
+  .hideForMobileDropDown,
+  .worldMapSideBarMain {
     display: none;
   }
 
@@ -3993,3 +3994,45 @@ mat-checkbox .mdc-form-field label {
 }
 
 /* copy imprpvements ends */
+
+.nestedNavFlexCol{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nestedNavFlexStart{
+  display: flex;
+}
+
+.nestedNavUpperText{
+  font-size: 14px;
+  font-weight: 400;
+  color: #969DA6;
+}
+
+.nestedNavUpperText > svg {
+  margin-left: 4px;
+}
+
+.nestedNavLowerText{
+  font-size: 24px;
+  font-weight: 600;
+  color: #596069;
+}
+
+.mobileNavFlexStart{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobileNavPastRoute{
+  font-size: 14px;
+  font-weight: 400;
+  color: #969DA6;
+}
+
+.mobileNavPastRoute > svg {
+  margin-left: 4px;
+}
