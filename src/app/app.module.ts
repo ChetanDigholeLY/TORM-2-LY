@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { SidebarService } from './services/sidebar.service';
 import { NotAcknowledgedGuidanceComponent } from './components/not-acknowledged-guidance/not-acknowledged-guidance.component';
 import { AcknowledgedGuidanceComponent } from './components/acknowledged-guidance/acknowledged-guidance.component';
+import { TimeSeriesComponent } from './components/time-series/time-series.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,10 @@ const routes: Routes = [
   { path: 'sensors', component: SensorsComponent , children: [
     {
       path: 'livedatafeed', component: LiveDataFeedComponent
-    }
+    },
+    {
+      path: 'timeseries', component: TimeSeriesComponent
+    },
   ]},
   { path: 'worldmap', component: WorldmapComponent }
   
@@ -45,7 +49,8 @@ const routes: Routes = [
     WorldmapComponent,
     LiveDataFeedComponent,
     NotAcknowledgedGuidanceComponent,
-    AcknowledgedGuidanceComponent
+    AcknowledgedGuidanceComponent,
+    TimeSeriesComponent
   ],
   imports: [
     BrowserModule,

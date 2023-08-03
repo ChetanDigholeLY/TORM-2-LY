@@ -17,13 +17,16 @@ export class SideBarComponent implements OnInit {
   //[0,1,2,3] = main menu
   //[4,5,6,7] = sensor menu
   //apend more when needed
-  focusToSideBarElement = [false,false,false,false,false];
+  focusToSideBarElement = [false,false,false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
     for(let i = 0; i<this.focusToSideBarElement.length; i++){
       this.focusToSideBarElement[i] = false;
     }
     this.focusToSideBarElement[value] = true
+    if(value>3 && value <8){
+      this.focusToSideBarElement[2] = true
+    }
   }
   // focus on sideBar Element ends
 
@@ -46,6 +49,11 @@ export class SideBarComponent implements OnInit {
       }
       if(currentUrl === '/sensors/livedatafeed'){
         this.focusToSideBarElementFunc(4)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
+      }
+      if(currentUrl === '/sensors/timeseries'){
+        this.focusToSideBarElementFunc(5)
         this.disAbleSideAndNav = false;
         this.disableNavFunc(false)
       }

@@ -7,7 +7,9 @@ const routeNameMap: { [key: string]: String[]} = {
   '/worldmap':["World Map"],
   '/guidance': ["Automated Guidance"],
   '/sensors/livedatafeed': ["Sensor Data","Live Data Feed"],
-  '/performance': ["Performance", "Electric Power Performance"]
+  '/performance': ["Performance", "Electric Power Performance"],
+  '/sensors/timeseries': ["Sensor Data","Time Series"],
+
 }
 
 @Component({
@@ -26,7 +28,7 @@ export class NavBarComponent implements OnInit {
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       this.currentRoute = routeNameMap[event.url]
-      console.log(this.currentRoute)
+      // console.log(this.currentRoute)
     })
   }
 
