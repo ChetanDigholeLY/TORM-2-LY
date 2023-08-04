@@ -496,6 +496,8 @@ ul {
 .vesselDropDownOnWorldMainMenu {
   width: 230px !important;
   border-radius: 8px;
+  max-height: 288px;
+  overflow: auto;
 }
 
 .rotateVesselArrowWorldMap {
@@ -779,7 +781,8 @@ mat-checkbox .mdc-form-field label {
 .crewMemberBody::-webkit-scrollbar,
 .shipSideBarCheckBoxDrop::-webkit-scrollbar,
 .vesselSideBarMainContent::-webkit-scrollbar,
-.timeSeriesSideBarListMain::-webkit-scrollbar {
+.timeSeriesSideBarListMain::-webkit-scrollbar,
+.vesselDropDownOnWorldMainMenu::-webkit-scrollbar {
   display: none;
 }
 
