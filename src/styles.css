@@ -4120,6 +4120,7 @@ mat-checkbox .mdc-form-field label {
     align-items: center;
     gap: 16px;
     padding: 12px 8px;
+    width: 242px;
   }
 
   .timeSeriesCalendar{
