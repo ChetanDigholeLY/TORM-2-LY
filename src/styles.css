@@ -473,7 +473,7 @@ ul {
 
 .vesselDropDownOnWorldMain {
   background: rgba(255, 255, 255, 0.60);
-  width: 230px !important;
+  width: 250px !important;
   cursor: pointer;
   border: 1px solid #DEE0E2;
 }
@@ -4199,3 +4199,41 @@ mat-checkbox .mdc-form-field label {
   }
 }
 /* time series ends */
+
+.WMVesselDropDownMain{
+  width: 250px;
+  max-height: 288px;
+  background-color: #FFF;
+  border-radius: 8px;
+  padding: 8px 16px;
+  overflow: auto;
+}
+
+.WMVesselDropDownContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.WMVesselDropLabel{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.WMCheckBoxInpt{
+  width: 18px;
+  height: 18px;
+}
+
+.WMVesselText{
+  font-size: 16px;
+  font: 400;
+  color: #596069;
+}
+
+.LR1VesselDropDownBody{
+  padding-left: 56px;
+}
+

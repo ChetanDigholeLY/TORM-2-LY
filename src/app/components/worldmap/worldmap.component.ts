@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-worldmap',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class WorldmapComponent {
+
+  constructor(private elementRef: ElementRef) {}
 
   // code for world map sidebar starts
   isSideBarOpen: boolean = false;
@@ -112,6 +114,92 @@ export class WorldmapComponent {
     this.accordionWorldMap[val] = !this.accordionWorldMap[val]
   }
   //vessel accrodian ends
+
+
+  //WMVessel DropDown starts
+  isLR1VesselDropDownOpen: boolean = false;
+  isLR2VesselDropDownOpen: boolean = false;
+  nestedVesselDropDownElementFunc(val: string){
+    if(val === 'lr1'){
+      this.isLR1VesselDropDownOpen = !this.isLR1VesselDropDownOpen
+    }
+    if(val === 'lr2'){
+      this.isLR2VesselDropDownOpen = !this.isLR2VesselDropDownOpen
+    }
+  }
+
+  // const WMCheckBoxInpt = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.WMCheckBoxInpt')
+  // console.log(WMCheckBoxInpt[0].name)
+  
+  // lr1 vessel drop down starts
+  parentLR1ForBlueArrow: boolean = false;
+
+  toogleAllLR1ChildFunc(event: any){
+    const parentLR1 = HTMLInputElement = this.elementRef.nativeElement.querySelector('.parentLR1')
+    const childLR1 = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.childLR1')
+    childLR1.forEach((Ele: any , i: number) => {
+      Ele.checked = event.target.checked;
+    })
+  }
+
+  updateParentLr1CheckBoxFunc(Ele: any){
+    const parentLR1 = HTMLInputElement = this.elementRef.nativeElement.querySelector('.parentLR1')
+
+    const childLR1 = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.childLR1')
+    const childLR1Array = Array.from(childLR1)
+
+    childLR1Array.map((currentEle: any) => {
+      if(currentEle.checked === false && parentLR1.checked){
+        parentLR1.checked = false;
+      }
+    })
+
+    let isAllLR1Vessel = true;
+    childLR1Array.forEach((currentEle: any) =>{
+      if(currentEle.checked === false){
+        isAllLR1Vessel = false;
+      }
+    })
+    parentLR1.checked = isAllLR1Vessel
+  }
+  // lr1 vessel drop down ends
+
+
+  // lr2 vessel drop down starts
+  toogleAllLR2ChildFunc(event: any){
+    const parentLR2 = HTMLInputElement = this.elementRef.nativeElement.querySelector('.parentLR2')
+    const childLR2 = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.childLR2')
+    // const WMCheckBoxInpt = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.WMCheckBoxInpt')
+    // console.log(WMCheckBoxInpt[0].name)
+    childLR2.forEach((Ele : any) => {
+      Ele.checked = event.target.checked
+    })
+  }
+
+  updateParentLr2CheckBoxFunc(Ele: any){
+    const parentLR2 = HTMLInputElement = this.elementRef.nativeElement.querySelector('.parentLR2')
+
+    const childLR2 = HTMLInputElement = this.elementRef.nativeElement.querySelectorAll('.childLR2')
+    const childLR2Array = Array.from(childLR2)
+
+    childLR2Array.map((currentEle: any) => {
+      if(currentEle.checked === false && parentLR2.checked){
+        parentLR2.checked = false;
+      }
+    })
+
+    let isAllLR2Vessel = true;
+    childLR2Array.forEach((currentEle: any) =>{
+      if(currentEle.checked === false){
+        isAllLR2Vessel = false;
+      }
+    })
+    parentLR2.checked = isAllLR2Vessel
+  }
+
+  // lr2 vessel drop down ends
+
+  //WMVessel DropDown ends
 
 
 }
