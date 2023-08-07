@@ -1,0 +1,30 @@
+<div class="date-picker">
+  <!-- Header -->
+  <div class="header">
+    <span class="label"> Time Range Selection </span>
+    <div class="info">
+      <span class="range">
+        <span class="label">From</span>
+        <span>:</span>
+        <span>{{ selectedFrom.toString() }}</span>
+      </span>
+      <span class="range">
+        <span class="label">To</span>
+        <span>:</span>
+        <span>{{ selectedTo.toString() }}</span>
+      </span>
+    </div>
+  </div>
+  <!-- Header ends -->
+
+  <!-- Datepicker body-->
+  <div class="calendar-container">
+    <ngx-daterangepicker-material
+      [autoApply]="true"
+      (choosedDate)="change($event)"
+      [showDropdowns]="true"
+      [timePicker]="true"
+    >
+    </ngx-daterangepicker-material>
+  </div>
+</div>

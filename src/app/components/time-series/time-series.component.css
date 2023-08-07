@@ -1,0 +1,9 @@
+
+.date-picker-container {
+  position: relative;
+}
+
+.date-picker-container button {
+  background-color: transparent;
+  border: none;
+}
