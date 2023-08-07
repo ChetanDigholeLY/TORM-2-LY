@@ -117,6 +117,9 @@ export class WorldmapComponent {
 
 
   //WMVessel DropDown starts
+
+  blueArrowArray = [false, false, false, false]
+
   isLR1VesselDropDownOpen: boolean = false;
   isLR2VesselDropDownOpen: boolean = false;
   nestedVesselDropDownElementFunc(val: string){
@@ -161,6 +164,8 @@ export class WorldmapComponent {
       }
     })
     parentLR1.checked = isAllLR1Vessel
+    this.blueArrowArray[1] = isAllLR1Vessel
+
   }
   // lr1 vessel drop down ends
 
@@ -194,7 +199,8 @@ export class WorldmapComponent {
         isAllLR2Vessel = false;
       }
     })
-    parentLR2.checked = isAllLR2Vessel
+    parentLR2.checked = isAllLR2Vessel;
+    this.blueArrowArray[2] = isAllLR2Vessel
   }
 
   // lr2 vessel drop down ends

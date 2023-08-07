@@ -158,7 +158,7 @@
             </div>
 
 
-            <div *ngIf="!isVesselDropDrownWorldmap">
+            <div *ngIf="isVesselDropDrownWorldmap">
 
                 <div class="WMVesselDropDownMain">
 
@@ -169,13 +169,13 @@
                         </label>
 
                         <label class="WMVesselDropLabel">
-                            <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                    fill="#596069" />
-                            </svg> -->
-                            <input type="checkbox" class="WMCheckBoxInpt" name="activeVessels"/>
+                                     [style.fill]="blueArrowArray[0]? '#016BFF' : '#596069'" />
+                            </svg>
+                            <input [(ngModel)]="blueArrowArray[0]" type="checkbox" class="WMCheckBoxInpt" name="activeVessels"/>
                             <div class="WMVesselText">Active Vessels</div>
                         </label>
 
@@ -185,16 +185,14 @@
                                 <svg *ngIf="!parentLR1ForBlueArrow" [ngClass]="{'rotateVesselForCheckBox' : isLR1VesselDropDownOpen}" (click)="nestedVesselDropDownElementFunc('lr1')" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                        fill="#596069" />
+                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                     [style.fill]="blueArrowArray[1]? '#016BFF' : '#596069'" />
                                 </svg>
-                                <svg *ngIf="parentLR1ForBlueArrow" [ngClass]="{'rotateVesselForCheckBox' : isLR1VesselDropDownOpen}" (click)="nestedVesselDropDownElementFunc('lr1')" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z" fill="#016BFF"/>
-                                </svg>                                    
-                                <input type="checkbox" class="WMCheckBoxInpt parentLR1" (change)="toogleAllLR1ChildFunc($event)" name="lr1"/>
+                                
+                                <input [(ngModel)]="blueArrowArray[1]" type="checkbox" class="WMCheckBoxInpt parentLR1" (change)="toogleAllLR1ChildFunc($event)" name="lr1"/>
                                 <div class="WMVesselText">LR 1</div>
                             </div>
-                            <div class="LR1VesselDropDownBody" *ngIf="isLR1VesselDropDownOpen">
+                            <div class="LR1VesselDropDownBody" [ngClass]="{'visiblityOfDropDownVessel':!isLR1VesselDropDownOpen}">
                                 
                                 <label class="WMVesselDropLabel">
                                     <input type="checkbox" class="WMCheckBoxInpt childLR1" name="tormHolland" (change)="updateParentLr1CheckBoxFunc($event)"/>
@@ -220,13 +218,13 @@
                                 <svg [ngClass]="{'rotateVesselForCheckBox' : isLR2VesselDropDownOpen}" (click)="nestedVesselDropDownElementFunc('lr2')" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                        fill="#596069" />
+                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                     [style.fill]="blueArrowArray[2]? '#016BFF' : '#596069'" />
                                 </svg>
-                                <input type="checkbox" class="WMCheckBoxInpt parentLR2" (change)="toogleAllLR2ChildFunc($event)" name="lr2"/>
+                                <input [(ngModel)]="blueArrowArray[2]" type="checkbox" class="WMCheckBoxInpt parentLR2" (change)="toogleAllLR2ChildFunc($event)" name="lr2"/>
                                 <div class="WMVesselText">LR 2</div>
                             </div>
-                            <div class="LR1VesselDropDownBody" *ngIf="isLR2VesselDropDownOpen">
+                            <div class="LR1VesselDropDownBody" [ngClass]="{'visiblityOfDropDownVessel':!isLR2VesselDropDownOpen}">
                                 
                                 <label class="WMVesselDropLabel">
                                     <input type="checkbox" class="WMCheckBoxInpt childLR2" name="tormHolland2" (change)="updateParentLr2CheckBoxFunc($event)"/>
@@ -247,13 +245,13 @@
                         <!-- lr 2 on worldMap ends -->
 
                         <label class="WMVesselDropLabel">
-                            <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                    fill="#596069" />
-                            </svg> -->
-                            <input type="checkbox" class="WMCheckBoxInpt" name="sold"/>
+                                     [style.fill]="blueArrowArray[3]? '#016BFF' : '#596069'" />
+                            </svg>
+                            <input type="checkbox" [(ngModel)]="blueArrowArray[3]" class="WMCheckBoxInpt" name="sold"/>
                             <div class="WMVesselText">Sold</div>
                         </label>
 

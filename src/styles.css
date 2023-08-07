@@ -782,7 +782,8 @@ mat-checkbox .mdc-form-field label {
 .shipSideBarCheckBoxDrop::-webkit-scrollbar,
 .vesselSideBarMainContent::-webkit-scrollbar,
 .timeSeriesSideBarListMain::-webkit-scrollbar,
-.vesselDropDownOnWorldMainMenu::-webkit-scrollbar {
+.vesselDropDownOnWorldMainMenu::-webkit-scrollbar,
+.WMVesselDropDownMain::-webkit-scrollbar {
   display: none;
 }
 
@@ -4229,11 +4230,22 @@ mat-checkbox .mdc-form-field label {
 
 .WMVesselText{
   font-size: 16px;
-  font: 400;
+  font-weight: 400;
   color: #596069;
 }
 
 .LR1VesselDropDownBody{
   padding-left: 56px;
+}
+
+.visiblityOfDropDownVessel {
+  /* visibility: hidden;
+  height: 0; */
+  position: absolute;
+  top:  -99999999999999px;
+}
+
+.WMCheckBoxInpt:checked + div{
+  color: #016BFF;
 }
 
