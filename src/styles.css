@@ -4308,3 +4308,13 @@ mat-checkbox .mdc-form-field label {
   font-size: 14px;
   font-weight: 600;
 }
+
+
+@media (max-width:512px){
+  .navbarDropDownBodyMain{
+    width: 212px;
+  }
+  .navBarDropDownEleText{
+    font-size: 14px;
+  }
+}
