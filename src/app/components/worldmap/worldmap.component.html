@@ -158,107 +158,170 @@
             </div>
 
 
-            <div *ngIf="isVesselDropDrownWorldmap">
-
-                <div class="WMVesselDropDownMain">
-
-                    <div class="WMVesselDropDowncontainer">
-                        <label class="WMVesselDropLabel">
-                            <input type="checkbox" class="WMCheckBoxInpt" name="allvessels"/>
-                            <div class="WMVesselText">All Vessels</div>
-                        </label>
-
-                        <label class="WMVesselDropLabel">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <div class="dropDownVesselMenu vesselDropDownOnWorldMainMenu" *ngIf="isVesselDropDrownWorldmap">
+                <div class="vesselDropDownOnWorldMapList">
+                    <div class="vesselDropDownOnWorldMapEle">
+                        <div>
+                            <svg *ngIf="!vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                     [style.fill]="blueArrowArray[0]? '#016BFF' : '#596069'" />
+                                    fill="#596069" />
                             </svg>
-                            <input [(ngModel)]="blueArrowArray[0]" type="checkbox" class="WMCheckBoxInpt" name="activeVessels"/>
-                            <div class="WMVesselText">Active Vessels</div>
-                        </label>
-
-                        <!-- lr 1 on worldMap starts -->
-                        <div>
-                            <div class="WMVesselDropLabel">
-                                <svg *ngIf="!parentLR1ForBlueArrow" [ngClass]="{'rotateVesselForCheckBox' : isLR1VesselDropDownOpen}" (click)="nestedVesselDropDownElementFunc('lr1')" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                     [style.fill]="blueArrowArray[1]? '#016BFF' : '#596069'" />
-                                </svg>
-                                
-                                <input [(ngModel)]="blueArrowArray[1]" type="checkbox" class="WMCheckBoxInpt parentLR1" (change)="toogleAllLR1ChildFunc($event)" name="lr1"/>
-                                <div class="WMVesselText">LR 1</div>
-                            </div>
-                            <div class="LR1VesselDropDownBody" [ngClass]="{'visiblityOfDropDownVessel':!isLR1VesselDropDownOpen}">
-                                
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR1" name="tormHolland" (change)="updateParentLr1CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Holland</div>
-                                </label>
-
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR1" name="tormAlice" (change)="updateParentLr1CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Alice</div>
-                                </label>
-
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR1" name="tormPoland" (change)="updateParentLr1CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Poland</div>
-                                </label>
-                            </div>
+                            <svg *ngIf="vesselCheckTextBlue[0]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
+                            </svg>
                         </div>
-                        <!-- lr 1 on worldMap ends -->
-
-                        <!-- lr 2 on worldMap starts -->
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[0]"
+                            class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[0]}">All Vessels</span>
+                    </div>
+                    <div class="vesselDropDownOnWorldMapEle">
                         <div>
-                            <div class="WMVesselDropLabel">
-                                <svg [ngClass]="{'rotateVesselForCheckBox' : isLR2VesselDropDownOpen}" (click)="nestedVesselDropDownElementFunc('lr2')" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                     [style.fill]="blueArrowArray[2]? '#016BFF' : '#596069'" />
-                                </svg>
-                                <input [(ngModel)]="blueArrowArray[2]" type="checkbox" class="WMCheckBoxInpt parentLR2" (change)="toogleAllLR2ChildFunc($event)" name="lr2"/>
-                                <div class="WMVesselText">LR 2</div>
-                            </div>
-                            <div class="LR1VesselDropDownBody" [ngClass]="{'visiblityOfDropDownVessel':!isLR2VesselDropDownOpen}">
-                                
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR2" name="tormHolland2" (change)="updateParentLr2CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Holland 2</div>
-                                </label>
-
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR2" name="tormAlice2" (change)="updateParentLr2CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Alice 2</div>
-                                </label>
-
-                                <label class="WMVesselDropLabel">
-                                    <input type="checkbox" class="WMCheckBoxInpt childLR2" name="tormPoland2" (change)="updateParentLr2CheckBoxFunc($event)"/>
-                                    <div class="WMVesselText">Torm Poland 2</div>
-                                </label>
-                            </div>
-                        </div>
-                        <!-- lr 2 on worldMap ends -->
-
-                        <label class="WMVesselDropLabel">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <svg *ngIf="!vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
-                                     [style.fill]="blueArrowArray[3]? '#016BFF' : '#596069'" />
+                                    fill="#596069" />
                             </svg>
-                            <input type="checkbox" [(ngModel)]="blueArrowArray[3]" class="WMCheckBoxInpt" name="sold"/>
-                            <div class="WMVesselText">Sold</div>
-                        </label>
+                            <svg *ngIf="vesselCheckTextBlue[1]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
+                            </svg>
+                        </div>
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[1]"
+                            class="example-margin vesselCheckBoxText"></mat-checkbox><span class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[1]}">Active Vessels</span>
+                    </div>
 
+                    <!-- nested starts -->
+                    <div>
+                        <div class="vesselDropDownOnWorldMapEle">
+                            <div>
+                                <svg *ngIf="!allComplete" (click)="nestedVesselCheckBoxFunc()"
+                                    [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBox}" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                        fill="#596069" />
+                                </svg>
+                                <svg *ngIf="allComplete" (click)="nestedVesselCheckBoxFunc()"
+                                    [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBox}" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                        fill="#016BFF" />
+                                </svg>
+                            </div>
+                            <mat-checkbox [(ngModel)]="vesselCheckTextBlue[2]" [checked]="allComplete"
+                                [indeterminate]="someComplete()" (change)="setAll($event.checked)"
+                                class="example-margin vesselCheckBoxText"></mat-checkbox><span
+                                class="vesselCheckBoxText" [ngClass]="{'blueTextForVesselDropDownEle':allComplete}">LR
+                                1</span>
+                        </div>
+
+                        <div class="nestedVesselOfLR" *ngIf="isNestedVesselCheckBox">
+                            <div class="vesselDropDownOnWorldMapEle flexNestedEleDropDownWorld">
+                                <div *ngFor="let subtask of task.subtasks; let i = index">
+
+                                    <mat-checkbox [(ngModel)]="lr1VesselText[i]" [(ngModel)]="subtask.completed"
+                                        (ngModelChange)="updateAllComplete()" class="example-margin vesselCheckBoxText">
+                                    </mat-checkbox>
+                                    <span class="vesselCheckBoxText"
+                                        [ngClass]="{'blueTextForVesselDropDownEle':lr1VesselText[i]}">{{subtask.name}}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- nested ends -->
+
+                    <!-- <div class="vesselDropDownOnWorldMapEle">
+                        <div>
+                            <svg *ngIf="!vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                    fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[3]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
+                            </svg>
+                        </div>
+                        <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]" class="example-margin"></mat-checkbox><span
+                            class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[3]}">LR 2</span>
+                    </div> -->
+
+                    <div>
+                        <div class="vesselDropDownOnWorldMapEle">
+                            <div>
+                                <svg *ngIf="!allCompleteTaskB" (click)="nestedVesselCheckBoxFuncLR2()"
+                                    [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBoxLR2}" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                        fill="#596069" />
+                                </svg>
+                                <svg *ngIf="allCompleteTaskB" (click)="nestedVesselCheckBoxFuncLR2()"
+                                    [ngClass]="{'rotateVesselForCheckBox':isNestedVesselCheckBoxLR2}" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                        fill="#016BFF" />
+                                </svg>
+                            </div>
+                            <mat-checkbox [(ngModel)]="vesselCheckTextBlue[3]" [checked]="allCompleteTaskB"
+                                [indeterminate]="someCompleteTaskB()" (change)="setAllTaskB($event.checked)"
+                                class="example-margin vesselCheckBoxText"></mat-checkbox><span
+                                class="vesselCheckBoxText" [ngClass]="{'blueTextForVesselDropDownEle':allCompleteTaskB}">LR
+                                2</span>
+                        </div>
+
+                        <div class="nestedVesselOfLR" *ngIf="isNestedVesselCheckBoxLR2">
+                            <div class="vesselDropDownOnWorldMapEle flexNestedEleDropDownWorld">
+                                <div *ngFor="let subtask of taskB.subtasks; let i = index">
+
+                                    <mat-checkbox [(ngModel)]="lr2VesselText[i]" [(ngModel)]="subtask.completed"
+                                        (ngModelChange)="updateAllCompleteTaskB()" class="example-margin vesselCheckBoxText">
+                                    </mat-checkbox>
+                                    <span class="vesselCheckBoxText"
+                                        [ngClass]="{'blueTextForVesselDropDownEle':subtask.completed}">{{subtask.name}}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vesselDropDownOnWorldMapEle">
+                        <div>
+                            <svg *ngIf="!vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53151 17.5856C9.20806 17.3269 9.15562 16.8549 9.41438 16.5315L13.0396 12L9.41438 7.46849C9.15562 7.14505 9.20806 6.67308 9.53151 6.41432C9.85495 6.15556 10.3269 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.3269 17.7919 9.85495 17.8444 9.53151 17.5856Z"
+                                    fill="#596069" />
+                            </svg>
+                            <svg *ngIf="vesselCheckTextBlue[4]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                    fill="#016BFF" />
+                            </svg>
+                        </div>
+                        <mat-checkbox class="example-margin vesselCheckBoxText"
+                            [(ngModel)]="vesselCheckTextBlue[4]"></mat-checkbox><span class="vesselCheckBoxText"
+                            [ngClass]="{'blueTextForVesselDropDownEle':vesselCheckTextBlue[4]}">Sold</span>
                     </div>
 
                 </div>
-
             </div>
 
 
