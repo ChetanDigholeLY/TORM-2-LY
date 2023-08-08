@@ -207,5 +207,44 @@ export class WorldmapComponent {
 
   //WMVessel DropDown ends
 
+  taskB = {
+    name: 'TaskB',
+    completed: false,
+    color: 'primary',
+    subtasks: [
+      { name: 'Subtask B1', completed: false, color: 'primary' },
+      { name: 'Subtask B2', completed: false, color: 'accent' },
+      { name: 'Subtask B3', completed: false, color: 'warn' },
+    ],
+  };
+
+  lr2VesselText = [false, false, false, false]
+
+  allCompleteTaskB: boolean = false;
+
+  updateAllCompleteTaskB() {
+    this.allCompleteTaskB = this.taskB.subtasks != null && this.taskB.subtasks.every(t => t.completed);
+  }
+
+  someCompleteTaskB(): boolean {
+    if (this.taskB.subtasks == null) {
+      return false;
+    }
+    return this.taskB.subtasks.filter(t => t.completed).length > 0 && !this.allCompleteTaskB;
+  }
+
+  setAllTaskB(completed: boolean) {
+    this.allCompleteTaskB = completed;
+    if (this.taskB.subtasks == null) {
+      return;
+    }
+    this.taskB.subtasks.forEach(t => (t.completed = completed));
+  }
+
+  isNestedVesselCheckBoxLR2: boolean = false
+
+  nestedVesselCheckBoxFuncLR2(){
+    this.isNestedVesselCheckBoxLR2 = !this.isNestedVesselCheckBoxLR2
+  }
 
 }
