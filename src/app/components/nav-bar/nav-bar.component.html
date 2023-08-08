@@ -26,8 +26,8 @@
 
     <div class="navBarRightElement">
         <!-- vessel DropDown  -->
-        <div class="navbarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <div class="navBarDropDownMain">
+        <div class="navbarDropDown">
+            <div class="navBarDropDownMain" (click)="dropDownToggleFunc()">
                 <div class="navBarDropDownLeft">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12H8L6.63938 10.0133L3 10V12Z" stroke="#003A78" stroke-width="0.6"
@@ -62,17 +62,113 @@
                     <div class="navBarDropDownHeadingText">Torm Alice</div>
                 </div>
 
-                <div class="navBarDropDownRight">
+                
+                
+                <div class="navBarDropDownNumber">+4</div>
+                <div class="navBarDropDownRight" [ngClass]="{'rotateVesselArrowWorldMap': isNavDropDownOpen}">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 10L12 14L17 10" stroke="#1E2124" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
-            <div class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <div class="navbarDropDownBodyMain" *ngIf="isNavDropDownOpen">
+
+                <label class="navBarDropDownEle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                            [style.fill]="navDropDownBlueArray[4] ? '#016BFF' : '#596069'" />
+                    </svg>
+                    <mat-checkbox [(ngModel)]="navDropDownBlueArray[4]" class="example-margin"><span class="navBarDropDownEleText" [ngClass]="{'blurTextNavBar': navDropDownBlueArray[4]}">All
+                            vessels</span></mat-checkbox>
+                </label>
+
+                <label class="navBarDropDownEle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                            [style.fill]="navDropDownBlueArray[0] ? '#016BFF' : '#596069'" />
+                    </svg>
+                    <mat-checkbox [(ngModel)]="navDropDownBlueArray[0]" class="example-margin"><span
+                            class="navBarDropDownEleText" [ngClass]="{'blurTextNavBar': navDropDownBlueArray[0]}">Active
+                            Vessels</span></mat-checkbox>
+                </label>
+
+                <!-- lr1 nested starts -->
+                <div>
+                    <div class="nestedDropDownEleHead">
+                        <svg (click)="nestedNavBarLR1OpenFunc()" [ngClass]="{'rotateVesselForCheckBox' : isNestedNavBarLR1Open}" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                [style.fill]="allCompleteTaskA ? '#016BFF' : '#596069'" />
+                        </svg>
+                        <label class="navBarDropDownEle">
+                            <mat-checkbox [checked]="allCompleteTaskA" [color]="taskA.color"
+                                [indeterminate]="someCompleteTaskA()"
+                                (change)="setAllTaskA($event.checked)" [(ngModel)]="navDropDownBlueArray[1]"
+                                class="example-margin"><span class="navBarDropDownEleText"
+                                    [ngClass]="{'blurTextNavBar': allCompleteTaskA}">LR 1</span>
+                            </mat-checkbox>
+                        </label>
+                    </div>
+
+                    <!-- lr1 body starts -->
+                    <div class="nestedDropDownBody" *ngIf="isNestedNavBarLR1Open">
+                        <div class="flexNestedEleDropDownWorld">
+                            <div *ngFor="let subtask of taskA.subtasks">
+
+                                <mat-checkbox [(ngModel)]="subtask.completed" [color]="subtask.color"
+                                    (ngModelChange)="updateAllCompleteTaskA()">
+                                    <span class="navBarDropDownEleText" [ngClass]="{'blurTextNavBar' : subtask.completed}">{{subtask.name}}</span>
+                                </mat-checkbox>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lr1 body ends -->
+
+                </div>
+                <!-- lr1 nested ends -->
+
+                <!-- lr2 nested starts -->
+                <div>
+                    <div class="nestedDropDownEleHead">
+                        <svg (click)="nestedNavBarLR2OpenFunc()" [ngClass]="{'rotateVesselForCheckBox' : isNestedNavBarLR2Open}" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.53154 17.5856C9.20809 17.3269 9.15565 16.8549 9.41441 16.5315L13.0396 12L9.41441 7.46849C9.15565 7.14505 9.20809 6.67308 9.53154 6.41432C9.85498 6.15556 10.327 6.208 10.5857 6.53145L14.5857 11.5315C14.8048 11.8054 14.8048 12.1946 14.5857 12.4685L10.5857 17.4685C10.327 17.7919 9.85498 17.8444 9.53154 17.5856Z"
+                                [style.fill]="allCompleteTaskB ? '#016BFF' : '#596069'" />
+                        </svg>
+                        <label class="navBarDropDownEle">
+                            <mat-checkbox [checked]="allCompleteTaskB" [color]="taskB.color"
+                                [indeterminate]="someCompleteTaskB()"
+                                (change)="setAllTaskB($event.checked)" [(ngModel)]="navDropDownBlueArray[2]"
+                                class="example-margin"><span class="navBarDropDownEleText"
+                                    [ngClass]="{'blurTextNavBar': allCompleteTaskB}">LR 2</span>
+                            </mat-checkbox>
+                        </label>
+                    </div>
+
+                    <!-- lr 2 body starts -->
+                    <div class="nestedDropDownBody" *ngIf="isNestedNavBarLR2Open">
+                        <div class="flexNestedEleDropDownWorld">
+                            <div *ngFor="let subtask of taskB.subtasks">
+
+                                <mat-checkbox [(ngModel)]="subtask.completed" [color]="subtask.color"
+                                    (ngModelChange)="updateAllCompleteTaskB()">
+                                    <span class="navBarDropDownEleText" [ngClass]="{'blurTextNavBar' : subtask.completed}">{{subtask.name}}</span>
+                                </mat-checkbox>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lr 2 body starts -->
+
+                </div>
+                <!-- lr2 nested ends -->
+
             </div>
         </div>
 

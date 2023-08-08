@@ -541,6 +541,10 @@ mat-checkbox .mdc-form-field label {
 .mat-mdc-checkbox.mat-accent {
   --mdc-checkbox-selected-icon-color: #016BFF !important;
 }
+.mat-mdc-checkbox.mat-primary{
+  --mdc-checkbox-selected-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
+}
 
 .mat-mdc-checkbox.mat-accent:hover {
   --mdc-checkbox-selected-hover-state-layer-color: #016BFF !important;
@@ -783,7 +787,8 @@ mat-checkbox .mdc-form-field label {
 .vesselSideBarMainContent::-webkit-scrollbar,
 .timeSeriesSideBarListMain::-webkit-scrollbar,
 .vesselDropDownOnWorldMainMenu::-webkit-scrollbar,
-.WMVesselDropDownMain::-webkit-scrollbar {
+.WMVesselDropDownMain::-webkit-scrollbar,
+.navbarDropDownBodyMain::-webkit-scrollbar {
   display: none;
 }
 
@@ -4249,3 +4254,57 @@ mat-checkbox .mdc-form-field label {
   color: #016BFF;
 }
 
+.navBarDropDownMain{
+  position: relative;
+}
+
+.navbarDropDownBodyMain{
+  position: absolute;
+  width: 230px;
+  margin-top: 10px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 16px;
+  z-index: 1;
+  max-height: 288px;
+  overflow: auto;
+  box-shadow: 0px 24px 48px 0px rgba(158, 158, 158, 0.24), 0px 0px 4px 0px rgba(158, 158, 158, 0.24);
+}
+
+.navBarDropDownEle{
+  display: flex;
+  align-items: center;
+}
+
+.navBarDropDownEleText{
+  font-size: 16px;
+  font-weight: 400;
+  color: #596069;
+}
+
+.blurTextNavBar{
+  color: #016BFF;
+}
+
+.nestedDropDownEleHead{
+  display: flex;
+  align-items: center;
+}
+
+.nestedDropDownBody{
+  padding-left: 46px;
+}
+
+.navBarDropDownNumber{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  border-radius: 40px;
+  background-color: #E1EFFF;
+  color: #003A78;
+  font-size: 14px;
+  font-weight: 600;
+}
