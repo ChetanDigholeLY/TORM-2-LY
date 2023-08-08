@@ -14,7 +14,12 @@ export class TimeSeriesComponent {
     this.isTimeSeriesSideBar = !this.isTimeSeriesSideBar;
   }
 
-  onCalendarButtonClick() {
+  onCalendarButtonClick(event: any) {
+    event.stopPropagation();
     this.showDatePicker = !this.showDatePicker;
+  }
+
+  closeDatePicker() {
+    this.showDatePicker = false;
   }
 }

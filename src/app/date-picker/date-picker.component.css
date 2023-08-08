@@ -9,6 +9,11 @@
   border-radius: 8px;
   min-width: 692px;
   min-height: 494px;
+  display: none;
+}
+
+.date-picker.show {
+  display: block;
 }
 
 .header {
@@ -72,6 +77,8 @@
   --size: 32px;
   height: var(--size) !important;
   width: var(--size) !important;
+  min-width: var(--size) !important;
+  min-height: var(--size) !important;
   padding: 1px !important;
   margin: 1px !important;
   font-size: 14px !important;
@@ -103,4 +110,56 @@
 ::ng-deep .md-drppicker .dropdowns {
   font-size: 14px !important;
   font-weight: 600 !important;
+}
+
+.calendar-container {
+  display: flex;
+}
+
+.predefined-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.predefined-options button {
+  border: none;
+  padding: 16px;
+  padding-block: 12px;
+  font-size: 16px;
+  color: #1e2124;
+  background-color: transparent;
+  text-align: left;
+}
+
+.predefined-options button:first-child {
+  padding-top: 0;
+}
+
+.calendars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendars .actions {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+  margin-right: 18px;
+}
+
+.calendars .actions button {
+  padding: 16px;
+  padding-block: 8px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #DEE0E2;
+  border-radius: 6px;
+  color: #596069;
+}
+
+.calendars .actions button.primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #E1EFFF;
 }

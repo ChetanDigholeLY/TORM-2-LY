@@ -1,4 +1,4 @@
-<div class="date-picker">
+<div #container class="date-picker" [ngClass]="{ show: showDatePicker }">
   <!-- Header -->
   <div class="header">
     <span class="label"> Time Range Selection </span>
@@ -19,12 +19,35 @@
 
   <!-- Datepicker body-->
   <div class="calendar-container">
-    <ngx-daterangepicker-material
-      [autoApply]="true"
-      (choosedDate)="change($event)"
-      [showDropdowns]="true"
-      [timePicker]="true"
-    >
-    </ngx-daterangepicker-material>
+    <div class="calendars">
+      <ngx-daterangepicker-material
+        [autoApply]="true"
+        (datesUpdated)="updateDateRange()"
+        [autoUpdateInput]="true"
+        [showDropdowns]="true"
+        [timePicker]="true"
+        [alwaysShowCalendars]="true"
+        [keepCalendarOpeningWithRange]="true"
+        ngModel
+        #datepicker
+      >
+      </ngx-daterangepicker-material>
+
+      <div class="actions">
+        <button (click)="onActionButtonClick()" type="button">Cancel</button>
+        <button (click)="onActionButtonClick()" type="button" class="primary">
+          Apply
+        </button>
+      </div>
+    </div>
+
+    <div class="predefined-options">
+      <button
+        (click)="onRangeButtonClick(date.value)"
+        *ngFor="let date of ranges | keyvalue : originalOrder"
+      >
+        {{ date.key }}
+      </button>
+    </div>
   </div>
 </div>
