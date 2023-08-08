@@ -1,4 +1,34 @@
-import { Component } from "@angular/core";
+import { Component, Pipe, PipeTransform } from "@angular/core";
+import dayjs, { Dayjs } from "dayjs";
+
+@Pipe({ name: "removetime" })
+export class RemoveTime implements PipeTransform {
+  transform(value: string): string {
+    const splitBy = " ";
+    const splittedText = value.split(splitBy);
+    return splittedText[0];
+  }
+}
+
+type SelectedDate = {
+  label: string;
+  value: Dayjs;
+};
+
+const dateFormatter = new Intl.DateTimeFormat("en-GB", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: true,
+});
+
+function customDateFormatter(date: Date | number | any): string {
+  return dateFormatter.format(date)
+    .replaceAll("/", "-")
+    .replaceAll(",", " ");
+}
 
 @Component({
   selector: "app-time-series",
@@ -9,6 +39,15 @@ export class TimeSeriesComponent {
   isTimeSeriesSideBar = false;
   // TODO: Change to false;
   showDatePicker = true;
+  selectedPredefinedValue = "";
+  selectedStartDate: SelectedDate = {
+    label: customDateFormatter(dayjs()),
+    value: dayjs(),
+  };
+  selectedEndDate: SelectedDate = {
+    label: customDateFormatter(dayjs().add(1, "day")),
+    value: dayjs().add(1, "day"),
+  };
 
   timeSeriesSideBarFunc() {
     this.isTimeSeriesSideBar = !this.isTimeSeriesSideBar;
@@ -19,7 +58,30 @@ export class TimeSeriesComponent {
     this.showDatePicker = !this.showDatePicker;
   }
 
-  closeDatePicker() {
+  closeDatePicker(
+    event: {
+      range: Array<Dayjs>;
+      predefinedValue: string;
+    },
+  ): void {
+    if (!event) {
+      this.showDatePicker = false;
+      return;
+    }
+
+    const { range, predefinedValue } = event;
+
+    if (range.length) {
+      this.selectedStartDate = {
+        label: customDateFormatter(range[0]),
+        value: range[0],
+      };
+      this.selectedEndDate = {
+        label: customDateFormatter(range[1]),
+        value: range[1],
+      };
+    }
+    this.selectedPredefinedValue = predefinedValue;
     this.showDatePicker = false;
   }
 }

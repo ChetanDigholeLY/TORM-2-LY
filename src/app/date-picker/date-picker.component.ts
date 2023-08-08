@@ -43,6 +43,12 @@ export class DatePickerComponent {
   @Input()
   showDatePicker = false;
 
+  @Input()
+  startDate = { label: "", value: dayjs() };
+
+  @Input()
+  endDate = { label: "", value: dayjs() };
+
   @Output()
   closeDatePickerEvent = new EventEmitter<any>();
 
@@ -88,14 +94,27 @@ export class DatePickerComponent {
     this.selectedTo = customDateFormatter(new Date(dates[1]));
   }
 
-  onRangeButtonClick(event: any) {
+  onRangeButtonClick(event: any, key: any) {
     this.datePickerRef.setStartDate(event[0]);
     this.datePickerRef.setEndDate(event[1]);
     this.updateDateRange();
     this.datePickerRef.updateCalendars();
+    this.closeDatePickerEvent.emit({
+      range: [
+        this.datePickerRef.startDate,
+        this.datePickerRef.endDate,
+      ],
+      predefinedValue: key,
+    });
   }
 
   onActionButtonClick() {
-    this.closeDatePickerEvent.emit();
+    this.closeDatePickerEvent.emit({
+      range: [
+        this.datePickerRef.startDate,
+        this.datePickerRef.endDate,
+      ],
+      predefinedValue: '',
+    });
   }
 }

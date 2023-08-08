@@ -6,12 +6,12 @@
       <span class="range">
         <span class="label">From</span>
         <span>:</span>
-        <span>{{ selectedFrom.toString() }}</span>
+        <span>{{ startDate.label }}</span>
       </span>
       <span class="range">
         <span class="label">To</span>
         <span>:</span>
-        <span>{{ selectedTo.toString() }}</span>
+        <span>{{ endDate.label }}</span>
       </span>
     </div>
   </div>
@@ -43,7 +43,7 @@
 
     <div class="predefined-options">
       <button
-        (click)="onRangeButtonClick(date.value)"
+        (click)="onRangeButtonClick(date.value, date.key)"
         *ngFor="let date of ranges | keyvalue : originalOrder"
       >
         {{ date.key }}
