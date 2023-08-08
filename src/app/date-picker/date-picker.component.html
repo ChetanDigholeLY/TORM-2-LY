@@ -1,0 +1,53 @@
+<div #container class="date-picker" [ngClass]="{ show: showDatePicker }">
+  <!-- Header -->
+  <div class="header">
+    <span class="label"> Time Range Selection </span>
+    <div class="info">
+      <span class="range">
+        <span class="label">From</span>
+        <span>:</span>
+        <span>{{ startDate.label }}</span>
+      </span>
+      <span class="range">
+        <span class="label">To</span>
+        <span>:</span>
+        <span>{{ endDate.label }}</span>
+      </span>
+    </div>
+  </div>
+  <!-- Header ends -->
+
+  <!-- Datepicker body-->
+  <div class="calendar-container">
+    <div class="calendars">
+      <ngx-daterangepicker-material
+        [autoApply]="true"
+        (datesUpdated)="updateDateRange()"
+        [autoUpdateInput]="true"
+        [showDropdowns]="true"
+        [timePicker]="true"
+        [alwaysShowCalendars]="true"
+        [keepCalendarOpeningWithRange]="true"
+        ngModel
+        #datepicker
+      >
+      </ngx-daterangepicker-material>
+
+      <div class="actions">
+        <button (click)="onActionButtonClick()" type="button">Cancel</button>
+        <button (click)="onActionButtonClick()" type="button" class="primary">
+          Apply
+        </button>
+      </div>
+    </div>
+
+    <div class="predefined-options">
+      <button
+        (click)="onRangeButtonClick(date.value, date.key)"
+        *ngFor="let date of ranges | keyvalue : originalOrder"
+      >
+        {{ date.key }}
+      </button>
+    </div>
+  </div>
+</div>
