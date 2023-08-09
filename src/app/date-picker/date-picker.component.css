@@ -112,6 +112,40 @@
   font-weight: 600 !important;
 }
 
+::ng-deep .md-drppicker .calendar-time {
+  margin-top: 52px !important;
+  display: flex !important;
+  gap: 10px !important;
+  position: relative;
+}
+
+::ng-deep .md-drppicker .calendar-time::before {
+  content: "Time";
+  position: absolute;
+  top: -80%;
+  left: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+::ng-deep .md-drppicker .dropdowns select.monthselect,
+::ng-deep .md-drppicker .dropdowns select.yearselect {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+::ng-deep .md-drppicker .calendar-time .select:not(:has(select)) {
+  display: none !important;
+}
+
+::ng-deep .md-drppicker .calendar-time .select-item {
+  border: 1px solid #969da666 !important;
+  border-radius: 8px !important;
+  color: #1e2124 !important;
+  padding-inline: 16px !important;
+  padding-block: 8px !important;
+}
+
 .calendar-container {
   display: flex;
 }
@@ -153,7 +187,7 @@
   padding-block: 8px;
   border: none;
   background-color: transparent;
-  border: 1px solid #DEE0E2;
+  border: 1px solid #dee0e2;
   border-radius: 6px;
   color: #596069;
 }
@@ -161,5 +195,5 @@
 .calendars .actions button.primary {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-  color: #E1EFFF;
+  color: #e1efff;
 }

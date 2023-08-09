@@ -12,13 +12,12 @@ ul {
 }
 
 @font-face {
-  font-family: 'Futura';
-  src: url('./assets/fonts/futura/Futura Bold font.ttf');
+  font-family: "Futura";
+  src: url("./assets/fonts/futura/Futura Bold font.ttf");
 }
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
-
 
 .mainComponents {
   display: flex;
@@ -37,7 +36,7 @@ ul {
 .sideBarMainContainer {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  background: linear-gradient(157deg, #016bff 0%, #003a78 91.86%);
 }
 
 .navBarGrayHeading {
@@ -47,7 +46,7 @@ ul {
 }
 
 .navbarDropDown {
-  border: 1px solid #DEE0E2;
+  border: 1px solid #dee0e2;
   border-radius: 8px;
   width: 230px;
 }
@@ -55,7 +54,7 @@ ul {
 .navBarDropDownHeadingText {
   font-size: 18px;
   font-weight: 400;
-  color: #1E2124;
+  color: #1e2124;
 }
 
 .navBarDropDownMain {
@@ -73,8 +72,8 @@ ul {
   height: 18px;
   padding: 8px;
   border-radius: 40px;
-  background-color: #E1EFFF;
-  color: #003A78;
+  background-color: #e1efff;
+  color: #003a78;
   font-size: 10px;
   font-weight: 600;
 }
@@ -170,7 +169,7 @@ ul {
 .sideBarListElementText {
   font-size: 16px;
   font-weight: 400;
-  color: #EDEEEF;
+  color: #edeeef;
 }
 
 .sideBarRadioLabel {
@@ -186,11 +185,10 @@ ul {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   font-size: 16px !important;
-
 }
 
 .activeSideBarElement div {
-  color: #00479E;
+  color: #00479e;
   font-size: 16px;
   font-weight: 600;
 }
@@ -199,7 +197,7 @@ ul {
   background-color: #fff;
   font-size: 12px;
   font-weight: 600;
-  color: #00479E;
+  color: #00479e;
   padding: 8px;
   display: flex;
   justify-content: center;
@@ -207,7 +205,6 @@ ul {
   border-radius: 40px;
   width: 24px;
   height: 24px;
-
 }
 
 .sideBarFlexColumnElement {
@@ -217,8 +214,8 @@ ul {
 }
 
 .activeGuidanceNumber {
-  background-color: #00479E;
-  color: #EDEEEF !important;
+  background-color: #00479e;
+  color: #edeeef !important;
   font-size: 12px !important;
   font-weight: 600 !important;
 }
@@ -250,7 +247,6 @@ ul {
   justify-content: center;
   align-items: center;
 }
-
 
 .halfSideBarListElement {
   display: flex;
@@ -316,17 +312,17 @@ ul {
 .sidebarMainMenuText {
   font-size: 16px;
   font-weight: 400;
-  color: #EDEEEF;
+  color: #edeeef;
 }
 
 .sensorFirstList {
-  background-color: #003A78;
-  color: #E1EFFF;
+  background-color: #003a78;
+  color: #e1efff;
   cursor: auto;
 }
 
 .sensorFirstList:hover {
-  background-color: #003A78;
+  background-color: #003a78;
 }
 
 .sensorMenuList {
@@ -336,15 +332,14 @@ ul {
 }
 
 .sensorDropDownListElement {
-  color: #EDEEEF;
+  color: #edeeef;
   padding-left: 36px !important;
   font-size: 14px;
   font-weight: 400;
 }
 
-
 .sensorMenuText {
-  color: #00479E !important;
+  color: #00479e !important;
   font-size: 16px !important;
   font-weight: 600 !important;
 }
@@ -379,7 +374,7 @@ ul {
   left: 8px;
   width: 46px;
   height: 80px;
-  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  background: linear-gradient(157deg, #016bff 0%, #003a78 91.86%);
   border-radius: 4px;
 }
 
@@ -404,7 +399,7 @@ ul {
   left: 0;
   top: 0;
   height: 100vh;
-  background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+  background: linear-gradient(157deg, #016bff 0%, #003a78 91.86%);
   animation: expandDropdown 0.3s ease forwards;
   width: 60px;
 }
@@ -458,7 +453,7 @@ ul {
 }
 
 .worldMapActiveEle {
-  background: #FFF !important;
+  background: #fff !important;
 }
 
 .vesselDropDownOnWorldMap {
@@ -472,25 +467,25 @@ ul {
 }
 
 .vesselDropDownOnWorldMain {
-  background: rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.6);
   width: 250px !important;
   cursor: pointer;
-  border: 1px solid #DEE0E2;
+  border: 1px solid #dee0e2;
 }
 
-.activeBlueBackgroundDropDown{
-  background: #E1EFFF !important;
-  border: 1px solid #016BFF !important;
+.activeBlueBackgroundDropDown {
+  background: #e1efff !important;
+  border: 1px solid #016bff !important;
 }
-.activeBlueTextDropDown{
-  background: #A8CCFF !important;
-  color: #003A78 !important;
+.activeBlueTextDropDown {
+  background: #a8ccff !important;
+  color: #003a78 !important;
 }
 
 .dropDownVesselMenu {
   width: 230px !important;
   padding: 8px 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .vesselDropDownOnWorldMainMenu {
@@ -525,12 +520,12 @@ mat-checkbox .mdc-form-field label {
 .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background,
 .mdc-checkbox__ripple,
 .mdc-checkbox-selected-icon-color {
-  background-color: #016BFF !important;
-  border-color: #016BFF !important;
+  background-color: #016bff !important;
+  border-color: #016bff !important;
 }
 
 .blueTextForVesselDropDownEle {
-  color: #016BFF !important;
+  color: #016bff !important;
 }
 
 /* .mat-mdc-checkbox .example-margin .mat-accent .mdc-checkbox .mat-mdc-checkbox-touch-target .mdc-checkbox__native-control .mdc-checkbox__ripple .mdc-checkbox__background .mat-ripple .mat-mdc-checkbox-ripple .mat-mdc-focus-indicator .mdc-checkbox{
@@ -539,19 +534,19 @@ mat-checkbox .mdc-form-field label {
 } */
 
 .mat-mdc-checkbox.mat-accent {
-  --mdc-checkbox-selected-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-icon-color: #016bff !important;
 }
-.mat-mdc-checkbox.mat-primary{
-  --mdc-checkbox-selected-icon-color: #016BFF !important;
-  --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
+.mat-mdc-checkbox.mat-primary {
+  --mdc-checkbox-selected-icon-color: #016bff !important;
+  --mdc-checkbox-selected-hover-icon-color: #016bff !important;
 }
 
 .mat-mdc-checkbox.mat-accent:hover {
-  --mdc-checkbox-selected-hover-state-layer-color: #016BFF !important;
-  --mdc-checkbox-selected-focus-state-layer-color: #016BFF !important;
-  --mdc-checkbox-selected-pressed-icon-color: #016BFF !important;
-  --mdc-checkbox-selected-hover-icon-color: #016BFF !important;
-  --mdc-checkbox-selected-focus-icon-color: #016BFF !important;
+  --mdc-checkbox-selected-hover-state-layer-color: #016bff !important;
+  --mdc-checkbox-selected-focus-state-layer-color: #016bff !important;
+  --mdc-checkbox-selected-pressed-icon-color: #016bff !important;
+  --mdc-checkbox-selected-hover-icon-color: #016bff !important;
+  --mdc-checkbox-selected-focus-icon-color: #016bff !important;
 }
 
 .nestedVesselOfLR {
@@ -579,17 +574,17 @@ mat-checkbox .mdc-form-field label {
 .WorldMapDropDownActiveText {
   font-size: 18px;
   font-weight: 400;
-  color: #1E2124;
+  color: #1e2124;
 }
 
 .numberOnDropDownForWorldMap {
-  color: #003A78;
+  color: #003a78;
   font-size: 12px;
   font-weight: 600;
   width: 24px;
   height: 24px;
   border-radius: 40px;
-  background-color: #E1EFFF;
+  background-color: #e1efff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -606,8 +601,8 @@ mat-checkbox .mdc-form-field label {
 }
 
 .shipOnWorldMapText {
-  background-color: #1E2124;
-  color: #FFFFFF;
+  background-color: #1e2124;
+  color: #ffffff;
   text-align: center;
   font-size: 12px;
   font-weight: 400;
@@ -619,7 +614,7 @@ mat-checkbox .mdc-form-field label {
   right: 0;
   top: 0;
   height: 100%;
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   width: 392px;
 }
@@ -669,7 +664,7 @@ mat-checkbox .mdc-form-field label {
   display: flex;
   align-items: flex-end;
   gap: 16px;
-  background: #F4F5F6;
+  background: #f4f5f6;
   backdrop-filter: blur(4px);
   border-radius: 8px;
 }
@@ -687,12 +682,12 @@ mat-checkbox .mdc-form-field label {
 }
 
 .borderBottomZeroAccordion,
-.borderBottomZeroAccordion>div {
+.borderBottomZeroAccordion > div {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  background-color: #F1F1F1 !important;
+  background-color: #f1f1f1 !important;
   font-weight: 600;
-  color: #1E2124;
+  color: #1e2124;
 }
 
 .voyageInfoAccordion {
@@ -721,9 +716,8 @@ mat-checkbox .mdc-form-field label {
 }
 
 .HeadWhiteeActive {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
-
 
 .voyageInfoAccordion {
   display: flex;
@@ -768,9 +762,9 @@ mat-checkbox .mdc-form-field label {
 .sixCrewText {
   font-size: 14px !important;
   font-weight: 600 !important;
-  color: #003A78 !important;
+  color: #003a78 !important;
   padding: 4px 8px !important;
-  background-color: #A8CCFF !important;
+  background-color: #a8ccff !important;
   margin: 0 !important;
   border-radius: 4px;
 }
@@ -794,13 +788,13 @@ mat-checkbox .mdc-form-field label {
 
 .textBoldCrew {
   font-weight: 600;
-  color: #1E2124 !important;
+  color: #1e2124 !important;
 }
 
 .cabinCrewTextOnAccordionBody {
   font-size: 16px;
   font-weight: 600;
-  color: #1E2124;
+  color: #1e2124;
 }
 
 .cabinCrewSectionEle {
@@ -825,7 +819,7 @@ mat-checkbox .mdc-form-field label {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border-bottom: 1px solid rgba(150, 157, 166, 0.40);
+  border-bottom: 1px solid rgba(150, 157, 166, 0.4);
 }
 
 .cabinCrewSectionRightEle {
@@ -879,7 +873,6 @@ mat-checkbox .mdc-form-field label {
   border-bottom-right-radius: 8px;
 }
 
-
 .checkBoxForRoute {
   font-weight: 400;
   font-size: 16px;
@@ -927,7 +920,7 @@ mat-checkbox .mdc-form-field label {
   letter-spacing: 2px;
 }
 
-@media (min-width:512px) {
+@media (min-width: 512px) {
   .mobileNavBarContainer {
     display: none;
   }
@@ -939,7 +932,6 @@ mat-checkbox .mdc-form-field label {
   .worldmapShipSideBArMobileDrawer {
     display: none;
   }
-
 }
 
 @media (max-width: 512px) {
@@ -951,7 +943,7 @@ mat-checkbox .mdc-form-field label {
     display: none;
   }
 
-  .accordionWorldMapEle{
+  .accordionWorldMapEle {
     display: none;
   }
 
@@ -961,7 +953,7 @@ mat-checkbox .mdc-form-field label {
 
   /* navbar */
   .mobileUpperNavBarContainer {
-    background: linear-gradient(83deg, #016BFF 0%, #003A78 95.27%);
+    background: linear-gradient(83deg, #016bff 0%, #003a78 95.27%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -971,7 +963,7 @@ mat-checkbox .mdc-form-field label {
 
   .navbarDropDown {
     width: 168px;
-    background: #FFF;
+    background: #fff;
   }
 
   .mobileUpperNavBarLeft {
@@ -985,8 +977,8 @@ mat-checkbox .mdc-form-field label {
     font-size: 14px;
   }
 
-  .mobileLowerNavBarContainer{
-    border-bottom: 1px solid #DEE0E2;
+  .mobileLowerNavBarContainer {
+    border-bottom: 1px solid #dee0e2;
     height: 32px;
     padding: 4px 16px 8px 16px;
   }
@@ -1008,7 +1000,7 @@ mat-checkbox .mdc-form-field label {
     z-index: 2;
     width: 252px;
     height: 100%;
-    background: linear-gradient(157deg, #016BFF 0%, #003A78 91.86%);
+    background: linear-gradient(157deg, #016bff 0%, #003a78 91.86%);
   }
 
   .blackScreenForSideBar {
@@ -1038,7 +1030,7 @@ mat-checkbox .mdc-form-field label {
     font-weight: 700;
     font-size: 16px;
     font-family: Futura;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .mobileSideBarListContainer {
@@ -1071,7 +1063,7 @@ mat-checkbox .mdc-form-field label {
   .mobileSideBarEleText {
     font-size: 16px;
     font-weight: 400;
-    color: #EDEEEF;
+    color: #edeeef;
   }
 
   .mobileGuidanceNumber {
@@ -1082,16 +1074,16 @@ mat-checkbox .mdc-form-field label {
     height: 24px;
     padding: 8px;
     border-radius: 40px;
-    color: #00479E;
-    background-color: #FFF;
+    color: #00479e;
+    background-color: #fff;
   }
 
   .mobileActiveSideBarEle,
   .mobileActiveSideBarEle div {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     font-size: 16px !important;
     font-weight: 600 !important;
-    color: #003A78;
+    color: #003a78;
   }
 
   .activeMobileGuidanceNumber {
@@ -1102,8 +1094,8 @@ mat-checkbox .mdc-form-field label {
     height: 24px;
     padding: 8px;
     border-radius: 40px;
-    background-color: #00479E !important;
-    color: #EDEEEF !important;
+    background-color: #00479e !important;
+    color: #edeeef !important;
   }
 
   .mobileSensorMenuMain {
@@ -1128,11 +1120,11 @@ mat-checkbox .mdc-form-field label {
   .sensormainMenuText {
     font-size: 16px;
     font-weight: 400;
-    color: #EDEEEF;
+    color: #edeeef;
   }
 
   .sensorMenuHeading {
-    background-color: #003A78;
+    background-color: #003a78;
   }
 
   .sensorEmptyDiv24px {
@@ -1189,7 +1181,7 @@ mat-checkbox .mdc-form-field label {
     width: 64px;
     height: 4px;
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .accordionWorldMapEle {
@@ -1217,7 +1209,6 @@ mat-checkbox .mdc-form-field label {
   /* //////////////////world map mobile ends */
 }
 
-
 /* //////////////////////////////////// start ////////////////////////////////// */
 
 .secondary-text {
@@ -1236,8 +1227,6 @@ mat-checkbox .mdc-form-field label {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
-
 
 /* end */
 
@@ -1303,7 +1292,6 @@ mat-checkbox .mdc-form-field label {
 
 /* end */
 
-
 /* Desktop */
 @media (min-width: 1024px) {
   ::-webkit-scrollbar-track {
@@ -1334,7 +1322,6 @@ mat-checkbox .mdc-form-field label {
   .counter {
     display: none;
   }
-
 
   /* performance  */
   .nav-pills .nav-link {
@@ -1375,15 +1362,13 @@ mat-checkbox .mdc-form-field label {
   font-size: 16px;
 }
 
-@media (min-width:512px) {
+@media (min-width: 512px) {
   .boldFontForNotification {
     font-size: 24px;
   }
 }
 
-
 @media (min-width: 768px) {
-
   .guidanceHeaderLeftTop,
   .guidanceHeaderMidLeftTop,
   .guidanceHeaderMidRightTop,
@@ -1416,7 +1401,7 @@ mat-checkbox .mdc-form-field label {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 32px;
+    padding: 24px;
   }
 
   .NotAcknowledged {
@@ -1425,7 +1410,7 @@ mat-checkbox .mdc-form-field label {
     gap: 12px;
   }
 
-  .NotAcknowledgedTitle>h4 {
+  .NotAcknowledgedTitle > h4 {
     color: #969da6;
     font-weight: 600;
     font-size: 16px;
@@ -1463,7 +1448,7 @@ mat-checkbox .mdc-form-field label {
     gap: 12px;
   }
 
-  .NotAcknowledgedTitle>h4 {
+  .NotAcknowledgedTitle > h4 {
     color: #969da6;
     font-weight: 600;
     font-size: 12px;
@@ -1575,7 +1560,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons>button {
+  .guidanceButtons > button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -1781,7 +1766,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
@@ -1802,14 +1787,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel,
-  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2 {
+  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel,
+  .acknowledgeModalRadioButtons2:checked + .acknowledgeModalRadioLabel2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel::before {
+  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -1817,7 +1802,8 @@ mat-checkbox .mdc-form-field label {
     margin-right: 8px;
   }
 
-  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2::before {
+  .acknowledgeModalRadioButtons2:checked
+    + .acknowledgeModalRadioLabel2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2018,7 +2004,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons>button {
+  .guidanceButtons > button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2083,14 +2069,17 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile,
-  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2 {
+  .acknowledgeModalRadioButtonsMobile:checked
+    + .acknowledgeModalRadioLabelMobile,
+  .acknowledgeModalRadioButtonsMobile2:checked
+    + .acknowledgeModalRadioLabelMobile2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile::before {
+  .acknowledgeModalRadioButtonsMobile:checked
+    + .acknowledgeModalRadioLabelMobile::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2255,12 +2244,13 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
 
-  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2::before {
+  .acknowledgeModalRadioButtonsMobile2:checked
+    + .acknowledgeModalRadioLabelMobile2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2285,7 +2275,6 @@ mat-checkbox .mdc-form-field label {
 /* guidence list component start  */
 
 @media (max-width: 512px) {
-
   .modalStatusDate,
   .modalStatusTime {
     font-weight: 400;
@@ -2356,7 +2345,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons>button {
+  .guidanceButtons > button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2559,7 +2548,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
@@ -2580,14 +2569,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel,
-  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2 {
+  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel,
+  .acknowledgeModalRadioButtons2:checked + .acknowledgeModalRadioLabel2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel::before {
+  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2595,7 +2584,8 @@ mat-checkbox .mdc-form-field label {
     margin-right: 8px;
   }
 
-  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2::before {
+  .acknowledgeModalRadioButtons2:checked
+    + .acknowledgeModalRadioLabel2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2781,7 +2771,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons>button {
+  .guidanceButtons > button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2846,14 +2836,17 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile,
-  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2 {
+  .acknowledgeModalRadioButtonsMobile:checked
+    + .acknowledgeModalRadioLabelMobile,
+  .acknowledgeModalRadioButtonsMobile2:checked
+    + .acknowledgeModalRadioLabelMobile2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile::before {
+  .acknowledgeModalRadioButtonsMobile:checked
+    + .acknowledgeModalRadioLabelMobile::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -3013,12 +3006,13 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
 
-  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2::before {
+  .acknowledgeModalRadioButtonsMobile2:checked
+    + .acknowledgeModalRadioLabelMobile2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -3035,7 +3029,6 @@ mat-checkbox .mdc-form-field label {
 /* guidence list component ends  */
 
 /* sensor component starts  */
-
 
 @media (min-width: 512px) {
   .sensorHeadingTextDecoration {
@@ -3076,9 +3069,9 @@ mat-checkbox .mdc-form-field label {
     background: #f7f7f7;
   }
 
-  .sensorHeaderMainDesktop>div:nth-child(2),
-  .sensorHeaderMainDesktop>div:nth-child(3),
-  .sensorHeaderMainDesktop>div:nth-child(4) {
+  .sensorHeaderMainDesktop > div:nth-child(2),
+  .sensorHeaderMainDesktop > div:nth-child(3),
+  .sensorHeaderMainDesktop > div:nth-child(4) {
     border-left: 1px solid #dee0e2;
     border-right: 1px solid #dee0e2;
   }
@@ -3185,11 +3178,11 @@ mat-checkbox .mdc-form-field label {
     text-align: center;
   }
 
-  .liveDataFeedForBigScreen>div {
+  .liveDataFeedForBigScreen > div {
     padding: 7px 18px;
   }
 
-  .liveDataFeedForBigScreen>div:nth-child(1) {
+  .liveDataFeedForBigScreen > div:nth-child(1) {
     text-align: left;
   }
 
@@ -3297,7 +3290,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
@@ -3678,7 +3671,7 @@ mat-checkbox .mdc-form-field label {
     margin-bottom: 16px;
   }
 
-  .guidenceOfficerFlexImg>img {
+  .guidenceOfficerFlexImg > img {
     width: 16px;
     height: 16px;
   }
@@ -3895,29 +3888,24 @@ mat-checkbox .mdc-form-field label {
 
 /* world map component start */
 
-
 @media (max-width: 1024px) {
-
   .planned-route {
     display: flex;
     align-self: center;
     gap: 15px;
   }
 
-
-  .planned-route>p {
+  .planned-route > p {
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 520px) {
-
   .content-wrapper {
     height: calc(50vh - 57px);
     overflow: auto;
   }
 }
-
 
 /* world map on click sidebar ends   */
 
@@ -3978,77 +3966,81 @@ mat-checkbox .mdc-form-field label {
 }
 
 @media (min-width: 513px) and (max-width: 1024px) {
-
   .sensorHeadingTextDecoration {
     font-size: 14px;
   }
 }
 
-
 /* ///////////////////////////////////// end ////////////////////////////////// */
 
 /* copy imprpvements starts */
 
-@media (min-width:513px) {
-  .sensorComponentMain , .performance-container , .guidanceComponent , .timeSeriesMain {
+@media (min-width: 513px) {
+  .sensorComponentMain,
+  .performance-container,
+  .guidanceComponent,
+  .timeSeriesMain {
     height: calc(100vh - 72px);
     overflow: auto;
   }
 }
 
-.guidanceComponent{
-  background: #F4F5F6;
+.guidanceComponent {
+  background: #f4f5f6;
 }
 
-@media (max-width:512px) {
-  .sensorComponentMain , .performance-container , .guidanceComponent , .timeSeriesMain {
+@media (max-width: 512px) {
+  .sensorComponentMain,
+  .performance-container,
+  .guidanceComponent,
+  .timeSeriesMain {
     height: calc(100vh - 96px);
     overflow: auto;
   }
 }
 
-.guidanceListContent{
-  background: #FFF;
+.guidanceListContent {
+  background: #fff;
 }
 
 /* copy imprpvements ends */
 
-.nestedNavFlexCol{
+.nestedNavFlexCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.nestedNavFlexStart{
+.nestedNavFlexStart {
   display: flex;
 }
 
-.nestedNavUpperText{
+.nestedNavUpperText {
   font-size: 14px;
   font-weight: 400;
-  color: #969DA6;
+  color: #969da6;
 }
 
 .nestedNavUpperText > svg {
   margin-left: 4px;
 }
 
-.nestedNavLowerText{
+.nestedNavLowerText {
   font-size: 24px;
   font-weight: 600;
   color: #596069;
 }
 
-.mobileNavFlexStart{
+.mobileNavFlexStart {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.mobileNavPastRoute{
+.mobileNavPastRoute {
   font-size: 14px;
   font-weight: 400;
-  color: #969DA6;
+  color: #969da6;
 }
 
 .mobileNavPastRoute > svg {
@@ -4056,45 +4048,44 @@ mat-checkbox .mdc-form-field label {
 }
 
 /* time series starts */
-@media (min-width: 512px){
-
-  .timeSeriesContainer{
+@media (min-width: 512px) {
+  .timeSeriesContainer {
     width: 100%;
     height: 100%;
     display: flex;
   }
 
-  .timeSeriesSideBar{
+  .timeSeriesSideBar {
     width: 290px;
     height: 100%;
-    background: #F4F5F6;
+    background: #f4f5f6;
   }
 
-  .timeSeriesMetricsText{
+  .timeSeriesMetricsText {
     font-size: 16px;
     font-weight: 600;
     color: #596069;
     text-transform: uppercase;
   }
 
-  .timeSeriesSideBarHead{
+  .timeSeriesSideBarHead {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 21px 24px;
   }
 
-  .timeSeriesSearchInputMain{
+  .timeSeriesSearchInputMain {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 16px 16px 10px 16px;
   }
 
-  .timeSeriesSearchInput{
+  .timeSeriesSearchInput {
     padding: 8px 16px;
-    border: 1px solid #DEE0E2;
-    background: #F4F5F6;
+    border: 1px solid #dee0e2;
+    background: #f4f5f6;
     border-radius: 8px;
     background-image: url(./assets/images/magnifineGlass.png);
     background-repeat: no-repeat;
@@ -4102,29 +4093,29 @@ mat-checkbox .mdc-form-field label {
     width: 100%;
   }
 
-  .timeSeriesSearchInput:focus{
+  .timeSeriesSearchInput:focus {
     outline: none;
-    background: #E1EFFF;
-    border: 1px solid #016BFF;
+    background: #e1efff;
+    border: 1px solid #016bff;
   }
 
-  .timeSeriesSideBarListMain{
+  .timeSeriesSideBarListMain {
     height: calc(100% - 134px);
     overflow: auto;
     margin: 0 16px;
   }
-  
-  .timeSeriesCheckBoxTxt{
+
+  .timeSeriesCheckBoxTxt {
     font-size: 16px;
     font-weight: 400;
     color: #596069;
   }
 
-  .timeSeriesCheckBox:checked + div{
-    color: #016BFF;
+  .timeSeriesCheckBox:checked + div {
+    color: #016bff;
   }
 
-  .timeSeriesListEle{
+  .timeSeriesListEle {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -4132,114 +4123,113 @@ mat-checkbox .mdc-form-field label {
     width: 242px;
   }
 
-  .timeSeriesCalendar{
+  .timeSeriesCalendar {
     height: 92px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 24px;
   }
-  
-  .timeSeriesGraphMain{
+
+  .timeSeriesGraphMain {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .timeSeriesGraphImg{
+  .timeSeriesGraphImg {
     width: 100%;
   }
- 
 
-  .timeSeriesSideBarToggleMain{
+  .timeSeriesSideBarToggleMain {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 124px;
     height: 42px;
-    background: #EDEEEF;
+    background: #edeeef;
     padding: 21px 12px;
     margin-top: 12px;
     margin-left: 12px;
     border-radius: 4px;
   }
 
-  .mobileTimeSeriesContainer{
+  .mobileTimeSeriesContainer {
     display: none;
   }
 }
 
-@media (max-width:512px){
-  .timeSeriesContainer{
+@media (max-width: 512px) {
+  .timeSeriesContainer {
     display: none;
   }
-  .mobileTimeSeriesContainer{
+  .mobileTimeSeriesContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .mobileTimeSeriesHeading{
+  .mobileTimeSeriesHeading {
     color: #596069;
     margin-top: 52px;
     font-size: 20px;
     font-weight: 600;
   }
-  .mobileTimeSeriesImg{
+  .mobileTimeSeriesImg {
     margin-top: 32px;
   }
-  .mobileTimeSeriesBottomText{
+  .mobileTimeSeriesBottomText {
     margin-top: 32px;
     text-align: center;
     color: #596069;
     font-size: 16px;
     font-weight: 400;
   }
-  
 
-  .mobileTimeSeriesContainer{
+  .mobileTimeSeriesContainer {
     width: 100%;
     height: 100%;
-    background-image: url('./assets/images/timeSeriesWave1.svg') , url('./assets/images/timeSeriesWave2.svg');
+    background-image: url("./assets/images/timeSeriesWave1.svg"),
+      url("./assets/images/timeSeriesWave2.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
   }
 }
 /* time series ends */
 
-.WMVesselDropDownMain{
+.WMVesselDropDownMain {
   width: 250px;
   max-height: 288px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 8px;
   padding: 8px 16px;
   overflow: auto;
 }
 
-.WMVesselDropDownContainer{
+.WMVesselDropDownContainer {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.WMVesselDropLabel{
+.WMVesselDropLabel {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 4px 0;
 }
 
-.WMCheckBoxInpt{
+.WMCheckBoxInpt {
   width: 18px;
   height: 18px;
 }
 
-.WMVesselText{
+.WMVesselText {
   font-size: 16px;
   font-weight: 400;
   color: #596069;
 }
 
-.LR1VesselDropDownBody{
+.LR1VesselDropDownBody {
   padding-left: 56px;
 }
 
@@ -4247,55 +4237,56 @@ mat-checkbox .mdc-form-field label {
   /* visibility: hidden;
   height: 0; */
   position: absolute;
-  top:  -99999999999999px;
+  top: -99999999999999px;
 }
 
-.WMCheckBoxInpt:checked + div{
-  color: #016BFF;
+.WMCheckBoxInpt:checked + div {
+  color: #016bff;
 }
 
-.navBarDropDownMain{
+.navBarDropDownMain {
   position: relative;
 }
 
-.navbarDropDownBodyMain{
+.navbarDropDownBodyMain {
   position: absolute;
   width: 230px;
   margin-top: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 8px 16px;
   z-index: 1;
   max-height: 288px;
   overflow: auto;
-  box-shadow: 0px 24px 48px 0px rgba(158, 158, 158, 0.24), 0px 0px 4px 0px rgba(158, 158, 158, 0.24);
+  box-shadow: 0px 24px 48px 0px rgba(158, 158, 158, 0.24),
+    0px 0px 4px 0px rgba(158, 158, 158, 0.24);
 }
 
-.navBarDropDownEle{
+.navBarDropDownEle {
   display: flex;
   align-items: center;
 }
 
-.navBarDropDownEleText{
+.navBarDropDownEleText {
   font-size: 16px;
   font-weight: 400;
   color: #596069;
 }
 
-.blurTextNavBar{
-  color: #016BFF;
+.blurTextNavBar {
+  color: #016bff;
 }
 
-.nestedDropDownEleHead{
+.nestedDropDownEleHead {
   display: flex;
   align-items: center;
 }
 
-.nestedDropDownBody{
+.nestedDropDownBody {
   padding-left: 46px;
 }
 
-.navBarDropDownNumber{
+.navBarDropDownNumber {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4303,18 +4294,73 @@ mat-checkbox .mdc-form-field label {
   height: 24px;
   padding: 8px;
   border-radius: 40px;
-  background-color: #E1EFFF;
-  color: #003A78;
+  background-color: #e1efff;
+  color: #003a78;
   font-size: 14px;
   font-weight: 600;
 }
 
-
-@media (max-width:512px){
-  .navbarDropDownBodyMain{
+@media (max-width: 512px) {
+  .navbarDropDownBodyMain {
     width: 212px;
   }
-  .navBarDropDownEleText{
+  .navBarDropDownEleText {
     font-size: 14px;
   }
 }
+
+/* Time series starts */
+
+.date-picker-container {
+  position: relative;
+}
+
+.date-picker-container button {
+  background-color: transparent;
+  border: none;
+}
+
+.current-date-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.info .label {
+  color: #596069;
+  text-transform: uppercase;
+  font-weight: 600;
+  user-select: none;
+}
+
+.info .date {
+  color: #1e2124;
+  border: 1px solid #969da666;
+  padding-inline: 16px;
+  padding-block: 12px;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.calendar-button {
+  margin-left: 6px;
+}
+
+.predefined-chip {
+  padding-inline: 16px;
+  padding-block: 8px;
+  background: #dae9ff;
+  border: 2px solid #016bff;
+  color: #016bff;
+  font-weight: 600;
+  border-radius: 24px;
+}
+
+/* Time series ends */
