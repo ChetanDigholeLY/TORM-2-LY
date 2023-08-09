@@ -1,0 +1,165 @@
+.date-picker {
+  --color-accent: #016bff;
+  --color-primary-3: #a8ccff;
+  position: absolute;
+  right: 0;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background-color: white;
+  color: #1e2124;
+  border-radius: 8px;
+  min-width: 692px;
+  min-height: 494px;
+  display: none;
+}
+
+.date-picker.show {
+  display: block;
+}
+
+.header {
+  padding-inline: 22px;
+  padding-block: 16px;
+  display: flex;
+  gap: 94px;
+  align-items: center;
+}
+
+.header .label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header .info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.range {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range .label {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+::ng-deep .md-drppicker {
+  font-family: "Source Sans Pro", sans-serif !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+::ng-deep .md-drppicker .calendar.left,
+::ng-deep .md-drppicker .calendar.right,
+::ng-deep .md-drppicker .calendar-table {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+::ng-deep .md-drppicker .calendar.left,
+::ng-deep .md-drppicker .calendar.right {
+  padding-inline: 16px !important;
+}
+
+::ng-deep .md-drppicker table {
+  border-spacing: 0 !important;
+}
+
+::ng-deep .md-drppicker td,
+::ng-deep .md-drppicker th {
+  --size: 32px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  min-width: var(--size) !important;
+  min-height: var(--size) !important;
+  padding: 1px !important;
+  margin: 1px !important;
+  font-size: 14px !important;
+}
+
+::ng-deep .md-drppicker th span {
+  color: #1e2124 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+::ng-deep .md-drppicker td.in-range {
+  background-color: var(--color-primary-3) !important;
+  color: var(--color-accent) !important;
+}
+
+::ng-deep .md-drppicker td.active {
+  background-color: var(--color-accent) !important;
+  border-radius: 100px !important;
+  color: white !important;
+}
+
+::ng-deep .md-drppicker .dropdowns,
+::ng-deep .md-drppicker .dropdowns select,
+::ng-deep .md-drppicker .dropdowns option {
+  color: #1e2124 !important;
+}
+
+::ng-deep .md-drppicker .dropdowns {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.calendar-container {
+  display: flex;
+}
+
+.predefined-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.predefined-options button {
+  border: none;
+  padding: 16px;
+  padding-block: 12px;
+  font-size: 16px;
+  color: #1e2124;
+  background-color: transparent;
+  text-align: left;
+}
+
+.predefined-options button:first-child {
+  padding-top: 0;
+}
+
+.calendars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendars .actions {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+  margin-right: 18px;
+}
+
+.calendars .actions button {
+  padding: 16px;
+  padding-block: 8px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #DEE0E2;
+  border-radius: 6px;
+  color: #596069;
+}
+
+.calendars .actions button.primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #E1EFFF;
+}
