@@ -18,7 +18,9 @@ import { FormsModule } from '@angular/forms';
 import { SidebarService } from './services/sidebar.service';
 import { NotAcknowledgedGuidanceComponent } from './components/not-acknowledged-guidance/not-acknowledged-guidance.component';
 import { AcknowledgedGuidanceComponent } from './components/acknowledged-guidance/acknowledged-guidance.component';
-import { TimeSeriesComponent } from './components/time-series/time-series.component';
+import { RemoveTime, TimeSeriesComponent } from './components/time-series/time-series.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 
 const routes: Routes = [
@@ -50,7 +52,9 @@ const routes: Routes = [
     LiveDataFeedComponent,
     NotAcknowledgedGuidanceComponent,
     AcknowledgedGuidanceComponent,
-    TimeSeriesComponent
+    TimeSeriesComponent,
+    DatePickerComponent,
+    RemoveTime
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,8 @@ const routes: Routes = [
     MatExpansionModule,
     MatCheckboxModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgxDaterangepickerMd.forRoot(),
   ],
   providers: [SidebarService],
   bootstrap: [AppComponent]
