@@ -9,12 +9,12 @@
             <div class="WorldMapDropDownLogo">
                 <img class="logoImgDesk marginForLogoBtn" src="./assets/images/logo.png" />
             </div>
-            <div class="dropDownSvgWorldMap rotateArrowOfSideBar" (click)="sideBarOpenFunc()">
+            <div class="dropDownSvgWorldMap rotateArrowOfSideBar dismissCursorPointer" (click)="sideBarOpenFunc()">
                 <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="23.9989" y="24.0002" width="24" height="24" rx="6" transform="rotate(180 23.9989 24.0002)"
                         fill="#0154BD" />
                     <path d="M16.9989 17.0002L11.9989 13.0002L6.9989 17.0002" stroke="white" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
+                        stroke-linecap="round" stroke-linejoin="rouworldMapSideBarCollpsBtnnd" />
                     <path d="M16.9989 11.0002L11.9989 7.00024L6.9989 11.0002" stroke="white" stroke-width="1.5"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg> -->
@@ -37,7 +37,7 @@
             <!-- logo section starts -->
             <div class="worldMapSideBarLogoSection">
                 <img class="logoImgDesk" src="./assets/images/logo.png" />
-                <div class="worldMapSideBarCollpsBtn" (click)="sideBarOpenFunc()">
+                <div class="worldMapSideBarCollpsBtn dismissCursorPointer" (click)="sideBarOpenFunc()">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="23.9989" y="24.0002" width="24" height="24" rx="6"
                             transform="rotate(180 23.9989 24.0002)" fill="#0154BD" />
@@ -108,7 +108,7 @@
 
         <!-- drop down world map starts -->
         <div class="vesselDropDownOnWorldMap hideForMobileDropDown" *ngIf="!isVesselSideBar">
-            <div class="navbarDropDown vesselDropDownOnWorldMain"
+            <div class="navbarDropDown vesselDropDownOnWorldMain dismissCursorPointer"
                 [ngClass]="{'activeBlueBackgroundDropDown':isVesselDropDrownWorldmap}"
                 (click)="vesselDropDownWorldMapFunc()">
                 <div class="navBarDropDownMain">
@@ -393,7 +393,7 @@
                 <div class="accordionWorldMapEle">
 
                     <!-- head starts -->
-                    <div class="firstAccordionWorldMapHead dropDownOnShipSideBar" (click)="toggleWorldMapFunc(0)"
+                    <div class="firstAccordionWorldMapHead dropDownOnShipSideBar dismissCursorPointer" (click)="toggleWorldMapFunc(0)"
                         (click)="accordionWorldMapFunc(0)"
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[0]}">
                         <div class="firstAccordionWorldMapHeadRight">
@@ -646,7 +646,7 @@
 
                 <div class="actualAccordionWorldMapEle">
                     <!-- head  -->
-                    <div class="actualAccordionWorldMapEleHead"
+                    <div class="actualAccordionWorldMapEleHead dismissCursorPointer"
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[1]}"
                         (click)="accordionWorldMapFunc(1)">
 
@@ -683,7 +683,7 @@
                 <div class="actualAccordionWorldMapEle">
 
                     <!-- head  -->
-                    <div class="actualAccordionWorldMapEleHead crewDetailsFlexBetween"
+                    <div class="actualAccordionWorldMapEleHead crewDetailsFlexBetween dismissCursorPointer"
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[2]}"
                         (click)="accordionWorldMapFunc(2)">
                         <div class="crewDetailsFlexHead">
@@ -749,7 +749,7 @@
                 <div class="actualAccordionWorldMapEle">
 
                     <!-- head -->
-                    <div class="actualAccordionWorldMapEleHead"
+                    <div class="actualAccordionWorldMapEleHead dismissCursorPointer"
                         [ngClass]="{'borderBottomZeroAccordion': accordionWorldMap[3]}"
                         (click)="accordionWorldMapFunc(3)">
 

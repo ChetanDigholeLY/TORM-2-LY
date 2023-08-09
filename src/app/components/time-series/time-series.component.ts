@@ -37,6 +37,19 @@ function customDateFormatter(date: Date | number | any): string {
 })
 export class TimeSeriesComponent {
   isTimeSeriesSideBar = false;
+
+  isSearchInput: boolean = false;
+
+  handleSearchInput(event: any){
+    const val = event.target.value;
+    if(val){
+      this.isSearchInput = true;
+    }
+    else{
+      this.isSearchInput = false
+    }
+  }
+
   // TODO: Change to false;
   showDatePicker = false;
   selectedPredefinedValue = "";

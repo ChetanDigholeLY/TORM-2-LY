@@ -4364,3 +4364,13 @@ mat-checkbox .mdc-form-field label {
 }
 
 /* Time series ends */
+
+.timeSeriesWidthZero{
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.displayBgNone{
+  background-image: none !important;
+}
+
