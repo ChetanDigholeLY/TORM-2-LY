@@ -1,5 +1,8 @@
 # TormLy
 
+Hosted on: 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ab1e68ed-d3d8-4c42-8d76-f01f636c6b7e/deploy-status)](https://app.netlify.com/sites/torm2120/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Development server

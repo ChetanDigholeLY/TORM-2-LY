@@ -38,7 +38,7 @@ function customDateFormatter(date: Date | number | any): string {
 export class TimeSeriesComponent {
   isTimeSeriesSideBar = false;
   // TODO: Change to false;
-  showDatePicker = true;
+  showDatePicker = false;
   selectedPredefinedValue = "";
   selectedStartDate: SelectedDate = {
     label: customDateFormatter(dayjs()),
