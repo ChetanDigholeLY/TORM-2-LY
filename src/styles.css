@@ -4124,11 +4124,12 @@ mat-checkbox .mdc-form-field label {
   }
 
   .timeSeriesCalendar {
-    height: 92px;
+    height: 74px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 24px;
+    /* margin-right: 24px; */
+    padding: 12px;
   }
 
   .timeSeriesGraphMain {
@@ -4139,6 +4140,7 @@ mat-checkbox .mdc-form-field label {
 
   .timeSeriesGraphImg {
     width: 100%;
+    height: calc(100vh - 74px - 72px) !important;
   }
 
   .timeSeriesSideBarToggleMain {
@@ -4149,8 +4151,8 @@ mat-checkbox .mdc-form-field label {
     height: 42px;
     background: #edeeef;
     padding: 21px 12px;
-    margin-top: 12px;
-    margin-left: 12px;
+    /* margin-top: 12px;
+    margin-left: 12px; */
     border-radius: 4px;
   }
 
@@ -4368,9 +4370,19 @@ mat-checkbox .mdc-form-field label {
 .timeSeriesWidthZero{
   width: 0 !important;
   height: 0 !important;
+  visibility: hidden !important;
 }
 
 .displayBgNone{
   background-image: none !important;
 }
 
+.timeSeriesImg{
+  width: 100%;
+  /* height: calc(100vh - 72px - 54px); */
+  height: 100%;
+}
+
+.calendarComponentTimeSeries{
+  margin-right: 24px !important;
+}
