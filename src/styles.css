@@ -4109,6 +4109,7 @@ mat-checkbox .mdc-form-field label {
     font-size: 16px;
     font-weight: 400;
     color: #596069;
+    cursor: pointer;
   }
 
   .timeSeriesCheckBox:checked + div {
