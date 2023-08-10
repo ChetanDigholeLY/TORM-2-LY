@@ -148,6 +148,11 @@
 
 .calendar-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.calendar-container button:last-child{
+  border-bottom: 0;
 }
 
 .predefined-options {
@@ -163,6 +168,9 @@
   color: #1e2124;
   background-color: transparent;
   text-align: left;
+  border-left: 1px solid #E4E6E9;
+  border-bottom: 1px solid #E4E6E9;
+  padding-right: 30px;
 }
 
 .predefined-options button:first-child {
