@@ -140,6 +140,14 @@ export class NavBarComponent implements OnInit {
 
   // drop down ends
 
+  isUserDropDown: boolean = false;
+  isUserDropDownMobile: boolean = false;
 
+  userDropDownFunc(){
+    this.isUserDropDown = !this.isUserDropDown
+  }
+  userDropDownMobileFunc(){
+    this.isUserDropDownMobile = !this.isUserDropDownMobile
+  }
 
 }
