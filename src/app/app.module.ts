@@ -21,6 +21,7 @@ import { AcknowledgedGuidanceComponent } from './components/acknowledged-guidanc
 import { RemoveTime, TimeSeriesComponent } from './components/time-series/time-series.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
       path: 'timeseries', component: TimeSeriesComponent
     },
   ]},
-  { path: 'worldmap', component: WorldmapComponent }
+  { path: 'worldmap', component: WorldmapComponent },
+  { path: 'admin', component: AdminPageComponent }
   
   // Add more routes for other components if needed
 ];
@@ -54,7 +56,8 @@ const routes: Routes = [
     AcknowledgedGuidanceComponent,
     TimeSeriesComponent,
     DatePickerComponent,
-    RemoveTime
+    RemoveTime,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,

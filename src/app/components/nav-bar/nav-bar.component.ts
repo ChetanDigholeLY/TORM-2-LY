@@ -16,7 +16,7 @@ const routeNameMap: { [key: string]: String[]} = {
   '/sensors/livedatafeed': ["Sensor Data","Live Data Feed"],
   '/performance': ["Performance", "Electric Power Performance"],
   '/sensors/timeseries': ["Sensor Data","Time Series"],
-
+  '/admin': ["Admin","Vessel Model"]
 }
 
 @Component({

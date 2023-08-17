@@ -16,8 +16,9 @@ export class SideBarComponent implements OnInit {
   // focus on sideBar Element starts
   //[0,1,2,3] = main menu
   //[4,5,6,7] = sensor menu
+  //[8,9] = [bi report, admin]
   //apend more when needed
-  focusToSideBarElement = [false,false,false,false,false,false];
+  focusToSideBarElement = [false,false,false,false,false,false,false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
     for(let i = 0; i<this.focusToSideBarElement.length; i++){
@@ -44,6 +45,11 @@ export class SideBarComponent implements OnInit {
       }
       if(currentUrl === '/performance'){
         this.focusToSideBarElementFunc(3)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
+      }
+      if(currentUrl === '/admin'){
+        this.focusToSideBarElementFunc(9)
         this.disAbleSideAndNav = false;
         this.disableNavFunc(false)
       }
