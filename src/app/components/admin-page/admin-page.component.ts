@@ -35,19 +35,34 @@ export class AdminPageComponent {
 
 
   vesselDetail: vesselDetails[] = [
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
-    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2nd Jun 2023', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: false, vesselStartDate: '2023-06-01', vesselEndDate: "2023-07-30", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
+    { vesselName: 'Torm Alice', vesselID: 10055, vesselIMO: 912872638, vesselActive: true, vesselStartDate: '2023-06-01', vesselEndDate: "--", isEditing: false },
   ]
 
   
   //edit all function starts
-  isAllEdit: boolean = false;
+  isAllEdit: boolean = true;
 
   toggleAllEdit(){
     if(this.adminTabsArr[0] === true){
@@ -55,8 +70,14 @@ export class AdminPageComponent {
       this.vesselDetail.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
     }
   }
+
+  resetEdit(){
+    if(this.adminTabsArr[0] === true){
+      this.isAllEdit = !this.isAllEdit;
+      this.vesselDetail.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
+    }
+  }
+
   //edit all function ends
-
-
 
 }
