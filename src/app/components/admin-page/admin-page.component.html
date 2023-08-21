@@ -166,7 +166,7 @@
 
             </div>
             <div class="vesselDefinationList" *ngIf="!isAllEdit">
-                <div class="vesselDefinationListEle bgForEditAll" *ngFor="let item of vesselDetail">
+                <div class="vesselDefinationListEle bgForEditAll" *ngFor="let item of vesselDetail, let i = index">
                     <div class="vesselDefinationListEleText">
                         <input type="text" class="vesselDefinationInput" value={{item.vesselName}}
                             placeholder="Vessel Name" />
@@ -190,7 +190,8 @@
                         </div>
                     </div>
                     <div class="vesselDefinationListEleText vesselDefinationDateFlex">
-                        <svg class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <input type="date" #datePickerr class="hideInputDate" onfocus="this.showPicker()" (change)="updateSelectedDate(datePickerr.value , i)"/>
+                        <svg (click)="openDatePicker()" class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5L17 3.5C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18L3 7.5Z"
@@ -231,7 +232,26 @@
 
 
         <div class="reportFuelAllowance" *ngIf="adminTabsArr[4]">
-            <div>hello xyz</div>
+
+            <div class="reportFuelAllowanceMain">
+
+                <!-- left side starts -->
+                <div class="reportFuelAllowanceLeftMain">
+
+                    <!-- header starts -->
+                    <div class="TagNameFlex reportFuelAllowanceLeftHeader">
+                        <input type="text" class="form-control sensorMagnifineGlassSvg vesselNameInputField"
+                            placeholder="Vessel name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                    </div>
+                    <!-- header ends -->
+                    <div class="reportFuelAllowanceLeftBody">
+                        <div class="reportFuelVesselName" *ngFor="let item of reportFuelAllowanceArr">{{item.vesselName}}</div>
+                    </div>
+
+                </div>
+                <!-- left side ends -->
+
+            </div>
         </div>
     </div>
 

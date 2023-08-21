@@ -803,8 +803,9 @@ mat-checkbox .mdc-form-field label {
 .vesselDropDownOnWorldMainMenu::-webkit-scrollbar,
 .WMVesselDropDownMain::-webkit-scrollbar,
 .navbarDropDownBodyMain::-webkit-scrollbar
+
 /* .vesselDefinationList::-webkit-scrollbar  */
-{
+  {
   display: none;
 }
 
@@ -4711,13 +4712,13 @@ input[type="checkbox"].switch_1:checked:after {
   background-color: #D3483E !important;
 }
 
-.vesselDefinationDateFlex{
+.vesselDefinationDateFlex {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.flexAdminHeader{
+.flexAdminHeader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4725,22 +4726,22 @@ input[type="checkbox"].switch_1:checked:after {
   height: 49px;
 }
 
-.vesselAdminHeaderText{
+.vesselAdminHeaderText {
   padding: 0;
   text-transform: uppercase;
 }
 
-.activeDateTextAdmin{
+.activeDateTextAdmin {
   padding: 0;
   text-transform: uppercase;
 }
 
-.vesselAdminHeaderText::after{
+.vesselAdminHeaderText::after {
   content: '*';
   color: #D3483E;
 }
 
-.cancelBtnOnAdmin{
+.cancelBtnOnAdmin {
   font-size: 16px;
   font-weight: 600;
   color: #596069;
@@ -4748,6 +4749,51 @@ input[type="checkbox"].switch_1:checked:after {
   padding: 8px 16px;
 }
 
-.adminSaveBtn{
+.adminSaveBtn {
   background: #508C46 !important;
+}
+
+.hideInputDate {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.vesselNameInputField {
+  background-color: #EDEEEF;
+}
+
+.reportFuelAllowanceLeftHeader {
+  margin-bottom: 8px;
+}
+
+.reportFuelAllowanceLeftMain {
+  width: 258px;
+}
+
+.reportFuelVesselName{
+  padding: 6px 16px;
+  border-right: 1px solid #EDEEEF;
+  background: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #1E2124;
+  font-size: 14px;
+  font-weight: 600;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.reportFuelAllowanceLeftBody{
+  display: grid;
+  grid-template-columns: 1fr; /* One column */
+  grid-auto-rows: minmax(28px, auto); /* Dynamic row height */
+  gap: 8px;
+  
+}
+
+.reportFuelAllowanceMain{
+  height: calc(100vh - 144px);
+  overflow: auto;
 }
