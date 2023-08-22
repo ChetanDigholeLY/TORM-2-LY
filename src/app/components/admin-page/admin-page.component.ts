@@ -37,7 +37,7 @@ interface reportFuelAllowance {
 })
 export class AdminPageComponent {
 
-  adminTabsArr = [false, false, false, false, true, false, false]
+  adminTabsArr = [true, false, false, false, false , false, false]
 
   adminTabFunc(val: string) {
     for (let i = 0; i < this.adminTabsArr.length; i++) {
@@ -95,26 +95,76 @@ export class AdminPageComponent {
 
   //edit all function ends
 
-  openDatePicker(): void {
+   indexVesselDetailStart: any = null;
+   indexVesselDetailEnd: any = null;
+
+  openDatePicker(i:number): void {
     const datePicker = document.querySelector('.hideInputDate') as HTMLInputElement;
     if (datePicker) {
       datePicker.focus(); // Focus the input to open the date picker
     }
+    this.indexVesselDetailStart = i;
+  }
+  openDatePickerEnd(i:number): void {
+    const datePicker = document.querySelector('.hideInputEndDate') as HTMLInputElement;
+    if (datePicker) {
+      datePicker.focus(); // Focus the input to open the date picker
+    }
+    this.indexVesselDetailEnd = i;
   }
 
-  updateSelectedDate(date: string , i: number): void {
-    this.vesselDetail[i].vesselStartDate = date
+  updateSelectedDate(date: any): void {
+    this.vesselDetail[this.indexVesselDetailStart].vesselStartDate = date.target.value;
   }
 
-  // code: string,
-  // speedAnalysisMeter: number,
-  // windAnalysis: number,
-  // boilerFuel: number,
-  // extraAUX: number,
-  // boilerRun: number,
-  // AUXEngFuel: number,
-  // placeHolder: string,
-  // isEditing: boolean
+  updateSelectedEndDate(date: any): void {
+    this.vesselDetail[this.indexVesselDetailEnd].vesselEndDate = date.target.value;
+  }
+
+
+  //save start
+  updateAllChanges(){
+    this.resetEdit()
+  }
+  //save end
+
+  //add new vessel starts
+  isAddNewVessel: boolean = false;
+  addNewVesselFunc(){
+    this.isAddNewVessel = !this.isAddNewVessel
+  }
+
+  //new active start
+  newVesselStartDate: any;
+
+  updateSelectedNewVesselDate(event: any){
+    this.newVesselStartDate = event.target.value;
+  }
+
+  openNewVesselStartDatePicker(){
+    const datePicker = document.querySelector('.addNewVesselStartDate') as HTMLInputElement;
+    if (datePicker) {
+      datePicker.focus(); // Focus the input to open the date picker
+    }
+  }
+  //new active end
+
+  // new inactive starts
+  newVesselInactiveDate: any;
+  updateSelectedInactiveVesselDate(event: any){
+    this.newVesselInactiveDate = event.target.value;
+  }
+
+  openNewVesselInactiveDatePicker(){
+    const datePicker = document.querySelector('.addNewVesselEndDate') as HTMLInputElement;
+    if (datePicker) {
+      datePicker.focus(); // Focus the input to open the date picker
+    }
+  }
+  // new inactive ends
+
+  //add new vessel ends
+
 
   reportFuelAllowanceArr: reportFuelAllowance[] = [
     { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},

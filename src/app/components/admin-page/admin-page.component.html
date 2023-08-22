@@ -49,7 +49,8 @@
 
             <div class="cancelBtnOnAdmin" (click)="resetEdit()" *ngIf="!isAllEdit">Cancel</div>
 
-            <button class="adminAddBtn" *ngIf="isAllEdit">
+            <button class="adminAddBtn" *ngIf="!isAddNewVessel" [ngClass]="{'hideAddBtn': !isAllEdit}"
+                (click)="addNewVesselFunc()">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M9 0.9375C4.554 0.9375 0.9375 4.55475 0.9375 9C0.9375 13.4452 4.554 17.0625 9 17.0625C13.446 17.0625 17.0625 13.4452 17.0625 9C17.0625 4.55475 13.446 0.9375 9 0.9375ZM9 15.9375C5.17425 15.9375 2.0625 12.8258 2.0625 9C2.0625 5.17425 5.17425 2.0625 9 2.0625C12.8258 2.0625 15.9375 5.17425 15.9375 9C15.9375 12.8258 12.8258 15.9375 9 15.9375ZM12.1875 9C12.1875 9.3105 11.9355 9.5625 11.625 9.5625H9.5625V11.625C9.5625 11.9355 9.3105 12.1875 9 12.1875C8.6895 12.1875 8.4375 11.9355 8.4375 11.625V9.5625H6.375C6.0645 9.5625 5.8125 9.3105 5.8125 9C5.8125 8.6895 6.0645 8.4375 6.375 8.4375H8.4375V6.375C8.4375 6.0645 8.6895 5.8125 9 5.8125C9.3105 5.8125 9.5625 6.0645 9.5625 6.375V8.4375H11.625C11.9355 8.4375 12.1875 8.6895 12.1875 9Z"
@@ -58,7 +59,16 @@
                 <div class="adminAddBtnText">Add</div>
             </button>
 
-            <button class="adminAddBtn adminSaveBtn" *ngIf="!isAllEdit">
+            <button class="adminDisableAddBtn" *ngIf="isAddNewVessel" [ngClass]="{'hideAddBtn': !isAllEdit}">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9 0.9375C4.554 0.9375 0.9375 4.55475 0.9375 9C0.9375 13.4452 4.554 17.0625 9 17.0625C13.446 17.0625 17.0625 13.4452 17.0625 9C17.0625 4.55475 13.446 0.9375 9 0.9375ZM9 15.9375C5.17425 15.9375 2.0625 12.8258 2.0625 9C2.0625 5.17425 5.17425 2.0625 9 2.0625C12.8258 2.0625 15.9375 5.17425 15.9375 9C15.9375 12.8258 12.8258 15.9375 9 15.9375ZM12.1875 9C12.1875 9.3105 11.9355 9.5625 11.625 9.5625H9.5625V11.625C9.5625 11.9355 9.3105 12.1875 9 12.1875C8.6895 12.1875 8.4375 11.9355 8.4375 11.625V9.5625H6.375C6.0645 9.5625 5.8125 9.3105 5.8125 9C5.8125 8.6895 6.0645 8.4375 6.375 8.4375H8.4375V6.375C8.4375 6.0645 8.6895 5.8125 9 5.8125C9.3105 5.8125 9.5625 6.0645 9.5625 6.375V8.4375H11.625C11.9355 8.4375 12.1875 8.6895 12.1875 9Z"
+                        fill="#969DA6" />
+                </svg>
+                <div class="adminDisableAddBtnText">Add</div>
+            </button>
+
+            <button class="adminAddBtn adminSaveBtn" *ngIf="!isAllEdit" (click)="updateAllChanges()">
                 <div class="adminAddBtnText">Save</div>
             </button>
         </div>
@@ -85,6 +95,7 @@
                             d="M16.5301 13.47C16.8231 13.763 16.8231 14.238 16.5301 14.531L12.5301 18.531C12.3841 18.677 12.192 18.751 12 18.751C11.808 18.751 11.616 18.678 11.47 18.531L7.46999 14.531C7.17699 14.238 7.17699 13.763 7.46999 13.47C7.76299 13.177 8.23803 13.177 8.53103 13.47L12.001 16.94L15.471 13.47C15.763 13.177 16.2371 13.177 16.5301 13.47ZM8.53005 10.5301L12 7.06008L15.47 10.5301C15.616 10.6761 15.808 10.75 16 10.75C16.192 10.75 16.3841 10.6771 16.5301 10.5301C16.8231 10.2371 16.8231 9.76202 16.5301 9.46902L12.5301 5.46902C12.2371 5.17602 11.762 5.17602 11.469 5.46902L7.46902 9.46902C7.17602 9.76202 7.17602 10.2371 7.46902 10.5301C7.76202 10.8231 8.23705 10.8231 8.53005 10.5301Z"
                             fill="#1E2124" />
                     </svg>
+
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.00001 15.1667C4.04801 15.1667 0.833344 11.952 0.833344 8C0.833344 4.048 4.04801 0.833328 8.00001 0.833328C11.952 0.833328 15.1667 4.048 15.1667 8C15.1667 11.952 11.952 15.1667 8.00001 15.1667ZM8.00001 1.83333C4.59934 1.83333 1.83334 4.59933 1.83334 8C1.83334 11.4007 4.59934 14.1667 8.00001 14.1667C11.4007 14.1667 14.1667 11.4007 14.1667 8C14.1667 4.59933 11.4007 1.83333 8.00001 1.83333ZM8.50001 11V7.95263C8.50001 7.67663 8.27601 7.45263 8.00001 7.45263C7.72401 7.45263 7.50001 7.67663 7.50001 7.95263V11C7.50001 11.276 7.72401 11.5 8.00001 11.5C8.27601 11.5 8.50001 11.276 8.50001 11ZM8.68002 5.66666C8.68002 5.29866 8.38202 5 8.01336 5H8.00668C7.63868 5 7.34327 5.29866 7.34327 5.66666C7.34327 6.03466 7.64536 6.33333 8.01336 6.33333C8.38136 6.33333 8.68002 6.03466 8.68002 5.66666Z"
@@ -111,6 +122,17 @@
                             d="M16.5301 13.47C16.8231 13.763 16.8231 14.238 16.5301 14.531L12.5301 18.531C12.3841 18.677 12.192 18.751 12 18.751C11.808 18.751 11.616 18.678 11.47 18.531L7.46999 14.531C7.17699 14.238 7.17699 13.763 7.46999 13.47C7.76299 13.177 8.23803 13.177 8.53103 13.47L12.001 16.94L15.471 13.47C15.763 13.177 16.2371 13.177 16.5301 13.47ZM8.53005 10.5301L12 7.06008L15.47 10.5301C15.616 10.6761 15.808 10.75 16 10.75C16.192 10.75 16.3841 10.6771 16.5301 10.5301C16.8231 10.2371 16.8231 9.76202 16.5301 9.46902L12.5301 5.46902C12.2371 5.17602 11.762 5.17602 11.469 5.46902L7.46902 9.46902C7.17602 9.76202 7.17602 10.2371 7.46902 10.5301C7.76202 10.8231 8.23705 10.8231 8.53005 10.5301Z"
                             fill="#1E2124" />
                     </svg>
+                    <!-- sorting svg starts -->
+                    <!-- <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.7802 8.03038C14.634 8.17663 14.442 8.25011 14.25 8.25011C14.058 8.25011 13.8659 8.17663 13.7197 8.03038L9.74997 4.06066V15.7501C9.74997 16.1641 9.41472 16.5001 8.99997 16.5001C8.58522 16.5001 8.24997 16.1641 8.24997 15.7501V4.06066L4.28024 8.03038C3.98699 8.32363 3.51294 8.32363 3.21969 8.03038C2.92644 7.73713 2.92644 7.26309 3.21969 6.96984L8.46896 1.72057C8.53871 1.65082 8.62116 1.59604 8.71341 1.55779C8.89641 1.48204 9.10353 1.48204 9.28653 1.55779C9.37878 1.59604 9.46122 1.65082 9.53097 1.72057L14.7802 6.96984C15.0735 7.26309 15.0735 7.73713 14.7802 8.03038Z" fill="#016BFF"/>
+                        </svg>-->
+
+                    <!-- <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.7803 11.0303L9.53103 16.2795C9.46128 16.3493 9.37884 16.4041 9.28659 16.4423C9.19509 16.4806 9.09753 16.5 9.00003 16.5C8.90253 16.5 8.80497 16.4798 8.71347 16.4423C8.62122 16.4041 8.53877 16.3493 8.46902 16.2795L3.21975 11.0303C2.9265 10.737 2.9265 10.263 3.21975 9.96973C3.513 9.67648 3.98705 9.67648 4.2803 9.96973L8.25003 13.9395V2.25C8.25003 1.836 8.58528 1.5 9.00003 1.5C9.41478 1.5 9.75003 1.836 9.75003 2.25V13.9395L13.7198 9.96973C14.013 9.67648 14.4871 9.67648 14.7803 9.96973C15.0736 10.263 15.0736 10.737 14.7803 11.0303Z" fill="#016BFF"/>
+                        </svg> -->
+
+                    <!-- sorting svg starts -->
+
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.00001 15.1667C4.04801 15.1667 0.833344 11.952 0.833344 8C0.833344 4.048 4.04801 0.833328 8.00001 0.833328C11.952 0.833328 15.1667 4.048 15.1667 8C15.1667 11.952 11.952 15.1667 8.00001 15.1667ZM8.00001 1.83333C4.59934 1.83333 1.83334 4.59933 1.83334 8C1.83334 11.4007 4.59934 14.1667 8.00001 14.1667C11.4007 14.1667 14.1667 11.4007 14.1667 8C14.1667 4.59933 11.4007 1.83333 8.00001 1.83333ZM8.50001 11V7.95263C8.50001 7.67663 8.27601 7.45263 8.00001 7.45263C7.72401 7.45263 7.50001 7.67663 7.50001 7.95263V11C7.50001 11.276 7.72401 11.5 8.00001 11.5C8.27601 11.5 8.50001 11.276 8.50001 11ZM8.68002 5.66666C8.68002 5.29866 8.38202 5 8.01336 5H8.00668C7.63868 5 7.34327 5.29866 7.34327 5.66666C7.34327 6.03466 7.64536 6.33333 8.01336 6.33333C8.38136 6.33333 8.68002 6.03466 8.68002 5.66666Z"
@@ -150,6 +172,95 @@
             <!-- vessel body starts -->
             <div class="vesselDefinationList" *ngIf="isAllEdit">
 
+                <div class="addNewVesselMain" *ngIf="isAddNewVessel">
+
+                    <div class="addNewVesselRow">
+                        <div class="vesselDefinationListEleText">
+                            <input type="text" class="vesselDefinationInput" placeholder="Enter vessel name" />
+                        </div>
+
+                        <div class="vesselDefinationListEleText vesselDefinationTextBold">
+                            <input type="number" class="vesselDefinationInput vesselDefinationInputNumber"
+                                placeholder="Enter vessel ID " />
+                        </div>
+
+                        <div class="vesselDefinationListEleText vesselDefinationTextBold">
+                            <input type="number" class="vesselDefinationInput vesselDefinationInputNumber"
+                                placeholder="Enter IMO number" />
+                        </div>
+
+                        <div class="vesselDefinationListEleText">
+                            <div class="switch_box box_1">
+                                <input type="checkbox" class="switch_1" checked>
+                            </div>
+                        </div>
+
+                        <div class="vesselDefinationListEleText vesselDefinationDateFlex">
+                            <input type="date" class="hideInputDate addNewVesselStartDate" onfocus="this.showPicker()"
+                            (change)="updateSelectedNewVesselDate($event)" />
+                            <svg (click)="openNewVesselStartDatePicker()" class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5L17 3.5C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18L3 7.5Z"
+                                    stroke="#016BFF" stroke-width="1.5" />
+                                <path d="M3 9L21 9" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M8 2L8 5" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16 2V5" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="12" cy="15" r="1" fill="#016BFF" />
+                                <circle cx="16" cy="15" r="1" fill="#016BFF" />
+                                <circle cx="8" cy="15" r="1" fill="#016BFF" />
+                            </svg>
+                            <div class="addNewVesselDatePickerText marginSixteenPx" *ngIf="!newVesselStartDate">Active date</div>
+                            <div class="addNewVesselDatePickerValue marginSixteenPx" *ngIf="newVesselStartDate">{{newVesselStartDate}}</div>
+                        </div>
+
+                        <div class="vesselDefinationListEleText vesselDefinationDateFlex">
+                            <input type="date" class="hideInputDate addNewVesselEndDate" onfocus="this.showPicker()"
+                            (change)="updateSelectedInactiveVesselDate($event)" />
+                            <svg (click)="openNewVesselInactiveDatePicker()" class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5L17 3.5C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18L3 7.5Z"
+                                    stroke="#016BFF" stroke-width="1.5" />
+                                <path d="M3 9L21 9" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M8 2L8 5" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16 2V5" stroke="#016BFF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="12" cy="15" r="1" fill="#016BFF" />
+                                <circle cx="16" cy="15" r="1" fill="#016BFF" />
+                                <circle cx="8" cy="15" r="1" fill="#016BFF" />
+                            </svg>
+                            <div class="addNewVesselDatePickerText marginSixteenPx" *ngIf="!newVesselInactiveDate">Inactive date</div>
+                            <div class="addNewVesselDatePickerValue marginSixteenPx" *ngIf="newVesselInactiveDate">{{newVesselInactiveDate}}</div>
+                        </div>
+
+                    </div>
+                    <!-- button for addition fields starts -->
+                    <div class="addNewVesselButton">
+                        <button class="addNewVesselBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.7123 16.7729C16.0052 17.0658 16.4801 17.0658 16.7729 16.7729C17.0658 16.48 17.0658 16.0052 16.7729 15.7123L13.0607 12L16.7729 8.2877C17.0658 7.99481 17.0658 7.51993 16.7729 7.22704C16.48 6.93415 16.0052 6.93415 15.7123 7.22704L12 10.9393L8.28766 7.22699C7.99477 6.9341 7.5199 6.9341 7.227 7.22699C6.93411 7.51989 6.93411 7.99476 7.227 8.28765L10.9393 12L7.22699 15.7123C6.9341 16.0052 6.9341 16.4801 7.22699 16.773C7.51989 17.0659 7.99476 17.0659 8.28765 16.773L12 13.0606L15.7123 16.7729Z"
+                                    fill="#596069" />
+                            </svg>
+                        </button>
+                        <button class="addNewVesselBtn addNewVesselTickBtn" (click)="addNewVesselFunc()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.00002 18C8.99902 18 8.99802 18 8.99602 18C8.72902 17.999 8.47502 17.892 8.28802 17.702L4.28802 13.64C3.90002 13.246 3.90503 12.613 4.29903 12.226C4.69303 11.839 5.32502 11.843 5.71302 12.237L9.00602 15.581L18.294 6.29398C18.685 5.90298 19.317 5.90298 19.708 6.29398C20.099 6.68398 20.099 7.31798 19.708 7.70798L9.70801 17.708C9.52001 17.895 9.26502 18 9.00002 18Z"
+                                    fill="#EEF6FF" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- button for addition fields ends -->
+
+                </div>
+
                 <div class="vesselDefinationListEle" *ngFor="let item of vesselDetail">
                     <div class="vesselDefinationListEleText vesselDefinationTextBold">{{item.vesselName}}</div>
                     <div class="vesselDefinationListEleText vesselDefinationTextBold">{{item.vesselID}}</div>
@@ -165,8 +276,38 @@
                 </div>
 
             </div>
+
+            <!-- error toaster starts -->
+            <div class="errorToaster">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.00016 15.1666C4.04816 15.1666 0.833496 11.9519 0.833496 7.99992C0.833496 4.04792 4.04816 0.833252 8.00016 0.833252C11.9522 0.833252 15.1668 4.04792 15.1668 7.99992C15.1668 11.9519 11.9522 15.1666 8.00016 15.1666ZM8.00016 1.83325C4.5995 1.83325 1.8335 4.59925 1.8335 7.99992C1.8335 11.4006 4.5995 14.1666 8.00016 14.1666C11.4008 14.1666 14.1668 11.4006 14.1668 7.99992C14.1668 4.59925 11.4008 1.83325 8.00016 1.83325ZM8.50016 10.9999V7.95256C8.50016 7.67656 8.27616 7.45256 8.00016 7.45256C7.72416 7.45256 7.50016 7.67656 7.50016 7.95256V10.9999C7.50016 11.2759 7.72416 11.4999 8.00016 11.4999C8.27616 11.4999 8.50016 11.2759 8.50016 10.9999ZM8.68018 5.66659C8.68018 5.29859 8.38218 4.99992 8.01351 4.99992H8.00684C7.63884 4.99992 7.34342 5.29859 7.34342 5.66659C7.34342 6.03459 7.64551 6.33325 8.01351 6.33325C8.38151 6.33325 8.68018 6.03459 8.68018 5.66659Z"
+                        fill="#EEF6FF" />
+                </svg>
+                <div class="errorToasterText">Only Numeric values allowed</div>
+            </div>
+            <div class="errorToaster completeAllToaster">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.00016 15.1666C4.04816 15.1666 0.833496 11.9519 0.833496 7.99992C0.833496 4.04792 4.04816 0.833252 8.00016 0.833252C11.9522 0.833252 15.1668 4.04792 15.1668 7.99992C15.1668 11.9519 11.9522 15.1666 8.00016 15.1666ZM8.00016 1.83325C4.5995 1.83325 1.8335 4.59925 1.8335 7.99992C1.8335 11.4006 4.5995 14.1666 8.00016 14.1666C11.4008 14.1666 14.1668 11.4006 14.1668 7.99992C14.1668 4.59925 11.4008 1.83325 8.00016 1.83325ZM8.50016 10.9999V7.95256C8.50016 7.67656 8.27616 7.45256 8.00016 7.45256C7.72416 7.45256 7.50016 7.67656 7.50016 7.95256V10.9999C7.50016 11.2759 7.72416 11.4999 8.00016 11.4999C8.27616 11.4999 8.50016 11.2759 8.50016 10.9999ZM8.68018 5.66659C8.68018 5.29859 8.38218 4.99992 8.01351 4.99992H8.00684C7.63884 4.99992 7.34342 5.29859 7.34342 5.66659C7.34342 6.03459 7.64551 6.33325 8.01351 6.33325C8.38151 6.33325 8.68018 6.03459 8.68018 5.66659Z"
+                        fill="#EEF6FF" />
+                </svg>
+                <div class="errorToasterText">Complete all mandatory fields</div>
+            </div>
+            <div class="errorToaster newVesselToaster">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.00065 1.33337C4.32065 1.33337 1.33398 4.32004 1.33398 8.00004C1.33398 11.68 4.32065 14.6667 8.00065 14.6667C11.6807 14.6667 14.6673 11.68 14.6673 8.00004C14.6673 4.32004 11.6807 1.33337 8.00065 1.33337ZM10.6873 6.80005L7.57397 9.9067C7.48064 10.0067 7.35398 10.0534 7.22064 10.0534C7.09398 10.0534 6.96731 10.0067 6.86731 9.9067L5.31399 8.35339C5.12065 8.16006 5.12065 7.84002 5.31399 7.64669C5.50732 7.45335 5.82732 7.45335 6.02065 7.64669L7.22064 8.84672L9.98065 6.09338C10.174 5.89338 10.494 5.89338 10.6873 6.09338C10.8807 6.28672 10.8807 6.60005 10.6873 6.80005Z"
+                        fill="#EEF6FF" />
+                </svg>
+
+                <div class="errorToasterText">Vessel edited successfully </div>
+            </div>
+
+            <!-- error toaster ends -->
+
             <div class="vesselDefinationList" *ngIf="!isAllEdit">
-                <div class="vesselDefinationListEle bgForEditAll" *ngFor="let item of vesselDetail, let i = index">
+                <div class="vesselDefinationListEle bgForEditAll" *ngFor="let item of vesselDetail; let i = index">
                     <div class="vesselDefinationListEleText">
                         <input type="text" class="vesselDefinationInput" value={{item.vesselName}}
                             placeholder="Vessel Name" />
@@ -190,9 +331,10 @@
                         </div>
                     </div>
                     <div class="vesselDefinationListEleText vesselDefinationDateFlex">
-                        <input type="date" #datePickerr class="hideInputDate" onfocus="this.showPicker()" (change)="updateSelectedDate(datePickerr.value , i)"/>
-                        <svg (click)="openDatePicker()" class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <input type="date" class="hideInputDate" onfocus="this.showPicker()"
+                            (change)="updateSelectedDate($event)" />
+                        <svg (click)="openDatePicker(i)" class="dismissCursorPointer" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5L17 3.5C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18L3 7.5Z"
                                 stroke="#016BFF" stroke-width="1.5" />
@@ -205,10 +347,13 @@
                             <circle cx="16" cy="15" r="1" fill="#016BFF" />
                             <circle cx="8" cy="15" r="1" fill="#016BFF" />
                         </svg>
-                        <div class="vesselDefinationDates">{{item.vesselStartDate}}</div>
+                        <div class="vesselDefinationDates marginSixteenPx">{{item.vesselStartDate}}</div>
                     </div>
                     <div class="vesselDefinationListEleText vesselDefinationDateFlex">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <input type="date" class="hideInputEndDate" onfocus="this.showPicker()"
+                            (change)="updateSelectedEndDate($event)" />
+                        <svg (click)="openDatePickerEnd(i)" class="dismissCursorPointer" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5L17 3.5C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18L3 7.5Z"
                                 stroke="#016BFF" stroke-width="1.5" />
@@ -221,7 +366,7 @@
                             <circle cx="16" cy="15" r="1" fill="#016BFF" />
                             <circle cx="8" cy="15" r="1" fill="#016BFF" />
                         </svg>
-                        <div class="vesselDefinationDates">{{item.vesselEndDate}}</div>
+                        <div class="vesselDefinationDates marginSixteenPx">{{item.vesselEndDate}}</div>
                     </div>
                 </div>
             </div>
@@ -241,11 +386,13 @@
                     <!-- header starts -->
                     <div class="TagNameFlex reportFuelAllowanceLeftHeader">
                         <input type="text" class="form-control sensorMagnifineGlassSvg vesselNameInputField"
-                            placeholder="Vessel name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            placeholder="Vessel name" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2" />
                     </div>
                     <!-- header ends -->
                     <div class="reportFuelAllowanceLeftBody">
-                        <div class="reportFuelVesselName" *ngFor="let item of reportFuelAllowanceArr">{{item.vesselName}}</div>
+                        <div class="reportFuelVesselName" *ngFor="let item of reportFuelAllowanceArr">
+                            {{item.vesselName}}</div>
                     </div>
 
                 </div>
