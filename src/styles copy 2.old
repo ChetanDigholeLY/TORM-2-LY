@@ -4731,7 +4731,6 @@ input[type="checkbox"].switch_1:checked:after {
   align-items: center;
   gap: 6px;
   height: 49px;
-  background-color: #edeeef;
 }
 
 .vesselAdminHeaderText {
@@ -4899,79 +4898,6 @@ input[type="checkbox"].switch_1:checked:after {
 .reportFuelAllowanceMain {
   height: 100%;
   overflow: hidden;
-}
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  height: 100%;
-  margin-top: 15px;
-}
-
-.table {
-  border-collapse: collapse;
-  width: 100vw;
-  table-layout: fixed;
-  background-color: transparent;
-}
-
-th {
-  background-color: #dee0e2 !important;
-  padding: 0px !important;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-td {
-  /* border: 1px solid #000; */
-  padding: 4px 0px !important;
-  text-align: center;
-  background-color: transparent !important;
-}
-
-thead {
-  z-index: 2000;
-  position: sticky;
-}
-
-.fixed-header,
-.fixed-column {
-  width: 400px;
-}
-
-th {
-  min-width: 150px; /* Adjust as needed */
-}
-
-th {
-  background-color: #f1f1f1 !important;
-  position: sticky;
-  top: 0;
-}
-
-th > .flexAdminHeader {
-  border-right: 1px solid #dee0e2;
-}
-
-tr {
-  margin-top: 10px;
-  border-width: none !important;
-  border-style: none !important;
-  border-color: transparent !important;
-}
-
-.navAndRouteMainComponent {
-  overflow: hidden;
-}
-
-.reportFuelAllowance {
-  height: 100%;
-  overflow: hidden;
-}
-
-.reportFuelAllowanceMain {
-  height: 100%;
-  overflow: hidden;
   display: flex;
 }
 
@@ -5058,27 +4984,8 @@ tr {
 }
 
 .fixed-column {
-  position: sticky !important;
-  left: 0;
-  z-index: 200 !important;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.fixed-header {
-  position: sticky !important;
-  left: 0;
-  background-color: #edeeef !important;
-  z-index: 200 !important;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.fixed-header > input {
-  border-radius: 0px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: #edeeef !important;
+  position: sticky;
+  z-index: 200;
 }
 
 .reportFuelAllowanceListEle > div:nth-child(1),
@@ -5101,12 +5008,4 @@ tr {
   font-size: 16px;
   color: #1e2124;
   font-weight: 400;
-}
-
-.text-color {
-  padding: 6px 18px;
-  background-color: white;
-  width: 100%;
-  display: flex;
-  border-right: 1px solid #dee0e2;
 }
