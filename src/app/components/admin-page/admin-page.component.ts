@@ -30,6 +30,8 @@ interface reportFuelAllowance {
   isEditing: boolean
 }
 
+type ActiveSort = null | 'ascending' | 'descending';
+
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
@@ -37,7 +39,10 @@ interface reportFuelAllowance {
 })
 export class AdminPageComponent {
 
-  adminTabsArr = [true, false, false, false, false , false, false]
+  adminTabsArr = [true, false, false, false, false , false, false];
+  columns = [];
+  activeColumnID?: string;
+  activeSort : ActiveSort = null;
 
   adminTabFunc(val: string) {
     for (let i = 0; i < this.adminTabsArr.length; i++) {
@@ -84,12 +89,20 @@ export class AdminPageComponent {
       this.isAllEdit = !this.isAllEdit;
       this.vesselDetail.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
     }
+    if(this.adminTabsArr[4] === true){
+      this.isAllEdit = !this.isAllEdit;
+      this.reportFuelAllowanceArr.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
+    }
   }
 
   resetEdit(){
     if(this.adminTabsArr[0] === true){
       this.isAllEdit = !this.isAllEdit;
       this.vesselDetail.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
+    }
+    if(this.adminTabsArr[4] === true){
+      this.isAllEdit = !this.isAllEdit;
+      this.reportFuelAllowanceArr.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
     }
   }
 
@@ -134,6 +147,10 @@ export class AdminPageComponent {
     this.isAddNewVessel = !this.isAddNewVessel
   }
 
+  cancelNewVesselFunc(){
+    this.isAddNewVessel = false;
+  }
+
   //new active start
   newVesselStartDate: any;
 
@@ -165,39 +182,39 @@ export class AdminPageComponent {
 
   //add new vessel ends
 
+  reportFuelAllowanceCols = ['AUX Eng baseline Cons, Idle', 'AUX Eng baseline Cons, Sailing', 'Speed Analysis meter', 'Wind Analysis', 'Placeholder', 'Boiler fuel Cons baseline, Sailing', 'Extra aux Eng cons, Ballast Pumps','Boiler run', 'Boiler fuel Cons baseline, idle', 'AUX Eng fuel', 'AUX Eng fuel 542', 'Placeholder Name'];
 
-  reportFuelAllowanceArr: reportFuelAllowance[] = [
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
-    { vesselName: 'TormBerlin', vesselID: 533, vesselIMO: 93993, code: '#09383', speedAnalysisMeter: 36, windAnalysis: 18, boilerFuel:42.83, extraAUX: 783.83, boilerRun: 9399, AUXEngFuel: 7.637, placeHolder: 'placeHolder', isEditing:false},
+  reportFuelAllowanceArr = [
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
+    { vesselName: 'TormBerlin', AUXEngBCI: 533, AUXEngBCS: 93993, speedAnalysisMeter: 36, windAnalysis: 18, placeholder1:'placeholder 1', boilerFuelCBS:42.83, extraAUX: 783.83, boilerRun: 9399, boilerFuelCBI: 7.637, AUXEngFuel: 7.637, AUXEngFuel542:4444, placeHolder2: 'placeholder 2', isEditing:false},
   ]
 
+  handleSorting(columnID: string){
+    if(this.activeColumnID !== undefined && columnID !== this.activeColumnID){
+      this.activeColumnID = columnID;
+      this.activeSort = 'ascending';
+      return;
+    }
+    this.activeColumnID = columnID;
+    if(this.activeSort == null){
+      this.activeSort = 'ascending'
+    }
+    else if(this.activeSort == 'ascending'){
+      this.activeSort = 'descending';
+    }else {
+      this.activeSort = 'ascending';
+    }
+  }
 
 }
