@@ -22,6 +22,7 @@ import { RemoveTime, TimeSeriesComponent } from './components/time-series/time-s
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { BiReportComponent } from './components/bi-report/bi-report.component';
 
 
 const routes: Routes = [
@@ -37,7 +38,8 @@ const routes: Routes = [
     },
   ]},
   { path: 'worldmap', component: WorldmapComponent },
-  { path: 'admin', component: AdminPageComponent }
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'bireport', component: BiReportComponent },
   
   // Add more routes for other components if needed
 ];
@@ -57,7 +59,8 @@ const routes: Routes = [
     TimeSeriesComponent,
     DatePickerComponent,
     RemoveTime,
-    AdminPageComponent
+    AdminPageComponent,
+    BiReportComponent
   ],
   imports: [
     BrowserModule,

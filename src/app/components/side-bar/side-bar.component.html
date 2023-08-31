@@ -14,7 +14,7 @@
             </div>
 
             <!-- sideBar lower component -->
-            <div class="sideBarLowerComponent" *ngIf="!isSensorMenu">
+            <div class="sideBarLowerComponent" *ngIf="!isSensorMenu" [ngClass]="{'displaySideNav': isAdminMenu}">
                 <div class="sideBarFlexColumnElement">
                     <div [ngClass]="{'activeSideBarElement':focusToSideBarElement[0]}">
                         <a class="sideBarListElement" routerLink="/worldmap" target="_blank">
@@ -143,8 +143,8 @@
                         </a>
                     </div>
 
-                    <div [ngClass]="{'activeSideBarElement':focusToSideBarElement[9]}">
-                        <a routerLink="/admin" class="sideBarListElement relativeEle">
+                    <div [ngClass]="{'activeSideBarElement':focusToSideBarElement[9]}" (click)="adminMenuActiveFunc()">
+                        <a routerLink="/bireport" class="sideBarListElement relativeEle">
                             <svg *ngIf="!focusToSideBarElement[9]" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6666 4.16699V8.75033" stroke="white" stroke-width="1.5"
@@ -217,6 +217,40 @@
                 </div>
             </div>
             <!-- sensor main menu drop down ends -->
+
+            <!-- admin main menu drop down starts -->
+            <div class="sensorDropDownMenu" *ngIf="isAdminMenu">
+                <div class="sensorDropDownMenuMain">
+                    <div class="mainMenuSensor" (click)="adminMenuInactiveFunc()">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.3304 13.3335L4.99707 10.0002M4.99707 10.0002L8.3304 6.66683M4.99707 10.0002H14.9971"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="sidebarMainMenuText">Main menu</div>
+                    </div>
+                    <div class="sensorMenuList">
+                        <div class="sideBarListElement sensorFirstList">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6665 4.16663V8.74996" stroke="#E1EFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M14.0835 5.83329V5.08329H12.5835V5.83329H14.0835ZM7.41683 5.83329V5.08329H5.91683V5.83329H7.41683ZM10.0002 1.66663L10.2635 0.964379C10.0937 0.900708 9.90661 0.900708 9.73682 0.964379L10.0002 1.66663ZM3.3335 4.16663L3.07015 3.46438C2.77743 3.57415 2.5835 3.85399 2.5835 4.16663C2.5835 4.47926 2.77743 4.7591 3.07015 4.86887L3.3335 4.16663ZM10.0002 6.66663L9.73682 7.36887C9.90661 7.43254 10.0937 7.43254 10.2635 7.36887L10.0002 6.66663ZM16.6668 4.16663L16.9302 4.86887C17.2229 4.7591 17.4168 4.47926 17.4168 4.16663C17.4168 3.85399 17.2229 3.57415 16.9302 3.46438L16.6668 4.16663ZM10.5927 14.1715L10.0594 13.6441L10.0594 13.6441L10.5927 14.1715ZM11.9165 12.8329L12.4497 13.3603L12.4497 13.3603L11.9165 12.8329ZM12.6985 12.6201L12.9101 11.9005L12.6985 12.6201ZM8.08387 12.8329L8.61714 12.3056L8.08387 12.8329ZM9.40764 14.1715L9.94091 13.6441L9.40764 14.1715ZM7.30183 12.6201L7.09023 11.9005H7.09023L7.30183 12.6201ZM15.9168 18.3333C15.9168 18.7475 16.2526 19.0833 16.6668 19.0833C17.081 19.0833 17.4168 18.7475 17.4168 18.3333H15.9168ZM2.5835 18.3333C2.5835 18.7475 2.91928 19.0833 3.3335 19.0833C3.74771 19.0833 4.0835 18.7475 4.0835 18.3333H2.5835ZM12.5835 5.83329V7.49996H14.0835V5.83329H12.5835ZM7.41683 7.49996V5.83329H5.91683V7.49996H7.41683ZM10.0002 10.0833C8.57343 10.0833 7.41683 8.9267 7.41683 7.49996H5.91683C5.91683 9.75512 7.745 11.5833 10.0002 11.5833V10.0833ZM12.5835 7.49996C12.5835 8.9267 11.4269 10.0833 10.0002 10.0833V11.5833C12.2553 11.5833 14.0835 9.75512 14.0835 7.49996H12.5835ZM9.73682 0.964379L3.07015 3.46438L3.59684 4.86887L10.2635 2.36887L9.73682 0.964379ZM10.2635 7.36887L16.9302 4.86887L16.4035 3.46438L9.73682 5.96438L10.2635 7.36887ZM9.73682 2.36887L16.4035 4.86887L16.9302 3.46438L10.2635 0.964379L9.73682 2.36887ZM10.2635 5.96438L3.59684 3.46438L3.07015 4.86887L9.73682 7.36887L10.2635 5.96438ZM11.126 14.6989L12.4497 13.3603L11.3832 12.3056L10.0594 13.6441L11.126 14.6989ZM12.4869 13.3396C14.6923 13.9882 15.9168 15.3543 15.9168 16.6666H17.4168C17.4168 14.3671 15.3799 12.6268 12.9101 11.9005L12.4869 13.3396ZM7.5506 13.3603L8.87437 14.6989L9.94091 13.6441L8.61714 12.3056L7.5506 13.3603ZM4.0835 16.6666C4.0835 15.3543 5.30799 13.9882 7.51342 13.3396L7.09023 11.9005C4.62044 12.6268 2.5835 14.3671 2.5835 16.6666H4.0835ZM15.9168 16.6666V18.3333H17.4168V16.6666H15.9168ZM2.5835 16.6666V18.3333H4.0835V16.6666H2.5835ZM8.61714 12.3056C8.23459 11.9187 7.65509 11.7344 7.09023 11.9005L7.51342 13.3396C7.51345 13.3396 7.51336 13.3396 7.51322 13.3396C7.5131 13.3397 7.51315 13.3396 7.51344 13.3396C7.51398 13.3396 7.51602 13.3397 7.51953 13.3407C7.52703 13.3428 7.53883 13.3484 7.5506 13.3603L8.61714 12.3056ZM12.4497 13.3603C12.4615 13.3484 12.4733 13.3428 12.4808 13.3407C12.4843 13.3397 12.4863 13.3396 12.4869 13.3396C12.4872 13.3396 12.4872 13.3397 12.4871 13.3396C12.487 13.3396 12.4869 13.3396 12.4869 13.3396L12.9101 11.9005C12.3452 11.7344 11.7657 11.9188 11.3832 12.3056L12.4497 13.3603ZM10.0594 13.6441C10.0268 13.6771 9.97353 13.6771 9.94091 13.6441L8.87437 14.6989C9.49409 15.3255 10.5062 15.3255 11.126 14.6989L10.0594 13.6441Z" fill="#E1EFFF"/>
+                                </svg>
+                                
+                            <div>Admin</div>
+                        </div>
+                        <div routerLink="/bireport" class="sideBarListElement sensorDropDownListElement"
+                            (click)="focusToSideBarElementFunc(10)"
+                            [ngClass]="{'activeSideBarElement':focusToSideBarElement[10], 'sensorMenuText':focusToSideBarElement[10]}">
+                            BI Report <br/> Maintenance</div>
+                        <div routerLink="/admin" class="sideBarListElement sensorDropDownListElement"
+                            [ngClass]="{'activeSideBarElement':focusToSideBarElement[11], 'sensorMenuText':focusToSideBarElement[11]}"
+                            (click)="focusToSideBarElementFunc(11)">Vessel Model</div>
+                        <div class="sideBarListElement sensorDropDownListElement">Placeholder</div>
+                        <div class="sideBarListElement sensorDropDownListElement">Placeholder</div>
+                    </div>
+                </div>
+            </div>
+            <!-- admin main menu drop down ends -->
 
             <!-- ship image -->
             <div class="shipImgOnFullSideBar">
@@ -356,7 +390,7 @@
                         </a>
                     </div>
 
-                    <div class="halfSideBarBottomElement" routerLink="/admin"
+                    <div class="halfSideBarBottomElement" routerLink="/bireport"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[9]}"
                         (click)="sensorMenuInactiveFunc()" (click)="halfSideBarActive()">
                         <a>

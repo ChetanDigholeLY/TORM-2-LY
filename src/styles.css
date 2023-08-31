@@ -702,7 +702,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 .borderBottomZeroAccordion,
-.borderBottomZeroAccordion > div {
+.borderBottomZeroAccordion>div {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   background-color: #f1f1f1 !important;
@@ -804,7 +804,8 @@ mat-checkbox .mdc-form-field label {
 .WMVesselDropDownMain::-webkit-scrollbar,
 .navbarDropDownBodyMain::-webkit-scrollbar
 
-/* .vesselDefinationList::-webkit-scrollbar  */ {
+/* .vesselDefinationList::-webkit-scrollbar  */
+  {
   display: none;
 }
 
@@ -1391,6 +1392,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 @media (min-width: 768px) {
+
   .guidanceHeaderLeftTop,
   .guidanceHeaderMidLeftTop,
   .guidanceHeaderMidRightTop,
@@ -1432,7 +1434,7 @@ mat-checkbox .mdc-form-field label {
     gap: 12px;
   }
 
-  .NotAcknowledgedTitle > h4 {
+  .NotAcknowledgedTitle>h4 {
     color: #969da6;
     font-weight: 600;
     font-size: 16px;
@@ -1470,7 +1472,7 @@ mat-checkbox .mdc-form-field label {
     gap: 12px;
   }
 
-  .NotAcknowledgedTitle > h4 {
+  .NotAcknowledgedTitle>h4 {
     color: #969da6;
     font-weight: 600;
     font-size: 12px;
@@ -1582,7 +1584,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons > button {
+  .guidanceButtons>button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -1788,7 +1790,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
@@ -1809,14 +1811,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel,
-  .acknowledgeModalRadioButtons2:checked + .acknowledgeModalRadioLabel2 {
+  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel,
+  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel::before {
+  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -1824,8 +1826,7 @@ mat-checkbox .mdc-form-field label {
     margin-right: 8px;
   }
 
-  .acknowledgeModalRadioButtons2:checked
-    + .acknowledgeModalRadioLabel2::before {
+  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2026,7 +2027,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons > button {
+  .guidanceButtons>button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2091,17 +2092,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked
-    + .acknowledgeModalRadioLabelMobile,
-  .acknowledgeModalRadioButtonsMobile2:checked
-    + .acknowledgeModalRadioLabelMobile2 {
+  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile,
+  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked
-    + .acknowledgeModalRadioLabelMobile::before {
+  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2266,13 +2264,12 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
 
-  .acknowledgeModalRadioButtonsMobile2:checked
-    + .acknowledgeModalRadioLabelMobile2::before {
+  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2297,6 +2294,7 @@ mat-checkbox .mdc-form-field label {
 /* guidence list component start  */
 
 @media (max-width: 512px) {
+
   .modalStatusDate,
   .modalStatusTime {
     font-weight: 400;
@@ -2367,7 +2365,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons > button {
+  .guidanceButtons>button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2570,7 +2568,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
@@ -2591,14 +2589,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel,
-  .acknowledgeModalRadioButtons2:checked + .acknowledgeModalRadioLabel2 {
+  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel,
+  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtons:checked + .acknowledgeModalRadioLabel::before {
+  .acknowledgeModalRadioButtons:checked+.acknowledgeModalRadioLabel::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2606,8 +2604,7 @@ mat-checkbox .mdc-form-field label {
     margin-right: 8px;
   }
 
-  .acknowledgeModalRadioButtons2:checked
-    + .acknowledgeModalRadioLabel2::before {
+  .acknowledgeModalRadioButtons2:checked+.acknowledgeModalRadioLabel2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -2793,7 +2790,7 @@ mat-checkbox .mdc-form-field label {
     gap: 16px;
   }
 
-  .guidanceButtons > button {
+  .guidanceButtons>button {
     padding: 8px 16px 8px 16px;
     border-radius: 120px;
     text-align: center;
@@ -2858,17 +2855,14 @@ mat-checkbox .mdc-form-field label {
     background: #ffffff;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked
-    + .acknowledgeModalRadioLabelMobile,
-  .acknowledgeModalRadioButtonsMobile2:checked
-    + .acknowledgeModalRadioLabelMobile2 {
+  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile,
+  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2 {
     background: #e1efff;
     border: 2px solid #016bff;
     border-radius: 80px;
   }
 
-  .acknowledgeModalRadioButtonsMobile:checked
-    + .acknowledgeModalRadioLabelMobile::before {
+  .acknowledgeModalRadioButtonsMobile:checked+.acknowledgeModalRadioLabelMobile::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -3028,13 +3022,12 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
 
-  .acknowledgeModalRadioButtonsMobile2:checked
-    + .acknowledgeModalRadioLabelMobile2::before {
+  .acknowledgeModalRadioButtonsMobile2:checked+.acknowledgeModalRadioLabelMobile2::before {
     content: url(./assets/images/modalCheck.png);
     display: inline-block;
     width: 20px;
@@ -3091,9 +3084,9 @@ mat-checkbox .mdc-form-field label {
     background: #f7f7f7;
   }
 
-  .sensorHeaderMainDesktop > div:nth-child(2),
-  .sensorHeaderMainDesktop > div:nth-child(3),
-  .sensorHeaderMainDesktop > div:nth-child(4) {
+  .sensorHeaderMainDesktop>div:nth-child(2),
+  .sensorHeaderMainDesktop>div:nth-child(3),
+  .sensorHeaderMainDesktop>div:nth-child(4) {
     border-left: 1px solid #dee0e2;
     border-right: 1px solid #dee0e2;
   }
@@ -3200,11 +3193,11 @@ mat-checkbox .mdc-form-field label {
     text-align: center;
   }
 
-  .liveDataFeedForBigScreen > div {
+  .liveDataFeedForBigScreen>div {
     padding: 7px 18px;
   }
 
-  .liveDataFeedForBigScreen > div:nth-child(1) {
+  .liveDataFeedForBigScreen>div:nth-child(1) {
     text-align: left;
   }
 
@@ -3312,7 +3305,7 @@ mat-checkbox .mdc-form-field label {
     gap: 10px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
@@ -3693,7 +3686,7 @@ mat-checkbox .mdc-form-field label {
     margin-bottom: 16px;
   }
 
-  .guidenceOfficerFlexImg > img {
+  .guidenceOfficerFlexImg>img {
     width: 16px;
     height: 16px;
   }
@@ -3917,7 +3910,7 @@ mat-checkbox .mdc-form-field label {
     gap: 15px;
   }
 
-  .planned-route > p {
+  .planned-route>p {
     margin-bottom: 0;
   }
 }
@@ -3998,10 +3991,12 @@ mat-checkbox .mdc-form-field label {
 /* copy imprpvements starts */
 
 @media (min-width: 513px) {
+
   .sensorComponentMain,
   .performance-container,
   .guidanceComponent,
-  .timeSeriesMain {
+  .timeSeriesMain,
+  .biReportMain {
     height: calc(100vh - 72px);
     overflow: auto;
   }
@@ -4016,6 +4011,7 @@ mat-checkbox .mdc-form-field label {
 }
 
 @media (max-width: 512px) {
+
   .sensorComponentMain,
   .performance-container,
   .guidanceComponent,
@@ -4047,7 +4043,7 @@ mat-checkbox .mdc-form-field label {
   color: #969da6;
 }
 
-.nestedNavUpperText > svg {
+.nestedNavUpperText>svg {
   margin-left: 4px;
 }
 
@@ -4069,7 +4065,7 @@ mat-checkbox .mdc-form-field label {
   color: #969da6;
 }
 
-.mobileNavPastRoute > svg {
+.mobileNavPastRoute>svg {
   margin-left: 4px;
 }
 
@@ -4138,7 +4134,7 @@ mat-checkbox .mdc-form-field label {
     cursor: pointer;
   }
 
-  .timeSeriesCheckBox:checked + div {
+  .timeSeriesCheckBox:checked+div {
     color: #016bff;
   }
 
@@ -4274,7 +4270,7 @@ mat-checkbox .mdc-form-field label {
   top: -99999999999999px;
 }
 
-.WMCheckBoxInpt:checked + div {
+.WMCheckBoxInpt:checked+div {
   color: #016bff;
 }
 
@@ -4569,19 +4565,19 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-right: 5px;
 }
 
-.vesselDefinationHeader > div:nth-child(1),
-.vesselDefinationHeader > div:nth-child(2),
-.vesselDefinationHeader > div:nth-child(3),
-.vesselDefinationHeader > div:nth-child(4),
-.vesselDefinationHeader > div:nth-child(5) {
+.vesselDefinationHeader>div:nth-child(1),
+.vesselDefinationHeader>div:nth-child(2),
+.vesselDefinationHeader>div:nth-child(3),
+.vesselDefinationHeader>div:nth-child(4),
+.vesselDefinationHeader>div:nth-child(5) {
   border-right: 1px solid #dee0e2;
 }
 
-.vesselDefinationListEle > div:nth-child(1),
-.vesselDefinationListEle > div:nth-child(2),
-.vesselDefinationListEle > div:nth-child(3),
-.vesselDefinationListEle > div:nth-child(4),
-.vesselDefinationListEle > div:nth-child(5) {
+.vesselDefinationListEle>div:nth-child(1),
+.vesselDefinationListEle>div:nth-child(2),
+.vesselDefinationListEle>div:nth-child(3),
+.vesselDefinationListEle>div:nth-child(4),
+.vesselDefinationListEle>div:nth-child(5) {
   border-right: 1px solid #dee0e2;
 }
 
@@ -4810,11 +4806,11 @@ input[type="checkbox"].switch_1:checked:after {
   font-weight: 600;
 }
 
-.addNewVesselRow > div:nth-child(1),
-.addNewVesselRow > div:nth-child(2),
-.addNewVesselRow > div:nth-child(3),
-.addNewVesselRow > div:nth-child(4),
-.addNewVesselRow > div:nth-child(5) {
+.addNewVesselRow>div:nth-child(1),
+.addNewVesselRow>div:nth-child(2),
+.addNewVesselRow>div:nth-child(3),
+.addNewVesselRow>div:nth-child(4),
+.addNewVesselRow>div:nth-child(5) {
   border-right: 1px solid #edeeef;
 }
 
@@ -4936,11 +4932,12 @@ thead {
 
 .fixed-header,
 .fixed-column {
-  width: 400px;
+  width: 200px;
 }
 
 th {
-  min-width: 150px; /* Adjust as needed */
+  min-width: 150px;
+  /* Adjust as needed */
 }
 
 th {
@@ -4949,7 +4946,7 @@ th {
   top: 0;
 }
 
-th > .flexAdminHeader {
+th>.flexAdminHeader {
   border-right: 1px solid #dee0e2;
 }
 
@@ -4978,7 +4975,8 @@ tr {
 .reportFuelAllowanceRightBody::-webkit-scrollbar,
 .reportFuelAllowanceListEle::-webkit-scrollbar,
 .reportFuelAllowanceLeftBody::-webkit-scrollbar {
-  width: 0px; /* Width of the vertical scrollbar */
+  width: 0px;
+  /* Width of the vertical scrollbar */
 }
 
 .reportFuelAllowanceListEle {
@@ -5074,18 +5072,18 @@ tr {
   border-bottom-left-radius: 10px;
 }
 
-.fixed-header > input {
+.fixed-header>input {
   border-radius: 0px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: #edeeef !important;
 }
 
-.reportFuelAllowanceListEle > div:nth-child(1),
-.reportFuelAllowanceListEle > div:nth-child(2),
-.reportFuelAllowanceListEle > div:nth-child(3),
-.reportFuelAllowanceListEle > div:nth-child(4),
-.reportFuelAllowanceListEle > div:nth-child(5) {
+.reportFuelAllowanceListEle>div:nth-child(1),
+.reportFuelAllowanceListEle>div:nth-child(2),
+.reportFuelAllowanceListEle>div:nth-child(3),
+.reportFuelAllowanceListEle>div:nth-child(4),
+.reportFuelAllowanceListEle>div:nth-child(5) {
   border-right: 1px solid #dee0e2;
 }
 
@@ -5166,4 +5164,112 @@ tr {
 
 #tableHeaderEl .flexAdminHeader {
   padding-right: 8px;
+}
+
+.vesselDefinationFocusBorder:focus-within {
+  border: 2px solid #016BFF !important;
+}
+
+.vesselDefinationSearchInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 18px;
+  background-image: url(./assets/images/magnifineGlass.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.vesselDefinationSearchInput::placeholder {
+  padding-left: 32px;
+}
+
+.vesselDefinationSearchInput:not(:placeholder-shown) {
+  background-image: none;
+}
+
+.vesselDefinationSearchInput:focus {
+  background-color: #E1EFFF;
+  border: 1px solid #A8CCFF;
+}
+
+.reportFuelAllowanceSearchInput {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#tableHeaderEl{
+  border-left: 1px solid #DEE0E2 !important;
+}
+
+td > input:focus{
+  border: 2px solid #016BFF;
+}
+
+.biReportMain {
+  background: #F4F5F6;
+}
+
+.biReportHeaderMain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 18px;
+  background: #EDEEEF;
+  border-radius: 8px;
+  margin: 14px 24px 4px 24px;
+}
+
+.biReportHeaderText {
+  color: #596069;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.biReportHeaderBtnMain{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.expandAllBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #DEE0E2;
+}
+
+.expandAllBtnText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #596069;
+}
+
+.newRootButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 8px 16px 8px 12px;
+  border-radius: 8px;
+  background: #016BFF;
+}
+
+.newRootMenuBtnText{
+  font-size: 16px;
+  font-weight: 600;
+  color: #E1EFFF;
+}
+
+.biReportListMain{
+  margin-left: 24px;
+  padding-right: 24px;
+  overflow: auto;
+  height: calc(100vh - 146px);
 }

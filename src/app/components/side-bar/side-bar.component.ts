@@ -17,8 +17,9 @@ export class SideBarComponent implements OnInit {
   //[0,1,2,3] = main menu
   //[4,5,6,7] = sensor menu
   //[8,9] = [bi report, admin]
+  //[10, 11] = [bi report, vessel defination]
   //apend more when needed
-  focusToSideBarElement = [false,false,false,false,false,false,false,false,false,false];
+  focusToSideBarElement = [false,false,false,false,false,false,false,false,false,false,false,false];
 
   focusToSideBarElementFunc(value: number){
     for(let i = 0; i<this.focusToSideBarElement.length; i++){
@@ -27,6 +28,9 @@ export class SideBarComponent implements OnInit {
     this.focusToSideBarElement[value] = true
     if(value>3 && value <8){
       this.focusToSideBarElement[2] = true
+    }
+    if(value>9 && value <12){
+      this.focusToSideBarElement[9] = true
     }
   }
   // focus on sideBar Element ends
@@ -48,8 +52,13 @@ export class SideBarComponent implements OnInit {
         this.disAbleSideAndNav = false;
         this.disableNavFunc(false)
       }
+      if(currentUrl === '/bireport'){
+        this.focusToSideBarElementFunc(10)
+        this.disAbleSideAndNav = false;
+        this.disableNavFunc(false)
+      }
       if(currentUrl === '/admin'){
-        this.focusToSideBarElementFunc(9)
+        this.focusToSideBarElementFunc(11)
         this.disAbleSideAndNav = false;
         this.disableNavFunc(false)
       }
@@ -90,6 +99,18 @@ export class SideBarComponent implements OnInit {
     this.isSensorMenu = false;
   }
   //sideBar for sensor ends
+
+  //sideBar for Admin starts
+  isAdminMenu: boolean = false;
+
+  adminMenuActiveFunc(){
+    this.isAdminMenu = true;
+  }
+
+  adminMenuInactiveFunc(){
+    this.isAdminMenu = false;
+  }
+  //sideBar for Admin ends
 
   //code for sending data to navBar component to get disable when the route is /worldMap starts
   @Output() dataToNavEvent = new EventEmitter<boolean>();
