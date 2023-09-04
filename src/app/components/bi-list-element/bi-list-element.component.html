@@ -1,0 +1,9 @@
+<div class="nestedBiReportListElementFlex" *ngFor="let item of biReportMainArrData; let index = index">
+    <!-- <img class="biReportArrowPng" src="./assets/images/biReportArrow.png"/> -->
+    <div class="">
+        <app-bi-list [data]="item"></app-bi-list>
+        <div class="" style="margin-left: 20px;">
+            <app-bi-list-element [biReportMainArrData]="item.children"></app-bi-list-element>
+        </div>
+    </div>
+</div>

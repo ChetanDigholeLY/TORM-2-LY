@@ -102,8 +102,8 @@ export class AdminPageComponent {
       this.vesselDetail.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
     }
     if(this.adminTabsArr[4] === true){
-      this.isAllEdit = !this.isAllEdit;
-      this.reportFuelAllowanceArr.forEach(eachEle => eachEle.isEditing = this.isAllEdit)
+      this.isAllEditRFA = !this.isAllEditRFA;
+      this.reportFuelAllowanceArr.forEach(eachEle => eachEle.isEditing = this.isAllEditRFA)
     }
   }
 

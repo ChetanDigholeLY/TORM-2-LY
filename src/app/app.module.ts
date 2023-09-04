@@ -23,6 +23,8 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
 import { BiReportComponent } from './components/bi-report/bi-report.component';
+import { BiListComponent } from './components/bi-list/bi-list.component';
+import { BiListElementComponent } from './components/bi-list-element/bi-list-element.component';
 
 
 const routes: Routes = [
@@ -60,7 +62,9 @@ const routes: Routes = [
     DatePickerComponent,
     RemoveTime,
     AdminPageComponent,
-    BiReportComponent
+    BiReportComponent,
+    BiListComponent,
+    BiListElementComponent
   ],
   imports: [
     BrowserModule,
