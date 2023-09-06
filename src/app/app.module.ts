@@ -41,7 +41,7 @@ const routes: Routes = [
   ]},
   { path: 'worldmap', component: WorldmapComponent },
   { path: 'admin', component: AdminPageComponent },
-  { path: 'bireport', component: BiReportComponent },
+  // { path: 'bireport', component: BiReportComponent },
   
   // Add more routes for other components if needed
 ];
