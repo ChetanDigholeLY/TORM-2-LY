@@ -93,6 +93,7 @@ export class SideBarComponent implements OnInit {
 
   sensorMenuActiveFunc(){
     this.isSensorMenu = true;
+    this.isAdminMenu = false
   }
 
   sensorMenuInactiveFunc(){
@@ -105,6 +106,8 @@ export class SideBarComponent implements OnInit {
 
   adminMenuActiveFunc(){
     this.isAdminMenu = true;
+    this.isSensorMenu = false;
+
   }
 
   adminMenuInactiveFunc(){

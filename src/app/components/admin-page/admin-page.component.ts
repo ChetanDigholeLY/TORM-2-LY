@@ -214,7 +214,19 @@ export class AdminPageComponent {
     else if(this.activeSort == 'ascending'){
       this.activeSort = 'descending';
     }else {
-      this.activeSort = 'ascending';
+      this.activeSort = null;
+    }
+  }
+
+  vesselIdInput: boolean = false;
+  imoNumberInput: boolean = false;
+
+  vesselDefinitionheaderInput( val: string) {
+    if(val === 'vesselId'){
+      this.vesselIdInput = !this.vesselIdInput;
+    }
+    if(val === 'imoNumber'){
+      this.imoNumberInput = !this.imoNumberInput;
     }
   }
 

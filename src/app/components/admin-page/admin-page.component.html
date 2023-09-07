@@ -64,7 +64,8 @@
         <div class="adminAddBtnText">Add</div>
       </button>
 
-      <button class="adminDisableAddBtn" *ngIf="isAddNewVessel" [ngClass]="{ 'hideAddBtn': !isAllEdit || adminTabsArr[4] }">
+      <button class="adminDisableAddBtn" *ngIf="isAddNewVessel"
+        [ngClass]="{ 'hideAddBtn': !isAllEdit || adminTabsArr[4] }">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9 0.9375C4.554 0.9375 0.9375 4.55475 0.9375 9C0.9375 13.4452 4.554 17.0625 9 17.0625C13.446 17.0625 17.0625 13.4452 17.0625 9C17.0625 4.55475 13.446 0.9375 9 0.9375ZM9 15.9375C5.17425 15.9375 2.0625 12.8258 2.0625 9C2.0625 5.17425 5.17425 2.0625 9 2.0625C12.8258 2.0625 15.9375 5.17425 15.9375 9C15.9375 12.8258 12.8258 15.9375 9 15.9375ZM12.1875 9C12.1875 9.3105 11.9355 9.5625 11.625 9.5625H9.5625V11.625C9.5625 11.9355 9.3105 12.1875 9 12.1875C8.6895 12.1875 8.4375 11.9355 8.4375 11.625V9.5625H6.375C6.0645 9.5625 5.8125 9.3105 5.8125 9C5.8125 8.6895 6.0645 8.4375 6.375 8.4375H8.4375V6.375C8.4375 6.0645 8.6895 5.8125 9 5.8125C9.3105 5.8125 9.5625 6.0645 9.5625 6.375V8.4375H11.625C11.9355 8.4375 12.1875 8.6895 12.1875 9Z"
@@ -73,7 +74,7 @@
         <div class="adminDisableAddBtnText">Add</div>
       </button>
 
-      <button class="adminAddBtn adminSaveBtn"  [ngClass]="{ 'hideAddBtn': isAllEdit }" (click)="updateAllChanges()">
+      <button class="adminAddBtn adminSaveBtn" [ngClass]="{ 'hideAddBtn': isAllEdit }" (click)="updateAllChanges()">
         <div class="adminAddBtnText">Save</div>
       </button>
     </div>
@@ -93,7 +94,7 @@
         Cancel
       </div>
 
-      <button class="adminAddBtn adminSaveBtn"  [ngClass]="{ 'hideAddBtn': isAllEditRFA }" (click)="updateAllChanges()">
+      <button class="adminAddBtn adminSaveBtn" [ngClass]="{ 'hideAddBtn': isAllEditRFA }" (click)="updateAllChanges()">
         <div class="adminAddBtnText">Save</div>
       </button>
     </div>
@@ -121,7 +122,21 @@
           <input type="search" class="vesselDefinationSearchInput" placeholder="VESSEL NAME" />
 
         </div>
-        <div class="flexAdminHeader">
+        <div class="flexAdminHeader" *ngIf="!vesselIdInput">
+          <svg (click)="vesselDefinitionheaderInput('vesselId')" class="dismissCursorPointer" width="20" height="20"
+            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_626_10866)">
+              <path
+                d="M15.4167 15.417L18.3333 18.3337M17.5 9.58366C17.5 5.2114 13.9556 1.66699 9.58334 1.66699C5.21108 1.66699 1.66667 5.2114 1.66667 9.58366C1.66667 13.9559 5.21108 17.5003 9.58334 17.5003C13.9556 17.5003 17.5 13.9559 17.5 9.58366Z"
+                stroke="#596069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_626_10866">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
           <div class="sensorHeadingTextDecoration vesselAdminHeaderText">
             Vessel ID
           </div>
@@ -164,7 +179,45 @@
             <span class="tooltipText">VESSEL ID</span>
           </div>
         </div>
-        <div class="flexAdminHeader">
+        <div class="flexAdminHeader vesselDefinitionInputFlex" *ngIf="vesselIdInput">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_776_63260)">
+              <path
+                d="M15.4167 15.417L18.3333 18.3337M17.5 9.58366C17.5 5.2114 13.9556 1.66699 9.58334 1.66699C5.21108 1.66699 1.66667 5.2114 1.66667 9.58366C1.66667 13.9559 5.21108 17.5003 9.58334 17.5003C13.9556 17.5003 17.5 13.9559 17.5 9.58366Z"
+                stroke="#596069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_776_63260">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <div>
+            <input type="number" placeholder="Vessel ID" class="vesselDefinitionInput" />
+          </div>
+
+          <svg (click)="vesselDefinitionheaderInput('vesselId')"  class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.2427 7.75786L7.75739 16.2431M16.2427 16.2431L7.75739 7.75781" stroke="#1E2124"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+
+        </div>
+        <div class="flexAdminHeader" *ngIf="!imoNumberInput">
+          <svg (click)="vesselDefinitionheaderInput('imoNumber')" class="dismissCursorPointer" width="20" height="20"
+            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_626_10866)">
+              <path
+                d="M15.4167 15.417L18.3333 18.3337M17.5 9.58366C17.5 5.2114 13.9556 1.66699 9.58334 1.66699C5.21108 1.66699 1.66667 5.2114 1.66667 9.58366C1.66667 13.9559 5.21108 17.5003 9.58334 17.5003C13.9556 17.5003 17.5 13.9559 17.5 9.58366Z"
+                stroke="#596069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_626_10866">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
           <div class="sensorHeadingTextDecoration vesselAdminHeaderText">
             IMO number
           </div>
@@ -207,6 +260,33 @@
             <span class="tooltipText">IMO number</span>
           </div>
         </div>
+
+        <div class="flexAdminHeader vesselDefinitionInputFlex" *ngIf="imoNumberInput">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_776_63260)">
+              <path
+                d="M15.4167 15.417L18.3333 18.3337M17.5 9.58366C17.5 5.2114 13.9556 1.66699 9.58334 1.66699C5.21108 1.66699 1.66667 5.2114 1.66667 9.58366C1.66667 13.9559 5.21108 17.5003 9.58334 17.5003C13.9556 17.5003 17.5 13.9559 17.5 9.58366Z"
+                stroke="#596069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_776_63260">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <div>
+            <input type="number" placeholder="IMO number" class="vesselDefinitionInput" />
+          </div>
+
+          <svg (click)="vesselDefinitionheaderInput('imoNumber')"  class="dismissCursorPointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.2427 7.75786L7.75739 16.2431M16.2427 16.2431L7.75739 7.75781" stroke="#1E2124"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+
+        </div>
+
         <div class="flexAdminHeader">
           <div class="sensorHeadingTextDecoration vesselAdminHeaderText">
             vessel Status
