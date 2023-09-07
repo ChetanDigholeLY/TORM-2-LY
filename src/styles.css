@@ -5399,7 +5399,7 @@ td > .bgForEditAll:focus{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  /* gap: 18px; */
   padding: 8px 18px;
   background: #E1EFFF;
   border: 1px solid #A8CCFF !important;
