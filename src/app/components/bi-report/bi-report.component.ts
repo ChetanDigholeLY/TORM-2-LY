@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
   selector: 'app-bi-report',
@@ -7,24 +8,55 @@ import { Component } from '@angular/core';
 })
 export class BiReportComponent {
 
+  constructor(private sideBarService: SidebarService) { }
+
+  expandAll: boolean = false;
+  expandAllFunc() {
+    this.expandAll = !this.expandAll;
+    this.sideBarService.setExpandAllCollapsible(this.expandAll)
+  }
+
   biReportMainArr = [
     {
       title: 'Weather report of active shore vessels',
       collapsed: false,
+      delete: false,
+      report: false,
+      child: true,
       children: [
         {
           title: 'Sub Menu 1',
           collapsed: false,
+          delete: false,
+          report: false,
+          child: true,
           children: [
             {
               title: 'Sub Sub Menu',
               collapsed: false,
+              delete: false,
+              report: true,
+              child: true,
+              children: [
+                {
+                  title: 'Sub sub Sub Menu',
+                  collapsed: false,
+                  delete: false,
+                  report: true,
+                  child: false,
+                  children: []
+                }
+              ]
             }
           ]
         },
-        { 
+        {
           title: 'Sub Menu 2',
-          collapsed: false 
+          collapsed: false,
+          delete: false,
+          report: true,
+          child: false,
+          children: []
         }
       ]
     },
@@ -32,27 +64,54 @@ export class BiReportComponent {
     {
       title: 'General reports - captains',
       collapsed: false,
+      delete: false,
+      report: false,
+      child: true,
       children: [
         {
           title: 'Sub Menu 1',
           collapsed: false,
+          delete: false,
+          report: false,
+          child: true,
           children: [
             {
               title: 'Sub Sub Menu',
               collapsed: false,
+              delete: false,
+              report: false,
+              child: true,
+              children: [
+                {
+                  title: 'Sub Menu 3',
+                  collapsed: false,
+                  delete: false,
+                  report: true,
+                  child: false,
+                  children: []
+                }
+              ]
             }
           ]
         },
-        { 
+        {
           title: 'Sub Menu 2',
-          collapsed: false 
+          collapsed: false,
+          delete: false,
+          report: true,
+          child: false,
+          children: []
         }
       ]
     },
 
     {
       title: 'Fuel report on shore vessels',
-      collapsed: false
+      collapsed: false,
+      delete: false,
+      report: true,
+      child: false,
+      children: []
     },
   ]
 
