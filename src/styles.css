@@ -4556,10 +4556,11 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .vesselDefinationHeader {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, 1fr);
+  /* grid-template-columns: 1.5fr repeat(5, 1fr); */
+  grid-template-columns: 1fr 1.1fr 1.1fr 1.1fr 1fr 1fr;
   grid-column-gap: 0px;
   width: 100%;
-  background: #f1f1f1;
+  background: #edeeef;
   border-radius: 8px;
   text-align: center;
   margin-top: 14px;
@@ -4585,7 +4586,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .vesselDefinationListEle {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, 1fr);
+  /* grid-template-columns: 1.5fr repeat(5, 1fr); */
+  grid-template-columns: 1fr 1.1fr 1.1fr 1.1fr 1fr 1fr;
   width: 100%;
   background: #ffffff;
   border-radius: 4px;
@@ -4601,7 +4603,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .addNewVesselRow {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, 1fr);
+  /* grid-template-columns: 1.5fr repeat(5, 1fr); */
+  grid-template-columns: 1fr 1.1fr 1.1fr 1.1fr 1fr 1fr;
   width: 100%;
   border: 1.5px solid #a8ccff;
 }
@@ -4736,6 +4739,7 @@ input[type="checkbox"].switch_1:checked:after {
   padding: 0;
   text-transform: uppercase;
   text-align: left;
+  font-size: 14px !important;
 }
 
 .activeDateTextAdmin {
@@ -4843,6 +4847,7 @@ input[type="checkbox"].switch_1:checked:after {
   position: absolute;
   bottom: 32px;
   left: 50%;
+  z-index: 2;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -5202,7 +5207,8 @@ tr {
   background-color: #edeeef;
   border: none;
   outline: none;
-  padding: 8px 18px;
+  /* padding: 8px 18px; */
+  padding: 8px 12px 8px 18px;
   background-image: url(./assets/images/magnifineGlass.png);
   background-repeat: no-repeat;
   background-position: 16px center;
@@ -5210,9 +5216,9 @@ tr {
 }
 
 .vesselDefinationSearchInput::placeholder {
-  padding-left: 32px;
+  padding-left: 24px;
   color: #596069;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
