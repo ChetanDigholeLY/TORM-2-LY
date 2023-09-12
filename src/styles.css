@@ -5421,3 +5421,13 @@ td > .bgForEditAll:focus{
     display: none;
   }
 }
+
+.updatedTextForVesselDefHeader{
+  font-size: 14px !important;
+}
+
+.updatedFlexStyle{
+  justify-content: space-evenly !important;
+  padding-left: 12px !important;
+  padding-right: 6px !important;
+}
