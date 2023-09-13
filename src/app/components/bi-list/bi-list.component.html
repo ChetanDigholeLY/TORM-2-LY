@@ -2,7 +2,7 @@
     [ngClass]="{'whiteBiReportFolder' : data.folderColor === 'white' , 'blueBiReportFolder' : data.folderColor === 'blue' }">
 
     <!-- header start -->
-    <div class="biReportListHeader">
+    <div class="biReportListHeader" *ngIf="!editHeaderText">
         <!-- left starts -->
         <div class="biReportListHeaderLeft">
             <svg (click)="closeBodyFunc()" *ngIf="closeBody" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -57,7 +57,8 @@
 
             </div>
 
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg (click)="editHeaderTextFunc()" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M2.5 17.5H17.5M11.487 4.42643C11.487 4.42643 11.487 5.78861 12.8492 7.1508C14.2114 8.51299 15.5736 8.51299 15.5736 8.51299M6.09969 14.9901L8.96028 14.5814C9.37291 14.5225 9.7553 14.3313 10.05 14.0365L16.9358 7.1508C18.5 5.49991 18 5.49991 16.9358 4.42642L15.5736 3.06424C14 1.49992 14.5 1.49998 12.8492 3.06424L5.96347 9.94997C5.66873 10.2447 5.47754 10.6271 5.41859 11.0397L5.00994 13.9003C4.96691 14.2015 4.81555 14.7974 5 14.9999C5.20482 15.2247 5.76521 15.0378 6.09969 14.9901Z"
                     stroke="#596069" stroke-width="1.5" stroke-linecap="round" />
@@ -82,10 +83,72 @@
         <!-- right ends -->
 
     </div>
+
+    <div class="biReportListHeader biReportListEditedHeader" *ngIf="editHeaderText">
+        <!-- left starts -->
+        <div class="biReportListHeaderLeft">
+            <svg (click)="closeBodyFunc()" *ngIf="closeBody" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M15.5179 6L8.48207 6C6.93849 6 5.97675 7.67443 6.75451 9.00774L10.2724 15.0385C11.0442 16.3615 12.9558 16.3615 13.7276 15.0385L17.2455 9.00774C18.0232 7.67443 17.0615 6 15.5179 6Z"
+                    fill="#016BFF" />
+            </svg>
+
+            <svg (click)="closeBodyFunc()" *ngIf="!closeBody" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M7 15.5179V8.48207C7 6.93849 8.67443 5.97675 10.0077 6.75451L16.0385 10.2724C17.3615 11.0442 17.3615 12.9558 16.0385 13.7276L10.0077 17.2455C8.67443 18.0232 7 17.0615 7 15.5179Z"
+                    fill="#596069" />
+            </svg>
+
+
+            <svg *ngIf="!closeBody" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.3334 14.1667V8.33333C18.3334 6.49238 16.841 5 15 5H12.7778C12.0566 5 11.3548 4.76607 10.7778 4.33333L9.22224 3.16667C8.64526 2.73393 7.94348 2.5 7.22224 2.5H5.00002C3.15907 2.5 1.66669 3.99238 1.66669 5.83333V14.1667C1.66669 16.0076 3.15907 17.5 5.00002 17.5H15C16.841 17.5 18.3334 16.0076 18.3334 14.1667Z"
+                    stroke="#003A78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <svg *ngIf="closeBody" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.104 8.125V7.1875C16.104 5.6342 14.892 4.375 13.397 4.375H10.6023C10.1206 4.375 9.64775 4.2415 9.23235 3.98827L7.42543 2.88673C7.01003 2.6335 6.53713 2.5 6.05551 2.5H4.37368C2.87865 2.5 1.66669 3.7592 1.66669 5.3125V14.6875C1.66669 16.2408 2.87865 17.5 4.37368 17.5H12.2557C13.5236 17.5 14.6984 16.8089 15.3507 15.6794L18.0734 10.9647C18.7951 9.71495 17.9287 8.125 16.5259 8.125H16.104ZM16.104 8.125H8.52393C7.09757 8.125 5.805 8.99775 5.2257 10.352L2.56902 16.5625"
+                    stroke="#003A78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+
+            <!-- <div class="biReportListHeaderLeftText">{{data.title}}</div> -->
+            <div>
+                <input type="text" class="biReportListHeaderLeftInputText" [(ngModel)]="biReportEditedHeader"
+                    placeholder="Root Menu" value="{{data.title}}" />
+            </div>
+            <div class="biReportListHeaderLeftNumber">2</div>
+        </div>
+        <!-- left ends -->
+        <div class="biReportEditStateFlex">
+            <button class="biReportEditStateBtn crossBiReportStateBtn" (click)="editHeaderTextFunc()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.7123 16.7734C16.0052 17.0663 16.4801 17.0663 16.7729 16.7734C17.0658 16.4805 17.0658 16.0057 16.7729 15.7128L13.0607 12.0005L16.7729 8.28819C17.0658 7.99529 17.0658 7.52042 16.7729 7.22753C16.48 6.93463 16.0052 6.93463 15.7123 7.22753L12 10.9398L8.28766 7.22748C7.99477 6.93459 7.5199 6.93459 7.227 7.22748C6.93411 7.52038 6.93411 7.99525 7.227 8.28814L10.9393 12.0005L7.22699 15.7128C6.9341 16.0057 6.9341 16.4806 7.22699 16.7735C7.51989 17.0664 7.99476 17.0664 8.28765 16.7735L12 13.0611L15.7123 16.7734Z"
+                        fill="#596069" />
+                </svg>
+            </button>
+            <button class="biReportEditStateBtn saveBiReportStateBtn" (click)="biReportEditedHeaderFunc()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.00002 18.0002C8.99902 18.0002 8.99802 18.0002 8.99602 18.0002C8.72902 17.9992 8.47502 17.8922 8.28802 17.7022L4.28802 13.6402C3.90002 13.2462 3.90503 12.6132 4.29903 12.2262C4.69303 11.8392 5.32502 11.8432 5.71302 12.2372L9.00602 15.5812L18.294 6.29423C18.685 5.90323 19.317 5.90323 19.708 6.29423C20.099 6.68423 20.099 7.31823 19.708 7.70823L9.70801 17.7082C9.52001 17.8952 9.26502 18.0002 9.00002 18.0002Z"
+                        fill="#EEF6FF" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+
+
     <!-- header end -->
 
     <!-- body starts -->
-    <div class="biReportListBody" style="border-left: 1px solid #969DA6;" *ngIf="!closeBody">
+    <div class="biReportListBody" *ngIf="closeBody">
 
         <div class="" style="margin-left: 20px;">
             <app-bi-list-element [biReportMainArrData]="data.children"></app-bi-list-element>
@@ -94,8 +157,9 @@
         <div *ngIf="data.children.length === 0">
             <div class="reportMainDetails">
                 <!-- header starts -->
-                <div class="reportGrid">
-                    <div class="biReportGridHeaderEle">Name</div>
+                <div class="reportGrid"
+                    [ngClass]="{'blueReportHeader' : data.folderColor === 'white' , 'grayReportHeader' : data.folderColor === 'blue' }">
+                    <div class="biReportGridHeaderEle biReportGridHeaderNameText">Name</div>
                     <div class="biReportGridHeaderEle">Workspace ID</div>
                     <div class="biReportGridHeaderEle">Report ID</div>
                     <div class="biReportGridHeaderEle">Show on vessel</div>
@@ -105,10 +169,14 @@
                 <!-- header ends -->
 
                 <!-- body starts -->
-                <div>
-                    <div class="reportGrid">
+                <div class="biReportBodyMain"
+                    [ngClass]="{'babyBlueReportBody' : data.folderColor === 'white' , 'whiteReportBody' : data.folderColor === 'blue' }">
+
+                    <div class="reportGrid" [ngClass]="{'editReportStateGrid': item.isEditReport}"
+                        *ngFor="let item of reportDetail, let index = index">
                         <div class="reportGridFlexEle biReportGridBodyEle">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_881_8324)">
                                     <path
                                         d="M16.6667 18.3334H4.16669C2.78598 18.3334 1.66669 17.2141 1.66669 15.8334V4.16669C1.66669 2.78597 2.78598 1.66669 4.16669 1.66669H12.5C13.8807 1.66669 15 2.78598 15 4.16669V6.66669M16.6667 18.3334C15.7462 18.3334 15 17.5872 15 16.6667V6.66669M16.6667 18.3334C17.5872 18.3334 18.3334 17.5872 18.3334 16.6667V8.33335C18.3334 7.41288 17.5872 6.66669 16.6667 6.66669H15M5.00002 5.83335H11.6667M5.00002 10H11.6667M5.00002 14.1667H8.33335"
@@ -121,43 +189,101 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div>Report</div>
-    
+                            <div *ngIf="!item.isEditReport">{{item.name}}</div>
+                            <!-- edit state starts -->
+                            <div *ngIf="item.isEditReport">
+                                <input class="biReportListHeaderLeftInputText editReportStateInput" type="text"
+                                    value="{{item.name}}" [(ngModel)]="item.name" />
+                            </div>
+                            <!-- edit state ends -->
+
                         </div>
-                        <div class="biReportGridBodyEle">9871324SDAS</div>
-                        <div class="biReportGridBodyEle">4SDAS</div>
+                        <div *ngIf="!item.isEditReport" class="biReportGridBodyEle">{{item.workSpace}}</div>
+
+                        <!-- edit state starts -->
+                        <div *ngIf="item.isEditReport" class="biReportGridBodyEle">
+                            <input *ngIf="item.isEditReport"
+                                class="biReportListHeaderLeftInputText editReportStateInput" type="text"
+                                value="{{item.workSpace}}" [(ngModel)]="item.workSpace" />
+                        </div>
+                        <!-- edit state ends -->
+
+
+                        <div *ngIf="!item.isEditReport" class="biReportGridBodyEle">{{item.reportId}}</div>
+
+                        <!-- edit state starts -->
+                        <div *ngIf="item.isEditReport" class="biReportGridBodyEle">
+                            <input *ngIf="item.isEditReport"
+                                class="biReportListHeaderLeftInputText editReportStateInput" type="text"
+                                value="{{item.reportId}}" [(ngModel)]="item.reportId" />
+                        </div>
+                        <!-- edit state ends -->
+
                         <div class="biReportGridBodyEle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg *ngIf="!item.isEditReport && item.ShowOnVessel" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M17.63 3H6.38C4.13 3 3 4.12 3 6.37V17.62C3 19.87 4.13 21 6.38 21H17.63C19.88 21 21 19.87 21 17.62V6.37C21 4.12 19.88 3 17.63 3ZM16.03 10.2L11.36 14.86C11.22 15.01 11.03 15.08 10.83 15.08C10.64 15.08 10.45 15.01 10.3 14.86L7.96997 12.53C7.67997 12.24 7.67997 11.76 7.96997 11.47C8.25997 11.18 8.74003 11.18 9.03003 11.47L10.83 13.27L14.97 9.14001C15.26 8.84001 15.74 8.84001 16.03 9.14001C16.32 9.43001 16.32 9.90001 16.03 10.2Z"
                                     fill="#969DA6" />
                             </svg>
-    
+
+                            <svg *ngIf="!item.isEditReport && !item.ShowOnVessel" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.75 6.375V17.625C21.75 20.285 20.285 21.75 17.625 21.75H6.375C3.715 21.75 2.25 20.285 2.25 17.625V6.375C2.25 3.715 3.715 2.25 6.375 2.25H17.625C20.285 2.25 21.75 3.715 21.75 6.375ZM20.25 6.375C20.25 4.535 19.465 3.75 17.625 3.75H6.375C4.535 3.75 3.75 4.535 3.75 6.375V17.625C3.75 19.465 4.535 20.25 6.375 20.25H17.625C19.465 20.25 20.25 19.465 20.25 17.625V6.375Z"
+                                    fill="#969DA6" />
+                            </svg>
+
+
+                            <!-- edit state starts -->
+                            <div *ngIf="item.isEditReport" class="editReportStateCheckBox">
+                                <input type="checkbox" [(ngModel)]="item.ShowOnVessel" />
+                            </div>
+                            <!-- edit state ends -->
+
                         </div>
                         <div class="biReportGridBodyEle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg *ngIf="!item.isEditReport && item.ShowOnShore" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M17.63 3H6.38C4.13 3 3 4.12 3 6.37V17.62C3 19.87 4.13 21 6.38 21H17.63C19.88 21 21 19.87 21 17.62V6.37C21 4.12 19.88 3 17.63 3ZM16.03 10.2L11.36 14.86C11.22 15.01 11.03 15.08 10.83 15.08C10.64 15.08 10.45 15.01 10.3 14.86L7.96997 12.53C7.67997 12.24 7.67997 11.76 7.96997 11.47C8.25997 11.18 8.74003 11.18 9.03003 11.47L10.83 13.27L14.97 9.14001C15.26 8.84001 15.74 8.84001 16.03 9.14001C16.32 9.43001 16.32 9.90001 16.03 10.2Z"
                                     fill="#969DA6" />
                             </svg>
-    
+
+                            <svg *ngIf="!item.isEditReport && !item.ShowOnShore" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.75 6.375V17.625C21.75 20.285 20.285 21.75 17.625 21.75H6.375C3.715 21.75 2.25 20.285 2.25 17.625V6.375C2.25 3.715 3.715 2.25 6.375 2.25H17.625C20.285 2.25 21.75 3.715 21.75 6.375ZM20.25 6.375C20.25 4.535 19.465 3.75 17.625 3.75H6.375C4.535 3.75 3.75 4.535 3.75 6.375V17.625C3.75 19.465 4.535 20.25 6.375 20.25H17.625C19.465 20.25 20.25 19.465 20.25 17.625V6.375Z"
+                                    fill="#969DA6" />
+                            </svg>
+
+                            <!-- edit state starts -->
+                            <div *ngIf="item.isEditReport" class="editReportStateCheckBox">
+                                <input type="checkbox" [(ngModel)]="item.ShowOnShore" />
+                            </div>
+                            <!-- edit state ends -->
+
                         </div>
                         <div class="reportGridFlexEleIcon biReportGridBodyEle">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg (click)="editReportFunc(index)" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M2.5 17.5H17.5M11.487 4.42646C11.487 4.42646 11.487 5.78865 12.8492 7.15083C14.2114 8.51302 15.5736 8.51302 15.5736 8.51302M6.09969 14.9901L8.96028 14.5814C9.37291 14.5225 9.7553 14.3313 10.05 14.0366L16.9358 7.15083C18.5 5.49994 18 5.49994 16.9358 4.42645L15.5736 3.06427C14 1.49995 14.5 1.50001 12.8492 3.06427L5.96347 9.95C5.66873 10.2447 5.47754 10.6271 5.41859 11.0397L5.00994 13.9003C4.96691 14.2015 4.81555 14.7975 5 14.9999C5.20482 15.2248 5.76521 15.0379 6.09969 14.9901Z"
                                     stroke="#596069" stroke-width="1.5" stroke-linecap="round" />
                             </svg>
-    
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M4.16667 6.6665V14.9998C4.16667 17.5 5 18.3332 7.5 18.3332H12.5C15 18.3332 15.8333 17.5 15.8333 14.9998V6.6665M11.6667 9.1665V14.1665M8.33333 9.1665L8.33333 14.1665M13.3333 4.1665L12.1614 2.40867C11.8523 1.94501 11.3319 1.6665 10.7747 1.6665H9.22531C8.66805 1.6665 8.14767 1.94501 7.83856 2.40867L6.66667 4.1665M13.3333 4.1665H6.66667M13.3333 4.1665H17.5M6.66667 4.1665H2.5"
-                                    stroke="#596069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#596069" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
-    
+
                         </div>
                     </div>
-                    
+
+
                 </div>
                 <!-- body ends -->
             </div>

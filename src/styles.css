@@ -5381,6 +5381,12 @@ td>.bgForEditAll:focus {
   font-weight: 600;
 }
 
+.biReportListHeaderLeftInputText{
+  outline: none;
+  border: none;
+  background-color: #EEF6FF;
+}
+
 .biReportListHeaderLeftNumber {
   width: 16px;
   height: 16px;
@@ -5398,6 +5404,7 @@ td>.bgForEditAll:focus {
   margin-left: 12px;
   position: relative;
   /* border-left: 1px solid black; */
+  border-left: 1px solid #969DA6;
 }
 
 .biReportListContainer {
@@ -5503,6 +5510,9 @@ td>.bgForEditAll:focus {
 .biReportComponentMain {
   padding: 0 12px;
   /* background-color: #FFF; */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .biReportListBody::after {
@@ -5547,7 +5557,8 @@ td>.bgForEditAll:focus {
 }
 
 .reportMainDetails{
-  padding-left: 12px;
+  padding-left: 20px;
+  padding-top: 4px;
 }
 
 .reportGridFlexEle{
@@ -5578,4 +5589,80 @@ td>.bgForEditAll:focus {
   font-size: 14px;
   font-weight: 600;
   color: #1E2124;
+}
+
+.biReportGridHeaderNameText{
+  margin-left: 10px;
+}
+
+.blueReportHeader{
+  background-color: #E1EFFF;
+  border-top-left-radius: 4px;
+}
+
+.grayReportHeader{
+  background-color: #F4F5F6;
+  border-top-left-radius: 4px;
+}
+
+.babyBlueReportBody{
+  background-color: #EEF6FF;
+  /* border-bottom-left-radius: 4px; */
+}
+
+.whiteReportBody{
+  background-color: #FFFFFF;
+  /* border-bottom-left-radius: 4px; */
+}
+
+.biReportBodyMain {
+  border-bottom-left-radius: 4px;
+}
+
+.biReportEditStateBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+}
+
+.crossBiReportStateBtn{
+  border: 1px solid #596069;
+}
+
+.biReportEditStateFlex{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 10px;
+}
+
+.saveBiReportStateBtn{
+  border: 1px solid #016BFF;
+  background-color: #016BFF;
+}
+
+.biReportListEditedHeader{
+  border: 2px solid #016BFF;
+  padding: 4px;
+}
+
+.editReportStateInput{
+  width: 120px;
+}
+
+.editReportStateCheckBox{
+  display: flex; justify-content: flex-start; align-items: center; height: 100%;
+}
+
+.editReportStateCheckBox > input {
+  width: 18px; height: 18px;
+}
+
+.editReportStateGrid{
+  border: 1px solid #016BFF;
+  padding: 10px 0;
 }
