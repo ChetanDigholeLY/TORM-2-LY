@@ -859,14 +859,14 @@ mat-checkbox .mdc-form-field label {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
   background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  border-radius: 8px;
   -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
-  background-color: #999999 !important;
+  background-color: #DEE0E2 !important;
 }
 
 .routeAccordionDetails {
@@ -1323,14 +1323,15 @@ mat-checkbox .mdc-form-field label {
   }
 
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
+    height: 20px;
     background-color: #f5f5f5;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
-    background-color: #999999 !important;
+    background-color: #DEE0E2 !important;
   }
 
   .main-panel-container {
@@ -3960,7 +3961,7 @@ mat-checkbox .mdc-form-field label {
   }
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
   background-color: #f5f5f5;
 }
@@ -3974,7 +3975,7 @@ mat-checkbox .mdc-form-field label {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
   background-color: #999999 !important;
-}
+} */
 
 .rotateArrowOfSideBar {
   transform: rotate(180deg);
@@ -4477,6 +4478,7 @@ input[type="search"]::-webkit-search-cancel-button {
   align-items: flex-end;
   height: 60px;
   border-bottom: 1px solid #DEE0E2;
+  margin-bottom: 14px;
 }
 
 .adminTabSection {
@@ -4626,7 +4628,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .vesselDefinationList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .vesselDefinationList {
@@ -4728,11 +4730,16 @@ input[type="checkbox"].switch_1:checked:after {
 
 .flexAdminHeader {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   gap: 6px;
   height: 49px;
   background-color: #edeeef;
+}
+
+.search-label-wrapper {
+  display: flex; gap: 16px; align-items: center;
 }
 
 .vesselAdminHeaderText {
@@ -4913,7 +4920,12 @@ input[type="checkbox"].switch_1:checked:after {
   width: 100%;
   overflow-x: auto;
   height: 100%;
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  /* padding-top: 15px; */
+}
+
+.height14px{
+  height: 14px;
 }
 
 .table {
@@ -4932,7 +4944,7 @@ th {
 
 td {
   /* border: 1px solid #000; */
-  padding: 4px 0px !important;
+  padding: 2px 0px !important;
   text-align: center;
   background-color: transparent !important;
 }
@@ -5090,8 +5102,9 @@ tr {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: #edeeef !important;
-  width: 198px;
+  width: 200px;
   height: 49px;
+  border-right: 1px solid #DEE0E2;
 }
 
 .reportFuelAllowanceListEle>div:nth-child(1),
@@ -5174,6 +5187,9 @@ tr {
 .myTooltip[data-position="left"] .tooltipText {
   transform: translateX(-80px);
 }
+.myTooltipLast[data-position="left"] .tooltipText {
+  transform: translateX(-104px);
+}
 
 .myTooltip[data-position="left"] .tooltipText::before {
   content: "";
@@ -5188,6 +5204,19 @@ tr {
   border-right: 12px solid transparent;
   border-bottom: 12px solid #1E2124;
 }
+.myTooltipLast[data-position="left"] .tooltipText::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -0.3rem;
+  left: 6rem;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #1E2124;
+}
 
 
 #tableHeaderEl {
@@ -5195,7 +5224,7 @@ tr {
 }
 
 #tableHeaderEl .flexAdminHeader {
-  padding: 8px;
+  padding: 8px 18px;
 }
 
 .vesselDefinationFocusBorder:focus-within {
@@ -5424,6 +5453,52 @@ td>.bgForEditAll:focus {
   }
 }
 
+.updatedTextForVesselDefHeader{
+  font-size: 14px !important;
+}
+
+.updatedFlexStyle{
+  /* justify-content: space-evenly !important; */
+  justify-content: space-between;
+  padding-left: 12px !important;
+  padding-right: 6px !important;
+}
+
+.updatedFlexLeft{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.updatedRFAHeaderText{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.updatedRFAHeaderText>div:nth-child(1){
+  max-width: 135px;
+}
+
+
+  .table-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+    background-color: #f5f5f5;
+  }
+
+  .table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    /* z-index: 5555555; */
+    background-color: #f5f5f5;
+  }
+
+  .table-container::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(63, 67, 80, 0.24);
+    background-color: #DEE0E2 !important;
+  }
+
 
 .biReportComponentMain {
   padding: 0 12px;
@@ -5503,8 +5578,4 @@ td>.bgForEditAll:focus {
   font-size: 14px;
   font-weight: 600;
   color: #1E2124;
-}
-
-.reportGrid>div:nth-child(1){
-  /* margin-left: 16px; */
 }
