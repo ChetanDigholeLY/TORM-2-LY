@@ -4889,7 +4889,7 @@ input[type="checkbox"].switch_1:checked:after {
   align-items: center;
 }
 
-.calendar-table th{
+.calendar-table th {
   background-color: transparent !important;
 }
 
@@ -5238,11 +5238,11 @@ tr {
   vertical-align: middle;
 }
 
-#tableHeaderEl{
+#tableHeaderEl {
   border-left: 1px solid #DEE0E2 !important;
 }
 
-td > .bgForEditAll:focus{
+td>.bgForEditAll:focus {
   border: 2px solid #016BFF;
   padding-bottom: 2px;
 }
@@ -5251,7 +5251,7 @@ td > .bgForEditAll:focus{
   background: #F4F5F6;
 }
 
-.biReportHeaderMain{
+.biReportHeaderMain {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5267,7 +5267,7 @@ td > .bgForEditAll:focus{
   font-size: 16px;
 }
 
-.biReportHeaderBtnMain{
+.biReportHeaderBtnMain {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -5300,20 +5300,20 @@ td > .bgForEditAll:focus{
   background: #016BFF;
 }
 
-.newRootMenuBtnText{
+.newRootMenuBtnText {
   font-size: 16px;
   font-weight: 600;
   color: #E1EFFF;
 }
 
-.biReportListMain{
+.biReportListMain {
   margin-left: 24px;
   padding-right: 24px;
   overflow: auto;
   height: calc(100vh - 146px);
 }
 
-.biReportListHeader{
+.biReportListHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5332,7 +5332,7 @@ td > .bgForEditAll:focus{
   margin-right: 12px;
 }
 
-.biReportListHeaderReportAndFolder{
+.biReportListHeaderReportAndFolder {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -5342,17 +5342,17 @@ td > .bgForEditAll:focus{
   cursor: pointer;
 }
 
-.biReportListEle{
+.biReportListEle {
   padding: 4px 0;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
-.biReportListHeaderLeftText{
+.biReportListHeaderLeftText {
   font-size: 14px;
   font-weight: 600;
 }
 
-.biReportListHeaderLeftNumber{
+.biReportListHeaderLeftNumber {
   width: 16px;
   height: 16px;
   background-color: #003A78;
@@ -5365,36 +5365,36 @@ td > .bgForEditAll:focus{
   font-weight: 600;
 }
 
-.biReportListBody{
+.biReportListBody {
   margin-left: 12px;
   position: relative;
   /* border-left: 1px solid black; */
 }
 
-.biReportListContainer{
+.biReportListContainer {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.nestedBiReportListElementFlex{
+.nestedBiReportListElementFlex {
   background-color: #fff;
   margin-top: 4px;
 }
 
-@media (min-width: 513px){
-  .adminPageMain{
+@media (min-width: 513px) {
+  .adminPageMain {
     display: block;
   }
 }
 
-@media (max-width: 512px){
-  .adminPageMain{
+@media (max-width: 512px) {
+  .adminPageMain {
     display: none;
   }
 }
 
-.vesselDefinitionInput{
+.vesselDefinitionInput {
   width: 100px;
   background: transparent;
   outline: none;
@@ -5403,11 +5403,11 @@ td > .bgForEditAll:focus{
 
 .vesselDefinitionInput::-webkit-outer-spin-button,
 .vesselDefinitionInput::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.vesselDefinitionInputFlex{
+.vesselDefinitionInputFlex {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5418,19 +5418,19 @@ td > .bgForEditAll:focus{
 }
 
 
-@media (min-width: 1380px){
-  .disableAfter1380px{
+@media (min-width: 1380px) {
+  .disableAfter1380px {
     display: none;
   }
 }
 
 
-.biReportComponentMain{
+.biReportComponentMain {
   padding: 0 12px;
   /* background-color: #FFF; */
 }
 
-.biReportListBody::after{
+.biReportListBody::after {
   content: "";
   background-image: url(./assets/images/biReportArrowAfter.svg);
   width: 10px;
@@ -5442,7 +5442,7 @@ td > .bgForEditAll:focus{
   left: -0.1px;
 }
 
-.CollapseAllBtn{
+.CollapseAllBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5452,4 +5452,59 @@ td > .bgForEditAll:focus{
   font-size: 14px;
   font-weight: 600;
   color: #016BFF;
+}
+
+.whiteBiReportFolder {
+  background-color: #FFF;
+}
+
+.blueBiReportFolder {
+  background-color: #EEF6FF;
+}
+
+.reportGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  /* grid-column-gap: 0px;
+  grid-row-gap: 0px; */
+}
+
+.reportMainDetails{
+  padding-left: 12px;
+}
+
+.reportGridFlexEle{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reportGridFlexEleIcon{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-self: end;
+  margin-right: 12px;
+}
+
+.biReportGridHeaderEle{
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1E2124;
+}
+
+
+.biReportGridBodyEle{
+  padding: 2px 18px;
+  padding-right: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E2124;
+}
+
+.reportGrid>div:nth-child(1){
+  /* margin-left: 16px; */
 }

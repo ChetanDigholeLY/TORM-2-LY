@@ -22,6 +22,7 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      folderColor:'white',
       child: true,
       children: [
         {
@@ -29,6 +30,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          folderColor:'blue',
           child: true,
           children: [
             {
@@ -36,6 +38,7 @@ export class BiReportComponent {
               collapsed: false,
               delete: false,
               report: true,
+              folderColor:'white',
               child: true,
               children: [
                 {
@@ -43,6 +46,7 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  folderColor:'blue',
                   child: false,
                   children: []
                 }
@@ -55,6 +59,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          folderColor:'blue',
           child: false,
           children: []
         }
@@ -66,6 +71,7 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      folderColor:'white',
       child: true,
       children: [
         {
@@ -73,6 +79,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          folderColor:'blue',
           child: true,
           children: [
             {
@@ -80,6 +87,7 @@ export class BiReportComponent {
               collapsed: false,
               delete: false,
               report: false,
+              folderColor:'white',
               child: true,
               children: [
                 {
@@ -87,6 +95,7 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  folderColor:'blue',
                   child: false,
                   children: []
                 }
@@ -99,6 +108,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          folderColor:'blue',
           child: false,
           children: []
         }
@@ -110,6 +120,7 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: true,
+      folderColor:'white',
       child: false,
       children: []
     },

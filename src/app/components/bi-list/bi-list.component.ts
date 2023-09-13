@@ -15,7 +15,8 @@ export class BiListComponent {
 
   closeBody: boolean = false;
   closeBodyFunc () {
-    this.closeBody = !this.closeBody
+    this.closeBody = !this.closeBody;
+    // console.log(this.data);
   }
 
   
