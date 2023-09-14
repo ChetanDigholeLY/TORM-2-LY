@@ -5336,8 +5336,8 @@ td>.bgForEditAll:focus {
 }
 
 .biReportListMain {
-  margin-left: 24px;
-  padding-right: 24px;
+  margin-left: 12px;
+  padding-right: 12px;
   overflow: auto;
   height: calc(100vh - 146px);
 }
@@ -5665,4 +5665,9 @@ td>.bgForEditAll:focus {
 .editReportStateGrid{
   border: 1px solid #016BFF;
   padding: 10px 0;
+}
+
+.hoverStateForBiReportTriangle:hover > path{
+  fill: #016BFF;
+  cursor: pointer;
 }

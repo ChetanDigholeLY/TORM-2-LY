@@ -22,6 +22,7 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      folder: true,
       folderColor:'white',
       child: true,
       children: [
@@ -30,6 +31,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          folder: true,
           folderColor:'blue',
           child: true,
           children: [
@@ -37,7 +39,8 @@ export class BiReportComponent {
               title: 'Sub Sub Menu',
               collapsed: false,
               delete: false,
-              report: true,
+              report: false,
+              folder: true,
               folderColor:'white',
               child: true,
               children: [
@@ -46,6 +49,7 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  folder: false,
                   folderColor:'blue',
                   child: false,
                   children: []
@@ -59,6 +63,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          folder: false,
           folderColor:'blue',
           child: false,
           children: []
@@ -71,6 +76,7 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      folder: true,
       folderColor:'white',
       child: true,
       children: [
@@ -79,6 +85,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          folder: true,
           folderColor:'blue',
           child: true,
           children: [
@@ -87,6 +94,7 @@ export class BiReportComponent {
               collapsed: false,
               delete: false,
               report: false,
+              folder: true,
               folderColor:'white',
               child: true,
               children: [
@@ -95,6 +103,7 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  folder: false,
                   folderColor:'blue',
                   child: false,
                   children: []
@@ -108,6 +117,7 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          folder: false,
           folderColor:'blue',
           child: false,
           children: []
@@ -118,8 +128,9 @@ export class BiReportComponent {
     {
       title: 'Fuel report on shore vessels',
       collapsed: false,
-      delete: false,
-      report: true,
+      delete: true,
+      report: false,
+      folder: true,
       folderColor:'white',
       child: false,
       children: []
