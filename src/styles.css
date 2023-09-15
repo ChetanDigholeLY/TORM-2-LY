@@ -5552,6 +5552,7 @@ td>.bgForEditAll:focus {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   width: 100%;
+  align-items: center;
   /* grid-column-gap: 0px;
   grid-row-gap: 0px; */
 }
@@ -5670,4 +5671,32 @@ td>.bgForEditAll:focus {
 .hoverStateForBiReportTriangle:hover > path{
   fill: #016BFF;
   cursor: pointer;
+}
+
+.addNewSubMenu{
+  padding: 8px 12px;
+  border: 2px solid #016BFF;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+.addNewSubMenuLeft{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addNewSubMenuRight{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hoverEffectForBiReportIcon:hover path{
+  stroke: #016BFF;
+}
+.redHoverEffectForBiReportIcon:hover path{
+  stroke: #D3483E;
 }

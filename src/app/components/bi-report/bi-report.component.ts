@@ -137,8 +137,35 @@ export class BiReportComponent {
     },
   ]
 
-  collapseBiReportList(index: number) {
+
+  //add a new folder starts
+  addNewRootMenu: boolean = false;
+
+  newRootMenuName: string = "New Root Menu"
+
+  newRootMenuNameFunc(event: any){
+    this.newRootMenuName = event.target.value
+  }
+
+  addNewRootMenuFunc(){
+    const addNewRootDetail = {
+      title: this.newRootMenuName,
+      collapsed: false,
+      delete: true,
+      report: false,
+      folder: true,
+      folderColor:'white',
+      child: false,
+      children: []
+    }
+
+    this.biReportMainArr.unshift(addNewRootDetail)
+
+    this.addNewRootMenu = false
+
+    this.newRootMenuName = "New Root Menu"
 
   }
+  //add a new folder ends
 
 }

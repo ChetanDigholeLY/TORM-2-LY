@@ -84,8 +84,8 @@ export class BiListComponent {
     this.reportDetail[val] = this.editedReportData[val]
     this.reportDetail[val].isEditReport = !this.reportDetail[val].isEditReport
   }
-  
-  cancelReportEditing(val:number){
+
+  cancelReportEditing(val: number) {
     this.reportDetail = [...this.cancelEditedReportData]
     this.reportDetail[val].isEditReport = !this.reportDetail[val].isEditReport
   }
@@ -100,9 +100,64 @@ export class BiListComponent {
 
   //delete whole section starts
   deleteWholeSection = false
-  deleteWholeSectionFunc(){
+  deleteWholeSectionFunc() {
     this.deleteWholeSection = !this.deleteWholeSection
   }
   //delete whole section ends
+
+  //add folder starts
+
+  addNewSubFolder: boolean = false;
+
+  addNewSubFolderName: string = 'New sub menu'
+
+  addNewSubFolderNameFunc(event: any) {
+    this.addNewSubFolderName = event.target.value
+    // console.log(val);
+  }
+
+  addFolderFunc(val:boolean) {
+    // this.addNewSubFolder = !this.addNewSubFolder
+    let color = ''
+    if (this.data.folderColor === 'white') {
+      color = 'blue'
+    }
+    if (this.data.folderColor === 'blue') {
+      color = 'white'
+    }
+    
+    if (val) {
+      const addElement = {
+        title: this.addNewSubFolderName,
+        collapsed: false,
+        delete: true,
+        report: false,
+        folder: true,
+        folderColor: color,
+        child: false,
+        children: []
+      }
+      this.data.children.unshift(addElement)
+    }
+    this.addNewSubFolder = !this.addNewSubFolder
+  
+  }
+
+  //add report starts
+  addReportInBiFunc(){
+    this.data.report = true
+    const newReport = {
+      name: 'Report',
+      workSpace: '9871324SDAS',
+      reportId: '4SDAS',
+      ShowOnVessel: true,
+      ShowOnShore: true,
+      isEditReport: false
+    }
+
+    this.reportDetail.push(newReport)
+
+  }
+  //add report ends
 
 }
