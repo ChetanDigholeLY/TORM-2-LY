@@ -22,8 +22,9 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      reportDetail: [],
       folder: true,
-      folderColor:'white',
+      folderColor: 'white',
       child: true,
       children: [
         {
@@ -31,8 +32,9 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          reportDetail: [],
           folder: true,
-          folderColor:'blue',
+          folderColor: 'blue',
           child: true,
           children: [
             {
@@ -40,8 +42,9 @@ export class BiReportComponent {
               collapsed: false,
               delete: false,
               report: false,
+              reportDetail: [],
               folder: true,
-              folderColor:'white',
+              folderColor: 'white',
               child: true,
               children: [
                 {
@@ -49,8 +52,26 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  reportDetail: [
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                  ],
                   folder: false,
-                  folderColor:'blue',
+                  folderColor: 'blue',
                   child: false,
                   children: []
                 }
@@ -63,8 +84,26 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          reportDetail: [
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+          ],
           folder: false,
-          folderColor:'blue',
+          folderColor: 'blue',
           child: false,
           children: []
         }
@@ -76,8 +115,9 @@ export class BiReportComponent {
       collapsed: false,
       delete: false,
       report: false,
+      reportDetail: [],
       folder: true,
-      folderColor:'white',
+      folderColor: 'white',
       child: true,
       children: [
         {
@@ -85,8 +125,9 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: false,
+          reportDetail: [],
           folder: true,
-          folderColor:'blue',
+          folderColor: 'blue',
           child: true,
           children: [
             {
@@ -94,8 +135,9 @@ export class BiReportComponent {
               collapsed: false,
               delete: false,
               report: false,
+              reportDetail: [],
               folder: true,
-              folderColor:'white',
+              folderColor: 'white',
               child: true,
               children: [
                 {
@@ -103,8 +145,26 @@ export class BiReportComponent {
                   collapsed: false,
                   delete: false,
                   report: true,
+                  reportDetail: [
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                  ],
                   folder: false,
-                  folderColor:'blue',
+                  folderColor: 'blue',
                   child: false,
                   children: []
                 }
@@ -117,8 +177,26 @@ export class BiReportComponent {
           collapsed: false,
           delete: false,
           report: true,
+          reportDetail: [
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+          ],
           folder: false,
-          folderColor:'blue',
+          folderColor: 'blue',
           child: false,
           children: []
         }
@@ -129,9 +207,242 @@ export class BiReportComponent {
       title: 'Fuel report on shore vessels',
       collapsed: false,
       delete: true,
-      report: false,
+      report: true,
+      reportDetail: [
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+      ],
       folder: true,
-      folderColor:'white',
+      folderColor: 'white',
+      child: false,
+      children: []
+    },
+
+    {
+      title: 'Weather report of active shore vessels',
+      collapsed: false,
+      delete: false,
+      report: false,
+      reportDetail: [],
+      folder: true,
+      folderColor: 'white',
+      child: true,
+      children: [
+        {
+          title: 'Sub Menu 1',
+          collapsed: false,
+          delete: false,
+          report: false,
+          reportDetail: [],
+          folder: true,
+          folderColor: 'blue',
+          child: true,
+          children: [
+            {
+              title: 'Sub Sub Menu',
+              collapsed: false,
+              delete: false,
+              report: false,
+              reportDetail: [],
+              folder: true,
+              folderColor: 'white',
+              child: true,
+              children: [
+                {
+                  title: 'Sub sub Sub Menu',
+                  collapsed: false,
+                  delete: false,
+                  report: true,
+                  reportDetail: [
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                  ],
+                  folder: false,
+                  folderColor: 'blue',
+                  child: false,
+                  children: []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Sub Menu 2',
+          collapsed: false,
+          delete: false,
+          report: true,
+          reportDetail: [
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+          ],
+          folder: false,
+          folderColor: 'blue',
+          child: false,
+          children: []
+        }
+      ]
+    },
+
+    {
+      title: 'General reports - captains',
+      collapsed: false,
+      delete: false,
+      report: false,
+      reportDetail: [],
+      folder: true,
+      folderColor: 'white',
+      child: true,
+      children: [
+        {
+          title: 'Sub Menu 1',
+          collapsed: false,
+          delete: false,
+          report: false,
+          reportDetail: [],
+          folder: true,
+          folderColor: 'blue',
+          child: true,
+          children: [
+            {
+              title: 'Sub Sub Menu',
+              collapsed: false,
+              delete: false,
+              report: false,
+              reportDetail: [],
+              folder: true,
+              folderColor: 'white',
+              child: true,
+              children: [
+                {
+                  title: 'Sub Menu 3',
+                  collapsed: false,
+                  delete: false,
+                  report: true,
+                  reportDetail: [
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                    {
+                      name: 'Report',
+                      workSpace: '9871324SDAS',
+                      reportId: '4SDAS',
+                      ShowOnVessel: true,
+                      ShowOnShore: true,
+                      isEditReport: false
+                    },
+                  ],
+                  folder: false,
+                  folderColor: 'blue',
+                  child: false,
+                  children: []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Sub Menu 2',
+          collapsed: false,
+          delete: false,
+          report: true,
+          reportDetail: [
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+            {
+              name: 'Report',
+              workSpace: '9871324SDAS',
+              reportId: '4SDAS',
+              ShowOnVessel: true,
+              ShowOnShore: true,
+              isEditReport: false
+            },
+          ],
+          folder: false,
+          folderColor: 'blue',
+          child: false,
+          children: []
+        }
+      ]
+    },
+
+    {
+      title: 'Fuel report on shore vessels',
+      collapsed: false,
+      delete: true,
+      report: true,
+      reportDetail: [
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+      ],
+      folder: true,
+      folderColor: 'white',
       child: false,
       children: []
     },
@@ -152,9 +463,10 @@ export class BiReportComponent {
       title: this.newRootMenuName,
       collapsed: false,
       delete: true,
-      report: false,
+      report: true,
+      reportDetail: [],
       folder: true,
-      folderColor:'white',
+      folderColor: 'white',
       child: false,
       children: []
     }

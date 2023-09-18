@@ -144,7 +144,7 @@
                     </div>
 
                     <div [ngClass]="{'activeSideBarElement':focusToSideBarElement[9]}" (click)="adminMenuActiveFunc()">
-                        <a routerLink="/admin" class="sideBarListElement relativeEle">
+                        <a routerLink="/bireport" class="sideBarListElement relativeEle">
                             <svg *ngIf="!focusToSideBarElement[9]" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6666 4.16699V8.75033" stroke="white" stroke-width="1.5"
@@ -320,7 +320,7 @@
 
                     <div class="halfSideBarBottomElement" routerLink="/guidance"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[1]}"
-                        (click)="sensorMenuInactiveFunc()" (click)="halfSideBarActive()">
+                        (click)="sensorMenuInactiveFunc();adminMenuInactiveFunc()" (click)="halfSideBarActive()">
                         <a>
                             <div class="halfSideBarListElement">
                                 <svg *ngIf="!focusToSideBarElement[1]" width="20" height="20" viewBox="0 0 20 20"
@@ -371,7 +371,7 @@
 
                     <div class="halfSideBarBottomElement" routerLink="/performance"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[3]}"
-                        (click)="sensorMenuInactiveFunc()" (click)="halfSideBarActive()">
+                        (click)="sensorMenuInactiveFunc();adminMenuInactiveFunc()" (click)="halfSideBarActive()">
                         <a>
                             <div class="halfSideBarListElement">
                                 <svg *ngIf="!focusToSideBarElement[3]" width="20" height="20" viewBox="0 0 20 20"
@@ -390,7 +390,7 @@
                         </a>
                     </div>
 
-                    <div class="halfSideBarBottomElement" routerLink="/admin"
+                    <div class="halfSideBarBottomElement" routerLink="/bireport"
                         [ngClass]="{'halfSideBarActiveElement':focusToSideBarElement[9]}"
                         (click)="adminMenuActiveFunc()" (click)="halfSideBarActive()">
                         <a>

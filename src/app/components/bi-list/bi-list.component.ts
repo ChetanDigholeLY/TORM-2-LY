@@ -42,65 +42,65 @@ export class BiListComponent {
 
   //edit report section starts
 
-  reportDetail = [
-    {
-      name: 'Report',
-      workSpace: '9871324SDAS',
-      reportId: '4SDAS',
-      ShowOnVessel: true,
-      ShowOnShore: true,
-      isEditReport: false
-    },
-    {
-      name: 'Report',
-      workSpace: '9871324SDAS',
-      reportId: '4SDAS',
-      ShowOnVessel: true,
-      ShowOnShore: true,
-      isEditReport: false
-    },
-  ]
-
-  // editedReportData = {
-  //   name: 'Report',
-  //   workSpace: '9871324SDAS',
-  //   reportId: '4SDAS',
-  //   ShowOnVessel: true,
-  //   ShowOnShore: true,
-  //   isEditReport: false
-  // }
-
   editedReportData: any[] = []
   cancelEditedReportData: any[] = []
 
   editReport: boolean = false;
   editReportFunc(val: number) {
-    this.editedReportData = [...this.reportDetail]
-    this.cancelEditedReportData = [...this.reportDetail]
-    this.reportDetail[val].isEditReport = !this.reportDetail[val].isEditReport
+    this.editedReportData = [...this.data.reportDetail]
+    this.cancelEditedReportData = [...this.data.reportDetail]
+    this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
+    // console.log(this.editedReportData);
+    // console.log(this.cancelEditedReportData);
+    // console.log("populate ends");
   }
 
   saveEditedReportFunc(val: number) {
-    this.reportDetail[val] = this.editedReportData[val]
-    this.reportDetail[val].isEditReport = !this.reportDetail[val].isEditReport
+    this.data.reportDetail[val] = this.editedReportData[val]
+    this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
+    // console.log("edited data");
+
+    // console.log(this.editedReportData);
+
+    // console.log("canel data");
+
+    // console.log(this.cancelEditedReportData);
+    // console.log("save ends");
   }
 
   cancelReportEditing(val: number) {
-    this.reportDetail = [...this.cancelEditedReportData]
-    this.reportDetail[val].isEditReport = !this.reportDetail[val].isEditReport
+    // console.log(this.cancelEditedReportData);
+    this.data.reportDetail = [...this.cancelEditedReportData]
+    this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
+    // console.log(this.editedReportData);
+    // console.log(this.cancelEditedReportData);
+    // console.log("cancel ends");
   }
+
+  /////////////////////////////////////////
+
+  /////////////////////////////////////////
 
   //edit report section ends
 
   //delete report starts
   deleteReportFunc(val: number) {
-    this.reportDetail.splice(val, 1)
+    if(this.data.reportDetail.length === 1){
+      this.data.delete = true;
+      // this.deleteWholeSection = true
+    }
+    if(this.data.reportDetail.length > 1){
+      this.data.delete = false;
+      // this.deleteWholeSection = true
+    }
+    this.data.reportDetail.splice(val, 1)
   }
   //delete report ends
 
   //delete whole section starts
   deleteWholeSection = false
   deleteWholeSectionFunc() {
+    this.data.folder = true
     this.deleteWholeSection = !this.deleteWholeSection
   }
   //delete whole section ends
@@ -112,11 +112,12 @@ export class BiListComponent {
   addNewSubFolderName: string = 'New sub menu'
 
   addNewSubFolderNameFunc(event: any) {
+    this.data.report = false
     this.addNewSubFolderName = event.target.value
     // console.log(val);
   }
 
-  addFolderFunc(val:boolean) {
+  addFolderFunc(val: boolean) {
     // this.addNewSubFolder = !this.addNewSubFolder
     let color = ''
     if (this.data.folderColor === 'white') {
@@ -125,13 +126,14 @@ export class BiListComponent {
     if (this.data.folderColor === 'blue') {
       color = 'white'
     }
-    
+
     if (val) {
       const addElement = {
         title: this.addNewSubFolderName,
         collapsed: false,
         delete: true,
-        report: false,
+        report: true,
+        reportDetail: [],
         folder: true,
         folderColor: color,
         child: false,
@@ -140,22 +142,63 @@ export class BiListComponent {
       this.data.children.unshift(addElement)
     }
     this.addNewSubFolder = !this.addNewSubFolder
-  
+
   }
 
   //add report starts
-  addReportInBiFunc(){
+  addNewReport: boolean = false;
+
+  newReportInput = {
+    name: "",
+    workSpace: "",
+    reportId: "",
+    ShowOnVessel: true,
+    ShowOnShore: true,
+    isEditReport: false
+  }
+
+  addReportInBiFunc(val: boolean) {
+    this.closeBody = true
+    this.addNewReport = true;
     this.data.report = true
-    const newReport = {
-      name: 'Report',
-      workSpace: '9871324SDAS',
-      reportId: '4SDAS',
+    let newReport = {
+      name: '',
+      workSpace: '',
+      reportId: '',
       ShowOnVessel: true,
       ShowOnShore: true,
       isEditReport: false
     }
 
-    this.reportDetail.push(newReport)
+    // this.data.reportDetail.push(newReport)
+
+    if (val) {
+      newReport = this.newReportInput;
+      this.data.reportDetail.push(newReport)
+      this.addNewReport = false;
+      this.newReportInput = {
+        name: "",
+        workSpace: "",
+        reportId: "",
+        ShowOnVessel: true,
+        ShowOnShore: true,
+        isEditReport: false
+      }
+      console.log(this.data);
+    }
+
+    if (!val) {
+      this.addNewReport = false;
+      this.newReportInput = {
+        name: "",
+        workSpace: "",
+        reportId: "",
+        ShowOnVessel: true,
+        ShowOnShore: true,
+        isEditReport: false
+      }
+      console.log(this.data);
+    }
 
   }
   //add report ends

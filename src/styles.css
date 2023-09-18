@@ -5219,6 +5219,28 @@ tr {
 }
 
 
+.myTooltip[data-position="middle"] .tooltipText {
+  transform: translateX(-50%);
+}
+/* .myTooltipLast[data-position="middle"] .tooltipText {
+  transform: translateX(-104px);
+} */
+
+.myTooltip[data-position="middle"] .tooltipText::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -0.5rem;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #1E2124;
+}
+
+
 #tableHeaderEl {
   width: 250px;
 }
@@ -5365,6 +5387,7 @@ td>.bgForEditAll:focus {
   display: flex;
   align-items: center;
   gap: 12px;
+  /* justify-content: space-between; */
 }
 
 .biReportListHeaderRight svg {
@@ -5699,4 +5722,18 @@ td>.bgForEditAll:focus {
 }
 .redHoverEffectForBiReportIcon:hover path{
   stroke: #D3483E;
+}
+
+.newReportInputMain{
+  border: 2px solid #016BFF;
+  background-color: #FFF !important;
+  padding: 12px 0;
+}
+
+.newReportInputMain input {
+  background-color: #FFF;
+}
+
+.newReportInputBtns{
+  justify-self: flex-end;
 }
