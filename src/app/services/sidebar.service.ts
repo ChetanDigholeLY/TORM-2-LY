@@ -16,4 +16,18 @@ export class SidebarService {
     this.isMobileSideBar.next(!this.isMobileSideBar.value);
   }
 
+  //bi report starts
+
+  private expandAllCollapsible = new BehaviorSubject<boolean>(false);
+
+  setExpandAllCollapsible(data: any){
+    this.expandAllCollapsible.next(data);
+  }
+
+  get ExpandAllCollapsible$(): Observable<boolean>{
+    return this.expandAllCollapsible.asObservable();
+  }
+
+  //bi report ends
+
 }
