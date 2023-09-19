@@ -419,28 +419,11 @@ export class BiReportComponent {
     },
 
     {
-      title: 'Fuel report on shore vessels',
+      title: 'Fuel',
       collapsed: false,
       delete: true,
       report: true,
-      reportDetail: [
-        {
-          name: 'Report',
-          workSpace: '9871324SDAS',
-          reportId: '4SDAS',
-          ShowOnVessel: true,
-          ShowOnShore: true,
-          isEditReport: false
-        },
-        {
-          name: 'Report',
-          workSpace: '9871324SDAS',
-          reportId: '4SDAS',
-          ShowOnVessel: true,
-          ShowOnShore: true,
-          isEditReport: false
-        },
-      ],
+      reportDetail: [],
       folder: true,
       folderColor: 'white',
       child: false,

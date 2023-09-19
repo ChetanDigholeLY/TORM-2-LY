@@ -48,33 +48,22 @@ export class BiListComponent {
   editReport: boolean = false;
   editReportFunc(val: number) {
     this.editedReportData = [...this.data.reportDetail]
-    this.cancelEditedReportData = [...this.data.reportDetail]
+    this.cancelEditedReportData = this.data.reportDetail.map((item: any) => ({ ...item }));
     this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
-    // console.log(this.editedReportData);
-    // console.log(this.cancelEditedReportData);
-    // console.log("populate ends");
+
   }
 
   saveEditedReportFunc(val: number) {
     this.data.reportDetail[val] = this.editedReportData[val]
     this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
-    // console.log("edited data");
 
-    // console.log(this.editedReportData);
-
-    // console.log("canel data");
-
-    // console.log(this.cancelEditedReportData);
-    // console.log("save ends");
   }
 
   cancelReportEditing(val: number) {
-    // console.log(this.cancelEditedReportData);
     this.data.reportDetail = [...this.cancelEditedReportData]
-    this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
-    // console.log(this.editedReportData);
-    // console.log(this.cancelEditedReportData);
-    // console.log("cancel ends");
+    // this.data.reportDetail[val].isEditReport = !this.data.reportDetail[val].isEditReport
+    this.data.reportDetail[val].isEditReport = false
+
   }
 
   /////////////////////////////////////////
@@ -85,11 +74,11 @@ export class BiListComponent {
 
   //delete report starts
   deleteReportFunc(val: number) {
-    if(this.data.reportDetail.length === 1){
+    if (this.data.reportDetail.length === 1) {
       this.data.delete = true;
       // this.deleteWholeSection = true
     }
-    if(this.data.reportDetail.length > 1){
+    if (this.data.reportDetail.length > 1) {
       this.data.delete = false;
       // this.deleteWholeSection = true
     }
@@ -202,5 +191,14 @@ export class BiListComponent {
 
   }
   //add report ends
+
+
+  //calculate width starts
+  calculateInputWidth(val: any , multiple: number) {
+    let minWidth = '120px';
+    let width = val.length * multiple + 'px';
+    return (width < minWidth) ? minWidth : width;
+  }
+  //calculate width ends
 
 }

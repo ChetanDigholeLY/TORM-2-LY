@@ -156,7 +156,7 @@
             <!-- <div class="biReportListHeaderLeftText">{{data.title}}</div> -->
             <div>
                 <input type="text" class="biReportListHeaderLeftInputText" [(ngModel)]="biReportEditedHeader"
-                    placeholder="Root Menu" value="{{data.title}}" />
+                    placeholder="Root Menu" value="{{data.title}}" [style.min-width]="calculateInputWidth(data.title , 7)" />
             </div>
             <div class="biReportListHeaderLeftNumber" *ngIf="data.children.length>0">{{data.children.length}}</div>
         </div>
@@ -252,8 +252,8 @@
                 <!-- header ends -->
 
                 <!-- body starts -->
-                <div class="biReportBodyMain"
-                    [ngClass]="{'babyBlueReportBody' : data.folderColor === 'white' , 'whiteReportBody' : data.folderColor === 'blue' }">
+                <div class=""
+                    [ngClass]="{'babyBlueReportBody' : data.folderColor === 'white' , 'whiteReportBody' : data.folderColor === 'blue' , 'biReportBodyMain': !addNewReport }">
 
                     <div class="reportGrid" [ngClass]="{'editReportStateGrid': item.isEditReport}"
                         *ngFor="let item of data.reportDetail, let index = index">
@@ -277,7 +277,7 @@
                             <div *ngIf="item.isEditReport">
                                 <input class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                     value="{{editedReportData[index].name}}"
-                                    [(ngModel)]="editedReportData[index].name" />
+                                    [(ngModel)]="editedReportData[index].name" [style.max-width]="calculateInputWidth(data.title , 4)"/>
                             </div>
                             <!-- edit state ends -->
 
@@ -289,7 +289,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].workSpace}}"
-                                [(ngModel)]="editedReportData[index].workSpace" />
+                                [(ngModel)]="editedReportData[index].workSpace"  [style.max-width]="calculateInputWidth(data.title , 6)"/>
                         </div>
                         <!-- edit state ends -->
 
@@ -301,7 +301,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].reportId}}"
-                                [(ngModel)]="editedReportData[index].reportId" />
+                                [(ngModel)]="editedReportData[index].reportId" [style.max-width]="calculateInputWidth(data.title , 4)"/>
                         </div>
                         <!-- edit state ends -->
 
@@ -351,9 +351,10 @@
 
                         </div>
                         <div class="reportGridFlexEleIcon biReportGridBodyEle">
-                            <div *ngIf="!item.isEditReport" (click)="editReportFunc(index)" class="myTooltip" data-position="middle">
-                                <svg width="20" height="20"
-                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div *ngIf="!item.isEditReport" (click)="editReportFunc(index)" class="myTooltip"
+                                data-position="middle">
+                                <svg class="hoverEffectForBiReportIcon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M2.5 17.5H17.5M11.487 4.42646C11.487 4.42646 11.487 5.78865 12.8492 7.15083C14.2114 8.51302 15.5736 8.51302 15.5736 8.51302M6.09969 14.9901L8.96028 14.5814C9.37291 14.5225 9.7553 14.3313 10.05 14.0366L16.9358 7.15083C18.5 5.49994 18 5.49994 16.9358 4.42645L15.5736 3.06427C14 1.49995 14.5 1.50001 12.8492 3.06427L5.96347 9.95C5.66873 10.2447 5.47754 10.6271 5.41859 11.0397L5.00994 13.9003C4.96691 14.2015 4.81555 14.7975 5 14.9999C5.20482 15.2248 5.76521 15.0379 6.09969 14.9901Z"
                                         stroke="#596069" stroke-width="1.5" stroke-linecap="round" />
@@ -375,9 +376,8 @@
                             <!-- edit state for cross ends -->
 
                             <div *ngIf="!item.isEditReport" class="myTooltip" data-position="middle">
-                                <svg (click)="deleteReportFunc(index)" class="dismissCursorPointer"
-                                     width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg (click)="deleteReportFunc(index)" class="dismissCursorPointer redHoverEffectForBiReportIcon" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M4.16667 6.6665V14.9998C4.16667 17.5 5 18.3332 7.5 18.3332H12.5C15 18.3332 15.8333 17.5 15.8333 14.9998V6.6665M11.6667 9.1665V14.1665M8.33333 9.1665L8.33333 14.1665M13.3333 4.1665L12.1614 2.40867C11.8523 1.94501 11.3319 1.6665 10.7747 1.6665H9.22531C8.66805 1.6665 8.14767 1.94501 7.83856 2.40867L6.66667 4.1665M13.3333 4.1665H6.66667M13.3333 4.1665H17.5M6.66667 4.1665H2.5"
                                         stroke="#596069" stroke-width="1.5" stroke-linecap="round"
@@ -403,88 +403,85 @@
                         </div>
                     </div>
 
-                    <!-- input for new report starts -->
-                    <div *ngIf="addNewReport">
-                        <div class="reportGrid" *ngIf="data.reportDetail.length === 0"
-                            [ngClass]="{'blueReportHeader' : data.folderColor === 'white' , 'grayReportHeader' : data.folderColor === 'blue' }">
-                            <div class="biReportGridHeaderEle biReportGridHeaderNameText">Name</div>
-                            <div class="biReportGridHeaderEle">Workspace ID</div>
-                            <div class="biReportGridHeaderEle">Report ID</div>
-                            <div class="biReportGridHeaderEle">Show on vessel</div>
-                            <div class="biReportGridHeaderEle">Show on shore</div>
-                            <div class="biReportGridHeaderEle"></div>
-                        </div>
-                        <div class="reportGrid newReportInputMain">
-                            <div class="reportGridFlexEle biReportGridBodyEle">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_881_8324)">
-                                        <path
-                                            d="M16.6667 18.3334H4.16669C2.78598 18.3334 1.66669 17.2141 1.66669 15.8334V4.16669C1.66669 2.78597 2.78598 1.66669 4.16669 1.66669H12.5C13.8807 1.66669 15 2.78598 15 4.16669V6.66669M16.6667 18.3334C15.7462 18.3334 15 17.5872 15 16.6667V6.66669M16.6667 18.3334C17.5872 18.3334 18.3334 17.5872 18.3334 16.6667V8.33335C18.3334 7.41288 17.5872 6.66669 16.6667 6.66669H15M5.00002 5.83335H11.6667M5.00002 10H11.6667M5.00002 14.1667H8.33335"
-                                            stroke="#003A78" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_881_8324">
-                                            <rect width="20" height="20" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <div>
-                                    <input type="text" class="biReportListHeaderLeftInputText" placeholder="New Report"
-                                        [(ngModel)]="newReportInput.name" />
-                                </div>
-                            </div>
 
-                            <div class="biReportGridBodyEle">
-                                <input type="text" class="biReportListHeaderLeftInputText" placeholder="Workspace ID"
-                                    [(ngModel)]="newReportInput.workSpace" />
-                            </div>
-
-                            <div class="biReportGridBodyEle">
-                                <input type="text" class="biReportListHeaderLeftInputText" placeholder="Report ID"
-                                    [(ngModel)]="newReportInput.reportId" />
-                            </div>
-
-                            <div class="editReportStateCheckBox biReportGridBodyEle">
-                                <input type="checkbox" [(ngModel)]="newReportInput.ShowOnVessel" />
-                            </div>
-
-                            <div class="editReportStateCheckBox biReportGridBodyEle">
-                                <input type="checkbox" [(ngModel)]="newReportInput.ShowOnShore" />
-                            </div>
-
-
-                            <div class="biReportEditStateFlex newReportInputBtns">
-                                <button class="biReportEditStateBtn crossBiReportStateBtn"
-                                    (click)="addReportInBiFunc(false)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M15.7123 16.7734C16.0052 17.0663 16.4801 17.0663 16.7729 16.7734C17.0658 16.4805 17.0658 16.0057 16.7729 15.7128L13.0607 12.0005L16.7729 8.28819C17.0658 7.99529 17.0658 7.52042 16.7729 7.22753C16.48 6.93463 16.0052 6.93463 15.7123 7.22753L12 10.9398L8.28766 7.22748C7.99477 6.93459 7.5199 6.93459 7.227 7.22748C6.93411 7.52038 6.93411 7.99525 7.227 8.28814L10.9393 12.0005L7.22699 15.7128C6.9341 16.0057 6.9341 16.4806 7.22699 16.7735C7.51989 17.0664 7.99476 17.0664 8.28765 16.7735L12 13.0611L15.7123 16.7734Z"
-                                            fill="#596069" />
-                                    </svg>
-                                </button>
-                                <button class="biReportEditStateBtn saveBiReportStateBtn"
-                                    (click)="addReportInBiFunc(true)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.00002 18.0002C8.99902 18.0002 8.99802 18.0002 8.99602 18.0002C8.72902 17.9992 8.47502 17.8922 8.28802 17.7022L4.28802 13.6402C3.90002 13.2462 3.90503 12.6132 4.29903 12.2262C4.69303 11.8392 5.32502 11.8432 5.71302 12.2372L9.00602 15.5812L18.294 6.29423C18.685 5.90323 19.317 5.90323 19.708 6.29423C20.099 6.68423 20.099 7.31823 19.708 7.70823L9.70801 17.7082C9.52001 17.8952 9.26502 18.0002 9.00002 18.0002Z"
-                                            fill="#EEF6FF" />
-                                    </svg>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- input for new report ends -->
 
                 </div>
                 <!-- body ends -->
             </div>
         </div>
+
+
+        <!-- input for new report starts -->
+        <div *ngIf="addNewReport" style="margin: 0px 0 0 20px;">
+            <div class="reportGrid" *ngIf="data.reportDetail.length === 0"
+                [ngClass]="{'blueReportHeader' : data.folderColor === 'white' , 'grayReportHeader' : data.folderColor === 'blue' }">
+                <div class="biReportGridHeaderEle biReportGridHeaderNameText">Name</div>
+                <div class="biReportGridHeaderEle">Workspace ID</div>
+                <div class="biReportGridHeaderEle">Report ID</div>
+                <div class="biReportGridHeaderEle">Show on vessel</div>
+                <div class="biReportGridHeaderEle">Show on shore</div>
+                <div class="biReportGridHeaderEle"></div>
+            </div>
+            <div class="reportGrid newReportInputMain">
+                <div class="reportGridFlexEle biReportGridBodyEle">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_881_8324)">
+                            <path
+                                d="M16.6667 18.3334H4.16669C2.78598 18.3334 1.66669 17.2141 1.66669 15.8334V4.16669C1.66669 2.78597 2.78598 1.66669 4.16669 1.66669H12.5C13.8807 1.66669 15 2.78598 15 4.16669V6.66669M16.6667 18.3334C15.7462 18.3334 15 17.5872 15 16.6667V6.66669M16.6667 18.3334C17.5872 18.3334 18.3334 17.5872 18.3334 16.6667V8.33335C18.3334 7.41288 17.5872 6.66669 16.6667 6.66669H15M5.00002 5.83335H11.6667M5.00002 10H11.6667M5.00002 14.1667H8.33335"
+                                stroke="#003A78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_881_8324">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div>
+                        <input type="text" class="biReportListHeaderLeftInputText" placeholder="New Report"
+                            [(ngModel)]="newReportInput.name" />
+                    </div>
+                </div>
+
+                <div class="biReportGridBodyEle">
+                    <input type="text" class="biReportListHeaderLeftInputText" placeholder="Workspace ID"
+                        [(ngModel)]="newReportInput.workSpace" />
+                </div>
+
+                <div class="biReportGridBodyEle">
+                    <input type="text" class="biReportListHeaderLeftInputText" placeholder="Report ID"
+                        [(ngModel)]="newReportInput.reportId" />
+                </div>
+
+                <div class="editReportStateCheckBox biReportGridBodyEle">
+                    <input type="checkbox" [(ngModel)]="newReportInput.ShowOnVessel" />
+                </div>
+
+                <div class="editReportStateCheckBox biReportGridBodyEle">
+                    <input type="checkbox" [(ngModel)]="newReportInput.ShowOnShore" />
+                </div>
+
+
+                <div class="biReportEditStateFlex newReportInputBtns">
+                    <button class="biReportEditStateBtn crossBiReportStateBtn" (click)="addReportInBiFunc(false)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.7123 16.7734C16.0052 17.0663 16.4801 17.0663 16.7729 16.7734C17.0658 16.4805 17.0658 16.0057 16.7729 15.7128L13.0607 12.0005L16.7729 8.28819C17.0658 7.99529 17.0658 7.52042 16.7729 7.22753C16.48 6.93463 16.0052 6.93463 15.7123 7.22753L12 10.9398L8.28766 7.22748C7.99477 6.93459 7.5199 6.93459 7.227 7.22748C6.93411 7.52038 6.93411 7.99525 7.227 8.28814L10.9393 12.0005L7.22699 15.7128C6.9341 16.0057 6.9341 16.4806 7.22699 16.7735C7.51989 17.0664 7.99476 17.0664 8.28765 16.7735L12 13.0611L15.7123 16.7734Z"
+                                fill="#596069" />
+                        </svg>
+                    </button>
+                    <button class="biReportEditStateBtn saveBiReportStateBtn" (click)="addReportInBiFunc(true)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00002 18.0002C8.99902 18.0002 8.99802 18.0002 8.99602 18.0002C8.72902 17.9992 8.47502 17.8922 8.28802 17.7022L4.28802 13.6402C3.90002 13.2462 3.90503 12.6132 4.29903 12.2262C4.69303 11.8392 5.32502 11.8432 5.71302 12.2372L9.00602 15.5812L18.294 6.29423C18.685 5.90323 19.317 5.90323 19.708 6.29423C20.099 6.68423 20.099 7.31823 19.708 7.70823L9.70801 17.7082C9.52001 17.8952 9.26502 18.0002 9.00002 18.0002Z"
+                                fill="#EEF6FF" />
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- input for new report ends -->
 
     </div>
     <!-- body ends -->
