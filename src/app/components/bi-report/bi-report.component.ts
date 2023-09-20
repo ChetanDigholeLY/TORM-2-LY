@@ -28,7 +28,7 @@ export class BiReportComponent {
       child: true,
       children: [
         {
-          title: 'Sub Menu 1',
+          title: 'Nested sub Menu 1',
           collapsed: false,
           delete: false,
           report: false,
@@ -38,7 +38,7 @@ export class BiReportComponent {
           child: true,
           children: [
             {
-              title: 'Sub Sub Menu',
+              title: 'Nested sub Nested sub Menu',
               collapsed: false,
               delete: false,
               report: false,
@@ -48,14 +48,14 @@ export class BiReportComponent {
               child: true,
               children: [
                 {
-                  title: 'Sub sub Sub Menu',
+                  title: 'Nested sub Nested sub Nested sub Menu',
                   collapsed: false,
                   delete: false,
                   report: true,
                   reportDetail: [
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -63,7 +63,7 @@ export class BiReportComponent {
                     },
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -80,14 +80,14 @@ export class BiReportComponent {
           ]
         },
         {
-          title: 'Sub Menu 2',
+          title: 'Nested sub Menu 2',
           collapsed: false,
           delete: false,
           report: true,
           reportDetail: [
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -95,7 +95,7 @@ export class BiReportComponent {
             },
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -121,7 +121,7 @@ export class BiReportComponent {
       child: true,
       children: [
         {
-          title: 'Sub Menu 1',
+          title: 'Nested sub Menu 1',
           collapsed: false,
           delete: false,
           report: false,
@@ -131,7 +131,7 @@ export class BiReportComponent {
           child: true,
           children: [
             {
-              title: 'Sub Sub Menu',
+              title: 'Nested sub Nested sub Menu',
               collapsed: false,
               delete: false,
               report: false,
@@ -141,14 +141,14 @@ export class BiReportComponent {
               child: true,
               children: [
                 {
-                  title: 'Sub Menu 3',
+                  title: 'Nested sub Menu 3',
                   collapsed: false,
                   delete: false,
                   report: true,
                   reportDetail: [
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -156,7 +156,7 @@ export class BiReportComponent {
                     },
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -173,14 +173,14 @@ export class BiReportComponent {
           ]
         },
         {
-          title: 'Sub Menu 2',
+          title: 'Nested sub Menu 2',
           collapsed: false,
           delete: false,
           report: true,
           reportDetail: [
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -188,7 +188,7 @@ export class BiReportComponent {
             },
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -211,7 +211,7 @@ export class BiReportComponent {
       reportDetail: [
         {
           name: 'Report',
-          workSpace: '9871324SDAS',
+          workSpace: '987132',
           reportId: '4SDAS',
           ShowOnVessel: true,
           ShowOnShore: true,
@@ -219,7 +219,7 @@ export class BiReportComponent {
         },
         {
           name: 'Report',
-          workSpace: '9871324SDAS',
+          workSpace: '987132',
           reportId: '4SDAS',
           ShowOnVessel: true,
           ShowOnShore: true,
@@ -243,7 +243,7 @@ export class BiReportComponent {
       child: true,
       children: [
         {
-          title: 'Sub Menu 1',
+          title: 'Nested sub Menu 1',
           collapsed: false,
           delete: false,
           report: false,
@@ -253,7 +253,7 @@ export class BiReportComponent {
           child: true,
           children: [
             {
-              title: 'Sub Sub Menu',
+              title: 'Nested sub Nested sub Menu',
               collapsed: false,
               delete: false,
               report: false,
@@ -263,14 +263,14 @@ export class BiReportComponent {
               child: true,
               children: [
                 {
-                  title: 'Sub sub Sub Menu',
+                  title: 'Nested sub Nested sub Nested sub Menu',
                   collapsed: false,
                   delete: false,
                   report: true,
                   reportDetail: [
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -278,7 +278,7 @@ export class BiReportComponent {
                     },
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -295,14 +295,14 @@ export class BiReportComponent {
           ]
         },
         {
-          title: 'Sub Menu 2',
+          title: 'Nested sub Menu 2',
           collapsed: false,
           delete: false,
           report: true,
           reportDetail: [
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -310,7 +310,7 @@ export class BiReportComponent {
             },
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -336,7 +336,7 @@ export class BiReportComponent {
       child: true,
       children: [
         {
-          title: 'Sub Menu 1',
+          title: 'Nested sub Menu 1',
           collapsed: false,
           delete: false,
           report: false,
@@ -346,7 +346,7 @@ export class BiReportComponent {
           child: true,
           children: [
             {
-              title: 'Sub Sub Menu',
+              title: 'Nested sub Nested sub Menu',
               collapsed: false,
               delete: false,
               report: false,
@@ -356,14 +356,14 @@ export class BiReportComponent {
               child: true,
               children: [
                 {
-                  title: 'Sub Menu 3',
+                  title: 'Nested sub Menu 3',
                   collapsed: false,
                   delete: false,
                   report: true,
                   reportDetail: [
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -371,7 +371,7 @@ export class BiReportComponent {
                     },
                     {
                       name: 'Report',
-                      workSpace: '9871324SDAS',
+                      workSpace: '987132',
                       reportId: '4SDAS',
                       ShowOnVessel: true,
                       ShowOnShore: true,
@@ -388,14 +388,14 @@ export class BiReportComponent {
           ]
         },
         {
-          title: 'Sub Menu 2',
+          title: 'Nested sub Menu 2',
           collapsed: false,
           delete: false,
           report: true,
           reportDetail: [
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -403,7 +403,7 @@ export class BiReportComponent {
             },
             {
               name: 'Report',
-              workSpace: '9871324SDAS',
+              workSpace: '987132',
               reportId: '4SDAS',
               ShowOnVessel: true,
               ShowOnShore: true,
@@ -425,7 +425,7 @@ export class BiReportComponent {
       reportDetail: [
         {
           name: 'Report',
-          workSpace: '9871324SDAS',
+          workSpace: '987132',
           reportId: '4SDAS',
           ShowOnVessel: true,
           ShowOnShore: true,
@@ -433,7 +433,7 @@ export class BiReportComponent {
         },
         {
           name: 'Report',
-          workSpace: '9871324SDAS',
+          workSpace: '987132',
           reportId: '4SDAS',
           ShowOnVessel: true,
           ShowOnShore: true,

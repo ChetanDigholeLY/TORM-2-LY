@@ -139,7 +139,7 @@ export class BiListComponent {
 
   newReportInput = {
     name: "Report",
-    workSpace: "9871324SDAS",
+    workSpace: "987132",
     reportId: "4SDAS",
     ShowOnVessel: true,
     ShowOnShore: true,
@@ -152,7 +152,7 @@ export class BiListComponent {
     this.data.report = true
     let newReport = {
       name: "Report",
-      workSpace: "9871324SDAS",
+      workSpace: "987132",
       reportId: "4SDAS",
       ShowOnVessel: true,
       ShowOnShore: true,
@@ -167,7 +167,7 @@ export class BiListComponent {
       this.addNewReport = false;
       this.newReportInput = {
         name: "Report",
-        workSpace: "9871324SDAS",
+        workSpace: "987132",
         reportId: "4SDAS",
         ShowOnVessel: true,
         ShowOnShore: true,
@@ -180,7 +180,7 @@ export class BiListComponent {
       this.addNewReport = false;
       this.newReportInput = {
         name: "Report",
-        workSpace: "9871324SDAS",
+        workSpace: "987132",
         reportId: "4SDAS",
         ShowOnVessel: true,
         ShowOnShore: true,

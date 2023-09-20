@@ -36,7 +36,7 @@
 
 
             <div class="biReportListHeaderLeftText">{{data.title}}</div>
-            <div class="biReportListHeaderLeftNumber" *ngIf="data.children.length > 0">{{data.children.length}}</div>
+            <div class="biReportListHeaderLeftNumber">3</div>
         </div>
         <!-- left ends -->
 
@@ -158,7 +158,7 @@
                 <input type="text" class="biReportListHeaderLeftInputText" [(ngModel)]="biReportEditedHeader"
                     placeholder="Root Menu" value="{{data.title}}" [style.min-width]="calculateInputWidth(data.title , 7)" />
             </div>
-            <div class="biReportListHeaderLeftNumber" *ngIf="data.children.length>0">{{data.children.length}}</div>
+            <div class="biReportListHeaderLeftNumber">3</div>
         </div>
         <!-- left ends -->
         <div class="biReportEditStateFlex">
@@ -277,7 +277,7 @@
                             <div *ngIf="item.isEditReport">
                                 <input class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                     value="{{editedReportData[index].name}}"
-                                    [(ngModel)]="editedReportData[index].name" [style.min-width]="calculateInputWidth(editedReportData[index].name , 4)"/>
+                                    [(ngModel)]="editedReportData[index].name"  style="width: 48px;"/>
                             </div>
                             <!-- edit state ends -->
 
@@ -289,7 +289,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].workSpace}}"
-                                [(ngModel)]="editedReportData[index].workSpace"  [style.min-width]="calculateInputWidth(editedReportData[index].workSpace , 6)"/>
+                                [(ngModel)]="editedReportData[index].workSpace"  style="width: 48px;"/>
                         </div>
                         <!-- edit state ends -->
 
@@ -301,7 +301,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].reportId}}"
-                                [(ngModel)]="editedReportData[index].reportId" [style.min-width]="calculateInputWidth(editedReportData[index].reportId , 4)"/>
+                                [(ngModel)]="editedReportData[index].reportId" style="width: 48px;"/>
                         </div>
                         <!-- edit state ends -->
 
