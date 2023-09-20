@@ -417,18 +417,34 @@ export class BiReportComponent {
         }
       ]
     },
-
     {
-      title: 'Fuel',
+      title: 'Fuel report on shore vessels',
       collapsed: false,
-      delete: true,
+      delete: false,
       report: true,
-      reportDetail: [],
-      folder: true,
+      reportDetail: [
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+        {
+          name: 'Report',
+          workSpace: '9871324SDAS',
+          reportId: '4SDAS',
+          ShowOnVessel: true,
+          ShowOnShore: true,
+          isEditReport: false
+        },
+      ],
+      folder: false,
       folderColor: 'white',
       child: false,
       children: []
-    },
+    }
   ]
 
 
@@ -437,11 +453,11 @@ export class BiReportComponent {
 
   newRootMenuName: string = "New Root Menu"
 
-  newRootMenuNameFunc(event: any){
+  newRootMenuNameFunc(event: any) {
     this.newRootMenuName = event.target.value
   }
 
-  addNewRootMenuFunc(){
+  addNewRootMenuFunc() {
     const addNewRootDetail = {
       title: this.newRootMenuName,
       collapsed: false,

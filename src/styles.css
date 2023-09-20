@@ -5737,3 +5737,13 @@ td>.bgForEditAll:focus {
 .newReportInputBtns{
   justify-self: flex-end;
 }
+
+.undobuttonOnToaster{
+  padding: 4px 16px;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFF;
+  cursor: pointer;
+}
