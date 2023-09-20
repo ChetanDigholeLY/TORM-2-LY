@@ -138,9 +138,9 @@ export class BiListComponent {
   addNewReport: boolean = false;
 
   newReportInput = {
-    name: "",
-    workSpace: "",
-    reportId: "",
+    name: "Report",
+    workSpace: "9871324SDAS",
+    reportId: "4SDAS",
     ShowOnVessel: true,
     ShowOnShore: true,
     isEditReport: false
@@ -151,9 +151,9 @@ export class BiListComponent {
     this.addNewReport = true;
     this.data.report = true
     let newReport = {
-      name: '',
-      workSpace: '',
-      reportId: '',
+      name: "Report",
+      workSpace: "9871324SDAS",
+      reportId: "4SDAS",
       ShowOnVessel: true,
       ShowOnShore: true,
       isEditReport: false
@@ -166,27 +166,27 @@ export class BiListComponent {
       this.data.reportDetail.push(newReport)
       this.addNewReport = false;
       this.newReportInput = {
-        name: "",
-        workSpace: "",
-        reportId: "",
+        name: "Report",
+        workSpace: "9871324SDAS",
+        reportId: "4SDAS",
         ShowOnVessel: true,
         ShowOnShore: true,
         isEditReport: false
       }
-      console.log(this.data);
+      // console.log(this.data);
     }
 
     if (!val) {
       this.addNewReport = false;
       this.newReportInput = {
-        name: "",
-        workSpace: "",
-        reportId: "",
+        name: "Report",
+        workSpace: "9871324SDAS",
+        reportId: "4SDAS",
         ShowOnVessel: true,
         ShowOnShore: true,
         isEditReport: false
       }
-      console.log(this.data);
+      // console.log(this.data);
     }
 
   }
@@ -194,9 +194,9 @@ export class BiListComponent {
 
 
   //calculate width starts
-  calculateInputWidth(val: any , multiple: number) {
-    let minWidth = '120px';
-    let width = val.length * multiple + 'px';
+  calculateInputWidth(val: any, multiple: number) {
+    let minWidth = '100px !important';
+    let width = val.length * multiple + 'px !important';
     return (width < minWidth) ? minWidth : width;
   }
   //calculate width ends

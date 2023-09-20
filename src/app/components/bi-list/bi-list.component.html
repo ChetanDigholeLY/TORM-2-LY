@@ -277,7 +277,7 @@
                             <div *ngIf="item.isEditReport">
                                 <input class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                     value="{{editedReportData[index].name}}"
-                                    [(ngModel)]="editedReportData[index].name" [style.max-width]="calculateInputWidth(data.title , 4)"/>
+                                    [(ngModel)]="editedReportData[index].name" [style.min-width]="calculateInputWidth(editedReportData[index].name , 4)"/>
                             </div>
                             <!-- edit state ends -->
 
@@ -289,7 +289,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].workSpace}}"
-                                [(ngModel)]="editedReportData[index].workSpace"  [style.max-width]="calculateInputWidth(data.title , 6)"/>
+                                [(ngModel)]="editedReportData[index].workSpace"  [style.min-width]="calculateInputWidth(editedReportData[index].workSpace , 6)"/>
                         </div>
                         <!-- edit state ends -->
 
@@ -301,7 +301,7 @@
                             <input *ngIf="item.isEditReport"
                                 class="biReportListHeaderLeftInputText editReportStateInput" type="text"
                                 value="{{editedReportData[index].reportId}}"
-                                [(ngModel)]="editedReportData[index].reportId" [style.max-width]="calculateInputWidth(data.title , 4)"/>
+                                [(ngModel)]="editedReportData[index].reportId" [style.min-width]="calculateInputWidth(editedReportData[index].reportId , 4)"/>
                         </div>
                         <!-- edit state ends -->
 

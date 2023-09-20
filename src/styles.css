@@ -4567,7 +4567,7 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: center;
   margin-top: 14px;
   margin-bottom: 12px;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 .vesselDefinationHeader>div:nth-child(1),
@@ -5560,6 +5560,7 @@ td>.bgForEditAll:focus {
   font-size: 14px;
   font-weight: 600;
   color: #016BFF;
+  gap: 8px;
 }
 
 .whiteBiReportFolder {
@@ -5572,7 +5573,7 @@ td>.bgForEditAll:focus {
 
 .reportGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr) 0.72fr;
   grid-template-rows: 1fr;
   width: 100%;
   align-items: center;
@@ -5687,7 +5688,7 @@ td>.bgForEditAll:focus {
 }
 
 .editReportStateGrid{
-  border: 1px solid #016BFF;
+  border: 2px solid #016BFF;
   padding: 10px 0;
 }
 
@@ -5697,7 +5698,7 @@ td>.bgForEditAll:focus {
 }
 
 .addNewSubMenu{
-  padding: 8px 12px;
+  padding: 8px 8px;
   border: 2px solid #016BFF;
   margin-left: 20px;
   display: flex;
