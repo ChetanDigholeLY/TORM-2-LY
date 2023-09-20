@@ -5748,3 +5748,26 @@ td>.bgForEditAll:focus {
   color: #FFF;
   cursor: pointer;
 }
+
+
+.deleteAnimation{
+  background-color: #FFDCDC;
+  pointer-events: none;
+  animation: slideOut 2s, fadeOut 1s;
+}
+
+.deleteAnimation div, .deleteAnimation svg path , .deleteAnimation svg path {
+  color: #FFDCDC;
+  stroke: #FFDCDC;
+  fill: #FFDCDC;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

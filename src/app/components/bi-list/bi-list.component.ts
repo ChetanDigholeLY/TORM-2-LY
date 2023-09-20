@@ -72,6 +72,8 @@ export class BiListComponent {
 
   //edit report section ends
 
+  deleteAnimationFlag: number | null = null;
+
   //delete report starts
   deleteReportFunc(val: number) {
     if (this.data.reportDetail.length === 1) {
@@ -82,7 +84,9 @@ export class BiListComponent {
       this.data.delete = false;
       // this.deleteWholeSection = true
     }
-    this.data.reportDetail.splice(val, 1)
+    this.deleteAnimationFlag = val
+    setTimeout(() => {this.data.reportDetail.splice(val, 1); this.deleteAnimationFlag = null;}, 1000)
+    
   }
   //delete report ends
 
