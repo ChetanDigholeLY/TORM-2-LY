@@ -6,6 +6,9 @@ import { SidebarService } from 'src/app/services/sidebar.service';
   templateUrl: './bi-report.component.html',
   styleUrls: ['./bi-report.component.css']
 })
+
+
+
 export class BiReportComponent {
 
   constructor(private sideBarService: SidebarService) { }
@@ -16,7 +19,8 @@ export class BiReportComponent {
     this.sideBarService.setExpandAllCollapsible(this.expandAll)
   }
 
-  biReportMainArr = [
+ 
+  biReportMainArr: any = [
     {
       title: 'Weather report of active shore vessels',
       collapsed: false,
@@ -467,7 +471,8 @@ export class BiReportComponent {
       folder: true,
       folderColor: 'white',
       child: false,
-      children: []
+      children: [],
+      
     }
 
     this.biReportMainArr.unshift(addNewRootDetail)

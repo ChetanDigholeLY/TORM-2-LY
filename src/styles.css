@@ -1,5 +1,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"); */
 
+* {
+ --showArrow: block;
+}
+
 @font-face {
   font-family: "Source Sans Pro";
   src: url("./assets/fonts/sourceSansPro400.woff2") format(woff2);
@@ -5543,12 +5547,13 @@ td>.bgForEditAll:focus {
   background-image: url(./assets/images/biReportArrowAfter.svg);
   width: 10px;
   height: 8px;
-  display: block;
+  display: var(--showArrow);
   background-repeat: no-repeat;
   position: absolute;
   bottom: -4px;
   left: -0.1px;
 }
+
 
 .CollapseAllBtn {
   display: flex;
@@ -5753,7 +5758,7 @@ td>.bgForEditAll:focus {
 .deleteAnimation{
   background-color: #FFDCDC;
   pointer-events: none;
-  animation: slideOut 2s, fadeOut 1s;
+  animation: slideOut 0.5s;
 }
 
 .deleteAnimation div, .deleteAnimation svg path , .deleteAnimation svg path {

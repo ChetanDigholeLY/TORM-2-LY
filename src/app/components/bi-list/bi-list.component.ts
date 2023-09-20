@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
@@ -13,11 +13,25 @@ export class BiListComponent {
   @Input() data: any; //api in json
   @Input() biReportMainArrData: any;
 
+  ngOnInit(){
+    this.isValidChild()
+  }
+
+  disAbleBody: boolean = false;
+
   closeBody: boolean = false;
   closeBodyFunc() {
     this.closeBody = !this.closeBody;
   }
 
+  isValidChild(){
+    if(typeof this.data.children === 'object' && Array.isArray(this.data.children)){
+      this.disAbleBody = this.data.children.length === 0; 
+    }
+    if(Array.isArray(this.data.reportDetail) && this.data.reportDetail.length > 0){
+      this.disAbleBody = false;
+    }
+  }
 
   //expandAll starts
   expandAllRow: boolean = false;
@@ -85,7 +99,11 @@ export class BiListComponent {
       // this.deleteWholeSection = true
     }
     this.deleteAnimationFlag = val
-    setTimeout(() => {this.data.reportDetail.splice(val, 1); this.deleteAnimationFlag = null;}, 1000)
+    setTimeout(() => {
+      this.data.reportDetail.splice(val, 1); 
+      this.deleteAnimationFlag = null;
+      this.disAbleBody = this.data.reportDetail.length === 0;
+    }, 500)
     
   }
   //delete report ends
