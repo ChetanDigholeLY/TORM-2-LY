@@ -4939,21 +4939,21 @@ input[type="checkbox"].switch_1:checked:after {
   background-color: transparent;
 }
 
-th {
+.reportFuelAllowance th {
   background-color: #dee0e2 !important;
   padding: 0px !important;
   text-align: center;
   margin-bottom: 20px;
 }
 
-td {
+.reportFuelAllowance td {
   /* border: 1px solid #000; */
   padding: 2px 0px !important;
   text-align: center;
   background-color: transparent !important;
 }
 
-thead {
+.reportFuelAllowance thead {
   z-index: 2000;
   position: sticky;
 }
@@ -4964,12 +4964,12 @@ thead {
   z-index: 1111111;
 }
 
-th {
+.reportFuelAllowance th {
   min-width: 150px;
   /* Adjust as needed */
 }
 
-th {
+.reportFuelAllowance th {
   background-color: #f1f1f1 !important;
   position: sticky;
   top: 0;
@@ -4979,7 +4979,7 @@ th>.flexAdminHeader {
   border-right: 1px solid #dee0e2;
 }
 
-tr {
+.reportFuelAllowance tr {
   margin-top: 10px;
   border-width: none !important;
   border-style: none !important;
